@@ -1,0 +1,306 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "xs"
+      }
+    },
+    "af2d30e3-dfc7-4885-8fdd-d3e76a97b980": {
+      "type": "image-with-text",
+      "blocks": {
+        "d9575cf2-bf4d-441b-aaed-92300b446447": {
+          "type": "subheading",
+          "settings": {
+            "text": "Healthy Hair Starts With The Scalp"
+          }
+        },
+        "template--16044467486908__af2d30e3-dfc7-4885-8fdd-d3e76a97b980-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "OUR STORY",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16044467486908__af2d30e3-dfc7-4885-8fdd-d3e76a97b980-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Our journey began with a simple realization - the foundation of beautiful hair lies in a healthy scalp. At SUNDAY II SUNDAY, we embarked on a mission to redefine hair care, focusing on nurturing the scalp to bring out the natural vibrancy of your locks, even on the days you don’t wash your hair.\"<\/p>"
+          }
+        },
+        "416b2f8c-0dbf-49ce-a480-28770165fdb8": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "SHOP NOW",
+            "url": "shopify:\/\/collections\/all",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "d9575cf2-bf4d-441b-aaed-92300b446447",
+        "template--16044467486908__af2d30e3-dfc7-4885-8fdd-d3e76a97b980-heading-1",
+        "template--16044467486908__af2d30e3-dfc7-4885-8fdd-d3e76a97b980-richtext-1",
+        "416b2f8c-0dbf-49ce-a480-28770165fdb8"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "image": "shopify:\/\/shop_images\/our-story-1-desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/our-story-1-mobile.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": false
+      }
+    },
+    "9e9b9c17-d901-4c72-ac67-48b707e4f2d6": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Taking back control of your hair"
+          }
+        },
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "ACTIVE & ADAPTIVE",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Inspired by active women, our mission celebrates and supports all individuals in their diverse and dynamic lifestyles.<\/p><p>Our products are designed for those on the go, be it through a HIIT workout, an impromptu dance session, a night on the town, or last minute get-away.<\/p>"
+          }
+        },
+        "b08ca6c0-82a9-451e-9871-c505c8a3137d": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Shop \"Between Wash\"",
+            "url": "shopify:\/\/collections\/post-workout-hair-essentials",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-subheading-1",
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-heading-1",
+        "template--16044467486908__9e9b9c17-d901-4c72-ac67-48b707e4f2d6-richtext-1",
+        "b08ca6c0-82a9-451e-9871-c505c8a3137d"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "image": "shopify:\/\/shop_images\/our-story-2-desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/our-story-2-mobile.png",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": false
+      }
+    },
+    "667ac11d-d6bf-4391-88c5-e667e4b55b63": {
+      "type": "image-with-text",
+      "blocks": {
+        "90ab15d4-7750-44f0-ab68-fb2411d816d5": {
+          "type": "subheading",
+          "settings": {
+            "text": "Science-Backed"
+          }
+        },
+        "template--16044467486908__667ac11d-d6bf-4391-88c5-e667e4b55b63-heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Proven Under The Microscope",
+            "heading_tag": "h1"
+          }
+        },
+        "template--16044467486908__667ac11d-d6bf-4391-88c5-e667e4b55b63-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>We take scalp health seriously and believe in the power of science to drive results.<\/p><p>Our proprietary formulas have been shown to alleviate itchiness within 15 minutes and notably boost scalp health within 28 days. We pave the way for resilient, lustrous hair by focusing on the scalp.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "90ab15d4-7750-44f0-ab68-fb2411d816d5",
+        "template--16044467486908__667ac11d-d6bf-4391-88c5-e667e4b55b63-heading-1",
+        "template--16044467486908__667ac11d-d6bf-4391-88c5-e667e4b55b63-richtext-1"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "image": "shopify:\/\/shop_images\/root-refresh-micellar-rinse-dry-shampoo-alternative-with-apple-cider-vinegar-835989.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/root-refresh-micellar-rinse-dry-shampoo-alternative-with-apple-cider-vinegar-835989.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": false
+      }
+    },
+    "a055f85e-614d-45f8-b4ab-25378f4c145b": {
+      "type": "media-grid",
+      "blocks": {
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moisture-balance-square.png",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "Shop Moisture Balance",
+            "link_url": "shopify:\/\/products\/moisture-balance-kit",
+            "link_style": "solid",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/root-refresh-square.png",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "SHOP ROOT REFRESH",
+            "link_url": "shopify:\/\/products\/root-refresh-micellar-rinse",
+            "link_style": "solid",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "a8950708-01c4-47a9-aabf-cd314603cf5e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/revive-me-square.png",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "SHOP REVIVE ME",
+            "link_url": "shopify:\/\/products\/revive-me-daily-moisturizing-spray",
+            "link_style": "solid",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/co-wash-leave-in-square.png",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "SHOP CO-WASH",
+            "link_url": "shopify:\/\/products\/quick-curl-reset-co-wash-with-frizz-resist-complex",
+            "link_style": "solid",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "d844f481-4edb-4aa3-b1fd-33e1c145f18e": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/S2S_Root_Refresh_How_To.mp4",
+            "autoplay": true,
+            "show_controls": false,
+            "column_count": "12",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "button_background": "",
+            "button_text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-1",
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-2",
+        "a8950708-01c4-47a9-aabf-cd314603cf5e",
+        "template--16044467486908__a055f85e-614d-45f8-b4ab-25378f4c145b-image-3",
+        "d844f481-4edb-4aa3-b1fd-33e1c145f18e"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "desktop_row_height": 220,
+        "mobile_row_height": 180,
+        "section_width": "lg",
+        "spacing": "md",
+        "subheading": "",
+        "title": "What The Reviews Say",
+        "content": "",
+        "background": "",
+        "text_color": ""
+      }
+    },
+    "d146a183-3805-4056-bbb0-4bd1c71c4276": {
+      "type": "rich-text",
+      "blocks": {
+        "50c87353-c547-4b79-a799-1b8b0eafcda1": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "SHOP NOW",
+            "url": "shopify:\/\/collections\/all",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "50c87353-c547-4b79-a799-1b8b0eafcda1"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "af2d30e3-dfc7-4885-8fdd-d3e76a97b980",
+    "9e9b9c17-d901-4c72-ac67-48b707e4f2d6",
+    "667ac11d-d6bf-4391-88c5-e667e4b55b63",
+    "a055f85e-614d-45f8-b4ab-25378f4c145b",
+    "d146a183-3805-4056-bbb0-4bd1c71c4276"
+  ]
+}

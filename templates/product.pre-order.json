@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "description",
+        "share_buttons",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {}
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products"
+  ]
+}

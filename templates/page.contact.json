@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "xs"
+      }
+    },
+    "contact-form": {
+      "type": "contact",
+      "blocks": {
+        "cfdb51f4-116c-4e3c-aa4d-d2316c3c4e20": {
+          "type": "text",
+          "settings": {
+            "title": "Subject",
+            "use_long_text": false,
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "cfdb51f4-116c-4e3c-aa4d-d2316c3c4e20"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "Contact",
+        "content": "<p>Leave us a message here! We'd love to hear from you. We try to reply to all messages within two business days.<\/p><p>Alternatively, send an email to support@infinitelooks.com<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form"
+  ]
+}

@@ -1,0 +1,137 @@
+{% schema %}
+{
+  "name": "Hair Types Selector",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show Divider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_vertical_spacing",
+      "label": "Remove Vertical Spacing",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_straight",
+      "label": "Straight Hair"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wavy",
+      "label": "Wavy Hair"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_curly",
+      "label": "Curly Hair"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_very_curly",
+      "label": "Very Curly Hair"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_coily",
+      "label": "Coily Hair"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "large", "label": "Large" },
+        { "value": "xl", "label": "Extra Large" },
+        { "value": "fullwidth", "label": "Full Width" }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "section_subhead",
+      "label": "Section Subhead",
+      "default": "Our Ingredients are the best"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.hair-types-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hair-types-title {
+  margin-bottom: 15px; /* Margin-bottom */
+  font-size: 20px;
+}
+
+.hair-types-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.hair-types-list li {
+  margin-right: 10px; /* Spacing between the images */
+}
+
+.hair-types-list li:last-child {
+  margin-right: 0; /* No margin for the last image */
+}
+
+.hair-types-list img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+}
+{% endstylesheet %}
+
+{% case section.settings.section_width %}
+  {% when 'large' %}
+    {% assign container_class = 'container container--lg' %}
+  {% when 'xl' %}
+    {% assign container_class = 'container container--xl' %}
+  {% when 'fullwidth' %}
+    {% assign container_class = 'container' %}
+{% endcase %}
+
+{% assign spacingClass = 'section-spacing' %}
+
+{% if section.settings.remove_vertical_spacing %}
+  {% assign spacingClass = 'section-spacing section-spacing--tight' %}
+{% endif %}
+
+<div class="hair-types-section">
+  <div class="hair-types-title h6">BEST FOR</div>
+  <ul class="hair-types-list">
+    {% if section.settings.show_straight %}
+      <li><img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/straight-hair.png?v=1688595963" alt="Straight Hair"></li>
+    {% endif %}
+    {% if section.settings.show_wavy %}
+      <li><img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/wavy-hair.png?v=1688595943" alt="Wavy Hair"></li>
+    {% endif %}
+    {% if section.settings.show_curly %}
+      <li><img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/curly-hair.png?v=1688595955" alt="Curly Hair"></li>
+    {% endif %}
+    {% if section.settings.show_very_curly %}
+      <li><img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/very-curly-hair.png?v=1688595701" alt="Very Curly Hair"></li>
+    {% endif %}
+    {% if section.settings.show_coily %}
+      <li><img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/coily-hair.png?v=1688595974" alt="Coily Hair"></li>
+    {% endif %}
+  </ul>
+</div>

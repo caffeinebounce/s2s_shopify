@@ -1,0 +1,61 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "About the shop",
+            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "footer-1": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true
+          }
+        },
+        "11bcdb32-2ca7-4e64-b3b6-05958825fc12": {
+          "type": "links",
+          "settings": {
+            "menu": "support",
+            "show_menu_title": true
+          }
+        },
+        "footer-2": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Hear From Us More",
+            "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "11bcdb32-2ca7-4e64-b3b6-05958825fc12",
+        "footer-2"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "show_social_media": true,
+        "show_payment_icons": false,
+        "show_country_selector": false,
+        "show_country_name": true,
+        "show_country_flag": true,
+        "show_locale_selector": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

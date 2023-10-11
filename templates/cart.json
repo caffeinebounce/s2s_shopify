@@ -1,0 +1,148 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "show_cart_note": true,
+        "show_order_weight": false,
+        "show_shipping_text": true,
+        "show_accelerated_buttons": false,
+        "show_shipping_estimator": true
+      }
+    },
+    "72febab8-a80f-47c9-9843-f9a051f20592": {
+      "type": "featured-product",
+      "blocks": {
+        "3bede3f5-6ab8-4d7a-9eb6-159174c4df00": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>JUST ADD TO CART<\/h6>"
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-1": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-2": {
+          "type": "badges",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-3": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-4": {
+          "type": "rating",
+          "settings": {
+            "show_empty": true,
+            "rating_mode": "rating"
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-5": {
+          "type": "payment_terms",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-6": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-7": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-8": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_type": "block",
+            "color_selector_type": "color",
+            "size_chart_page": ""
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-9": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-10": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-11": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "3bede3f5-6ab8-4d7a-9eb6-159174c4df00",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-1",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-2",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-3",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-4",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-5",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-6",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-7",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-8",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-9",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-10",
+        "template--16044466536636__72febab8-a80f-47c9-9843-f9a051f20592-1688172486fd44520d-11"
+      ],
+      "settings": {
+        "product": "hair-flourish-vegan-biotin-gummies",
+        "separate_section_with_border": false,
+        "container_size": "lg",
+        "product_info_size": 45,
+        "center_basic_info": false,
+        "desktop_media_layout": "carousel_dots",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "subheading": "TRY OUR BIOTIN GUMMIES",
+        "title": "FREE WITH EVERY ORDER OVER $50",
+        "content": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed products",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "72febab8-a80f-47c9-9843-f9a051f20592",
+    "recently-viewed-products"
+  ]
+}

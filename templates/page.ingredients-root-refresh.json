@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "e070d3be-39f7-4161-bd3d-9ae2a87d7259": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16044325699772__e070d3be-39f7-4161-bd3d-9ae2a87d7259-168596906915bb1bf4-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/root-refresh-ingredients-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/root-refresh-ingredients-banner-mobile.jpg",
+            "subheading": "Clean Ingredients",
+            "title": "Root Refresh: Micellar Rinse Infused With Apple Cider Vinegar",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "radial-gradient(rgba(54, 54, 54, 0.05), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "template--16044325699772__e070d3be-39f7-4161-bd3d-9ae2a87d7259-168596906915bb1bf4-0"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": false,
+        "page_width": "lg"
+      }
+    },
+    "b68e1b11-90e7-4796-b41e-76ccf0e578ac": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-1": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-2": {
+          "type": "badges",
+          "settings": {}
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-3": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-4": {
+          "type": "rating",
+          "settings": {
+            "show_empty": true,
+            "rating_mode": "rating"
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-5": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-6": {
+          "type": "separator",
+          "settings": {}
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-7": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-8": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_type": "block",
+            "color_selector_type": "color",
+            "size_chart_page": ""
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-9": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-10": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-11": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-1",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-2",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-3",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-4",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-5",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-6",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-7",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-8",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-9",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-10",
+        "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-11"
+      ],
+      "settings": {
+        "product": "root-refresh-micellar-rinse",
+        "separate_section_with_border": true,
+        "container_size": "lg",
+        "product_info_size": 45,
+        "center_basic_info": false,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "subheading": "",
+        "title": "Featured product",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "e070d3be-39f7-4161-bd3d-9ae2a87d7259",
+    "main",
+    "b68e1b11-90e7-4796-b41e-76ccf0e578ac"
+  ]
+}

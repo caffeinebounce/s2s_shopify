@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "0719eaec-9f0c-4260-be05-69e94321040d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Root Refresh Dry Shampoo Alternative Post Workout Spray: Removes Sweat, Buildup, and Oil with Micellar Water and Apple Cider Vinegar for Clean Hair, Texture and Body<\/p>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "buy_buttons",
+        "description",
+        "0719eaec-9f0c-4260-be05-69e94321040d",
+        "quantity_selector",
+        "share_buttons"
+      ],
+      "settings": {
+        "enable_video_looping": false,
+        "enable_image_zoom": true
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products"
+  ]
+}

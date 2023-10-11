@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "171b0ba1-f90f-4f3f-a008-54434b897bbd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Natural Peppermint Essential Oil for Hair and Scalp: Made with Premium, Therapeutic Grade Peppermint Essential Oil for Hair Growth and Dry Scalp<\/p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        },
+        "7295a5d8-5cbf-47a1-90b3-f821b7567713": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "171b0ba1-f90f-4f3f-a008-54434b897bbd",
+        "buy_buttons",
+        "quantity_selector",
+        "share_buttons",
+        "7295a5d8-5cbf-47a1-90b3-f821b7567713"
+      ],
+      "settings": {
+        "enable_video_looping": false,
+        "enable_image_zoom": true
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products"
+  ]
+}

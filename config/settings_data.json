@@ -1,0 +1,171 @@
+{
+  "current": {
+    "text_color": "#303030",
+    "background": "#ffffff",
+    "header_background": "#ffffff",
+    "footer_background": "#000000",
+    "footer_text_color": "#ffffff",
+    "product_rating_color": "#968b83",
+    "heading_font": "avenir_next_n7",
+    "heading_text_transform": "uppercase",
+    "text_font": "avenir_next_n3",
+    "show_page_transition": false,
+    "show_button_transition": true,
+    "show_product_rating": true,
+    "cart_type": "message",
+    "cart_icon": "shopping_bag",
+    "cart_free_shipping_threshold": "50",
+    "social_facebook": "https:\/\/www.facebook.com\/sunday2sundayhair\/",
+    "social_twitter": "https:\/\/twitter.com\/mysunday2sunday",
+    "social_pinterest": "https:\/\/www.pinterest.com\/mysunday2sunday\/_created\/",
+    "social_instagram": "https:\/\/www.instagram.com\/mysunday2sunday\/",
+    "social_tiktok": "https:\/\/www.tiktok.com\/@mysunday2sunday",
+    "favicon": "shopify:\/\/shop_images\/Sunday_II_Sunday_Favicon.jpg",
+    "heading_color": "#303030",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Sunday_II_Sunday_Logo_Lrg_43b05bcb-a732-4670-929d-eb2702af7a42.png",
+          "logo_max_width": 290,
+          "show_icons": false,
+          "show_locale_selector": false,
+          "transparent_logo": "shopify:\/\/shop_images\/SundayIISunday_Logo_White.png"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "title": "About the shop",
+              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+            }
+          },
+          "footer-1": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "settings": {
+              "title": "JOIN OUR SQUAD",
+              "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "show_locale_selector": false
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "10436698916776057164": {
+        "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": true,
+        "settings": {}
+      },
+      "7570552984445421165": {
+        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": false,
+        "settings": {}
+      },
+      "4015264832934714879": {
+        "type": "shopify:\/\/apps\/ecomsend-popups\/blocks\/app\/a5670cf8-5705-4b01-ad9e-447033feae26",
+        "disabled": false,
+        "settings": {}
+      },
+      "13694372020385051692": {
+        "type": "shopify:\/\/apps\/analyzely-google-analytics-4\/blocks\/analyzely\/b3a3a697-6f42-4507-a5ae-c447f6da2c9d",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Allure": {
+      "section_vertical_spacing": "md",
+      "heading_color": "#1c1c1c",
+      "text_color": "#1c1c1c",
+      "background": "#efefef",
+      "secondary_background": "#ffffff",
+      "success_color": "#307a07",
+      "error_color": "#cb2b2b",
+      "header_background": "#ffffff",
+      "header_text_color": "#1c1c1c",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#1c1c1c",
+      "modal_background": "#ffffff",
+      "modal_text_color": "#1c1c1c",
+      "primary_button_background": "#1c1c1c",
+      "primary_button_text_color": "#ffffff",
+      "product_rating_color": "#1c1c1c",
+      "heading_font": "univers_next_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "univers_next_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18
+    },
+    "Couture": {
+      "section_vertical_spacing": "md",
+      "heading_color": "#5c5c5c",
+      "text_color": "#5c5c5c",
+      "background": "#ffffff",
+      "secondary_background": "#ffffff",
+      "success_color": "#307a07",
+      "error_color": "#cb2b2b",
+      "header_background": "#ffffff",
+      "header_text_color": "#303030",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#303030",
+      "modal_background": "#ffffff",
+      "modal_text_color": "#303030",
+      "primary_button_background": "#5c5c5c",
+      "primary_button_text_color": "#ffffff",
+      "product_rating_color": "#1c1c1c",
+      "heading_font": "futura_n4",
+      "heading_letter_spacing": 18,
+      "text_font": "century_gothic_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18
+    },
+    "Vogue": {
+      "section_vertical_spacing": "xs",
+      "heading_color": "#303030",
+      "text_color": "#303030",
+      "background": "#ffffff",
+      "secondary_background": "#ffffff",
+      "success_color": "#307a07",
+      "error_color": "#cb2b2b",
+      "header_background": "#ffffff",
+      "header_text_color": "#303030",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#303030",
+      "modal_background": "#ffffff",
+      "modal_text_color": "#303030",
+      "primary_button_background": "#f5db8b",
+      "primary_button_text_color": "#303030",
+      "product_rating_color": "#1c1c1c",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_letter_spacing": 18,
+      "text_font": "futura_n4",
+      "text_font_size_desktop": 14,
+      "button_letter_spacing": 18
+    }
+  }
+}

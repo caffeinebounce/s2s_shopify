@@ -1,0 +1,69 @@
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "d51e222f-c3f7-4ce6-9c8e-b6e85e61fcaa": {
+          "type": "message",
+          "settings": {
+            "text": "FREE SHIPPING OVER $25"
+          }
+        },
+        "05d455cc-340f-4d09-94cb-88a549133075": {
+          "type": "message",
+          "settings": {
+            "text": "SUBSCRIBE AND SAVE WITH <a href=\"https:\/\/mysunday2sunday.com\/apps\/subscriptions\/bb\/sA5sxa7d#\/\" title=\"https:\/\/mysunday2sunday.com\/apps\/subscriptions\/bb\/sA5sxa7d#\/\">BUILD-A-BOX<\/a>"
+          }
+        }
+      },
+      "block_order": [
+        "d51e222f-c3f7-4ce6-9c8e-b6e85e61fcaa",
+        "05d455cc-340f-4d09-94cb-88a549133075"
+      ],
+      "settings": {
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 5,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10,
+        "background": "#1c1c1c",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        ".header__primary-nav-item:first-child {background-color: #f0f0f0; color: #000000; padding: 10px 15px; margin-right: 10px; transition: all 0.3s ease;}",
+        ".header__primary-nav-item:first-child:hover {background-color: #000000; color: #f0f0f0;}"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "show_separation_border": true,
+        "reduce_padding": true,
+        "logo": "shopify:\/\/shop_images\/Sunday_II_Sunday_Logo_Lrg_43b05bcb-a732-4670-929d-eb2702af7a42.png",
+        "logo_max_width": 290,
+        "logo_mobile_max_width": 165,
+        "menu": "main-menu",
+        "sidebar_menu": "",
+        "menu_open_trigger": "click",
+        "enable_search": true,
+        "sidebar_text_font": "heading",
+        "sidebar_show_dividers": true,
+        "layout": "logo_center_navigation_below",
+        "show_icons": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": true,
+        "show_locale_selector": false,
+        "transparent_header_text_color": "#ffffff",
+        "transparent_logo": "shopify:\/\/shop_images\/SundayIISunday_Logo_White.png"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

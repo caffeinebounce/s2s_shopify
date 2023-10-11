@@ -1,0 +1,326 @@
+{% schema %}
+{
+  "name": "Ingredient List",
+  "settings": [
+       {
+  "type": "checkbox",
+  "id": "show_divider",
+  "label": "Show Divider",
+  "default": false
+},
+{
+  "type": "checkbox",
+  "id": "remove_vertical_spacing",
+  "label": "Remove Vertical Spacing",
+  "default": false
+},
+{
+      "type": "select",
+      "id": "section_width",
+      "label": "Section Width",
+      "options": [
+        { "value": "large", "label": "Large" },
+        { "value": "xl", "label": "Extra Large" },
+        { "value": "fullwidth", "label": "Full Width" }
+      ],
+      "default": "large"
+    },
+
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "section_subhead",
+      "label": "Section Subhead",
+      "default": "Our Ingredients are the best"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "limit": 25,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Ingredient Name"
+        },
+        {
+          "type": "text",
+          "id": "function",
+          "label": "What It Does"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Read More"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+{% stylesheet %}
+
+.no-vertical-spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-horizontal-spacing {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ingredient-list-section-divider {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.ingredient-list-section-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ingredient-list-section-subhead {
+    text-align: center;
+    text-transform: uppercase;
+}
+  
+.see-more-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title-container {
+  position: relative;
+}
+
+.see-more {
+  position: relative;
+  z-index: 3;
+  cursor: pointer; /* Add this */
+  font-size: 14px;
+  text-align: center;
+  margin-block-start: 0 !important;
+  padding: 10px 20px; /* Add padding to make the button temporarily bigger */
+}
+
+.see-more-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 0 10px;
+  position: relative;
+  margin-block-start: 0;
+}
+
+.text {
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.accordion-divider {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 !important;
+  transform: translateY(-50%);
+  border-top: 0.75px solid var(--main-black);
+  z-index: -1;
+}
+
+.additional {
+  border: 3px solid #000;
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  color: #000;
+  table-layout: fixed;
+  background-color: transparent;
+  font-family: "Helvetica", sans-serif;
+}
+
+.additional td,
+.additional th {
+  padding: 5px 10px;
+  text-align: left;
+  vertical-align: bottom;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-family: "Helvetica", sans-serif;
+}
+
+.additional th {
+  font-weight: 900;
+  font-size: 24px;
+  color: black;
+  opacity: 1;
+  font-family: "Helvetica", sans-serif;
+  text-transform: capitalize;
+}
+
+.additional th:first-child {
+  padding-left: 20px; /* added more padding to the left of the first column */
+}
+
+.additional th::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  border-bottom: 10px solid #000;
+}
+
+.additional th:first-child::before {
+  left: 10px;
+}
+
+.additional th:last-child::before {
+  right: 10px;
+}
+
+.additional td::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  border-bottom: 1px solid #000;
+}
+
+.additional td:first-child {
+  padding-left: 20px; /* added more padding to the left of the first column */
+}
+
+.additional td:first-child::before {
+  left: 10px;
+}
+
+.additional td:last-child::before {
+  right: 10px;
+}
+
+.additional tr:last-child td::before {
+  border-bottom: none;
+}
+
+.additional td a {
+  font-size: 10px; /* Reduce the font size of hyperlinks */
+  text-transform: uppercase; /* Make the text all uppercase */
+  color: grey; /* Set the font color to grey */
+  text-decoration: none !important; /* Remove underline */
+  font-weight: bold;
+}
+
+.additional td:nth-child(2),
+.additional td:nth-child(3),
+.additional th:nth-child(2),
+.additional th:nth-child(3) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+document.addEventListener("DOMContentLoaded", function() {
+    $(document).on("click", ".see-more", function() {
+        console.log("Button clicked.");
+
+        var extraContent = $(".additional");
+        var arrow = $(".see-more .arrow");
+        var seeMoreText = $(".see-more .text");
+
+        if (extraContent.hasClass("hidden")) {
+            extraContent.removeClass("hidden");
+            seeMoreText.text("See Less");
+            arrow.css("transform", "rotate(180deg)");
+        } else {
+            extraContent.addClass("hidden");
+            seeMoreText.text("See Full Ingredient List");
+            arrow.css("transform", "rotate(0deg)");
+        }
+    });
+});
+{% endjavascript %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+{% assign ingredient_list = section.blocks %}
+{% case section.settings.section_width %}
+  {% when 'large' %}
+    {% assign container_class = 'container container--lg' %}
+  {% when 'xl' %}
+    {% assign container_class = 'container container--xl' %}
+  {% when 'fullwidth' %}
+    {% assign container_class = 'container' %}
+{% endcase %}
+
+{% assign spacingClass = 'section-spacing' %}
+
+{% if section.settings.remove_vertical_spacing %}
+  {% assign spacingClass = 'section-spacing section-spacing--tight' %}
+{% endif %}
+
+<div class="{{ container_class }}{% if section.settings.show_divider %} bordered-section{% endif %}{% unless section.settings.remove_vertical_spacing %} section-spacing{% endunless %}">
+
+  <div class="ingredient-list-section">
+    <!-- Section Title and Subhead -->
+    <h4 class="ingredient-list-section-subhead">{{ section.settings.section_subhead }}</h4>
+    <h2 class="ingredient-list-section-title">{{ section.settings.section_title }}</h2>
+
+    <div class="see-more-container">
+      <div class="title-container">
+          <div class="see-more">
+              <span class="see-more-content">
+                  <span class="text">See Full Ingredient List</span>
+                  <span class="arrow">▽</span>
+              </span>
+          </div>
+          <div class="accordion-divider"></div>
+      </div>
+      <div class="additional hidden">
+          <table>
+              <tbody>
+                  <tr>
+                      <th>Ingredient Name</th>
+                      <th>Function</th>
+                      <th>More</th>
+                  </tr>
+                  {% for ingredient in ingredient_list %}
+                      <tr>
+                          <td>{{ ingredient.settings.title }}</td>
+                          <td>{{ ingredient.settings.function }}</td>
+                          <td><a href="{{ ingredient.settings.link }}" target="_blank" rel="noopener noreferrer">Read More</a></td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>

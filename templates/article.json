@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_date": true,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": true
+      }
+    },
+    "prev-next-blog-posts": {
+      "type": "prev-next-blog-posts",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "prev-next-blog-posts"
+  ]
+}

@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Prestige",
     "theme_author": "Maestrooo",
-    "theme_version": "7.3.1",
+    "theme_version": "7.3.6",
     "theme_documentation_url": "https:\/\/support.maestrooo.com\/",
     "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
   },
@@ -724,12 +724,17 @@
       {
         "type": "url",
         "id": "social_twitter",
-        "label": "Twitter"
+        "label": "X (formerly Twitter)"
       },
       {
         "type": "url",
         "id": "social_pinterest",
         "label": "Pinterest"
+      },
+      {
+        "type": "url",
+        "id": "social_threads",
+        "label": "Threads"
       },
       {
         "type": "url",

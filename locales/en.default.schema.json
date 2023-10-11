@@ -1209,10 +1209,6 @@
         "text": {
           "name": "Text"
         },
-        "best_for": {
-          "name": "Best For",
-          "show_below_gallery": "Show below gallery on desktop"
-        },
         "collapsible_text": {
           "name": "Collapsible text",
           "show_below_gallery": "Show below gallery on desktop",

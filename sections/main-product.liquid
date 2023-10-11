@@ -6,7 +6,7 @@
       continue
     endunless
 
-    if block.type == 'accordion' and block.settings.title != blank and block.settings.content != blank
+    if block.type == 'accordion' and block.settings.title != blank and block.settings.content != blank or block.settings.page.content != blank
       assign has_content_below_gallery = true
       break
     elsif block.type == 'description' and product.description != blank
@@ -129,7 +129,24 @@
       </div>
     </div>
 
-    {%- render 'buy-buttons', product: product, form_id: form_id, show_payment_button: false -%}
+    <buy-buttons class="buy-buttons" template="{{ product.template_suffix | escape }}" form="{{ form_id }}">
+      {%- liquid
+        assign button_disabled = false
+
+        if product.selected_or_first_available_variant.available == false
+          assign button_disabled = true
+          assign button_content = 'product.general.sold_out_button' | t
+        else
+          if product.template_suffix contains 'pre-order'
+            assign button_content = 'product.general.pre_order_button' | t
+          else
+            assign button_content = 'product.general.add_to_cart_button' | t
+          endif
+        endif
+      -%}
+
+      {%- render 'button', content: button_content, type: 'submit', form: form_id, disabled: button_disabled -%}
+    </buy-buttons>
   </product-sticky-bar>
 {%- endif -%}
 

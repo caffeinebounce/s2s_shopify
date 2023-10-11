@@ -27,7 +27,7 @@
           }
         },
         "d393ec93-f9e2-460f-a32a-c6ae9ce44667": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -48,7 +48,7 @@
           "settings": {}
         },
         "8b23db0b-b53d-4932-bdaf-100a9ed9b9d7": {
-          "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify://apps/appstle-subscriptions-app/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "buy_buttons": {
@@ -68,7 +68,7 @@
             "show_below_gallery": true,
             "icon": "picto-love",
             "title": "Best For",
-            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -78,7 +78,7 @@
             "show_below_gallery": true,
             "icon": "picto-success",
             "title": "Key Benefit",
-            "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.key_benefit.value }}</p>",
             "page": ""
           }
         },
@@ -88,7 +88,7 @@
             "show_below_gallery": true,
             "icon": "picto-user",
             "title": "How To Use",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
             "page": ""
           }
         }
@@ -131,7 +131,7 @@
             "title_font_color": "#2d2a26",
             "subtitle": "Musa Spp",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify:\/\/shop_images\/banana-extract_bdd9ebc1-b8c6-47ee-9981-4f6d81ef9910.png",
+            "image": "shopify://shop_images/banana-extract_bdd9ebc1-b8c6-47ee-9981-4f6d81ef9910.png",
             "ingredient_type": "Active",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -145,9 +145,7 @@
           }
         }
       },
-      "block_order": [
-        "ccaf7208-857a-4253-a189-67ce7d20028b"
-      ],
+      "block_order": ["ccaf7208-857a-4253-a189-67ce7d20028b"],
       "settings": {
         "show_divider": false,
         "remove_vertical_spacing": true,
@@ -156,187 +154,18 @@
         "section_subhead": "Always"
       }
     },
-    "full-ingredient-list": {
-      "type": "full-ingredient-list",
-      "disabled": true,
-      "blocks": {
-        "58ad230e-b8a6-4cc0-a6e6-f800d3594072": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Water (Aqua)",
-            "function": "Solvents",
-            "link": "https:\/\/incidecoder.com\/ingredients\/water"
-          }
-        },
-        "75d7b724-548c-4810-befd-652c110e53ed": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Glycerin",
-            "function": "Moisturizer",
-            "link": "https:\/\/incidecoder.com\/ingredients\/glycerin"
-          }
-        },
-        "d226ab99-1cb1-4d33-83a5-ef8459041cb6": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Methyl Gluceth-20",
-            "function": "Emollient",
-            "link": "https:\/\/incidecoder.com\/ingredients\/methyl-gluceth-20"
-          }
-        },
-        "b760be0a-7514-4add-b670-45570e5b0bb5": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Camellia Senensis Leaf Extract",
-            "function": "Antioxidant",
-            "link": "https:\/\/incidecoder.com\/ingredients\/camellia-sinensis-leaf-extract"
-          }
-        },
-        "4fabb1a5-c8ed-4f72-9ca2-ccab8f5c3fd6": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Commiphora Myrrha Resin Extract",
-            "function": "Anti-inflammatory",
-            "link": "https:\/\/incidecoder.com\/ingredients\/commiphora-myrrha-resin-extract"
-          }
-        },
-        "d74ab416-5bc8-4d15-91fd-a1d1bf4ee204": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Pyrus Malus (Apple) Fruit Extract",
-            "function": "Conditioner",
-            "link": "https:\/\/incidecoder.com\/ingredients\/pyrus-malus-fruit-extract"
-          }
-        },
-        "69104a31-af63-4177-a5a9-9483e9968330": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Allantoin",
-            "function": "Skin Soothing",
-            "link": "https:\/\/incidecoder.com\/ingredients\/allantoin"
-          }
-        },
-        "ecad455b-20ae-4cf0-ab21-feda7514d946": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Lauryl Methyl Gluceth-10 Hydroxypropyldimonium Chloride",
-            "function": "Antistatic",
-            "link": "https:\/\/incidecoder.com\/ingredients\/lauryl-methyl-gluceth-10-hydroxypropyldimonium-chloride"
-          }
-        },
-        "162f78b1-f638-408e-8353-faa609dd130b": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Propylene Glycol",
-            "function": "Humectant",
-            "link": "https:\/\/incidecoder.com\/ingredients\/propylene-glycol"
-          }
-        },
-        "ca13ee93-b373-43db-b981-b7bd262c435b": {
-          "type": "ingredient",
-          "settings": {
-            "title": "PEG-120 Methyl Glucose Trioleate",
-            "function": "Emulsifier",
-            "link": "https:\/\/incidecoder.com\/ingredients\/peg-120-methyl-glucose-trioleate"
-          }
-        },
-        "41e76438-3bdc-4e79-9be0-7bc8ec3b649b": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Vinegar (Acetum)",
-            "function": "pH Adjuster",
-            "link": "https:\/\/incidecoder.com\/ingredients\/vinegar"
-          }
-        },
-        "463385c0-762c-48d2-8a65-56c9b41108b2": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Polysorbate",
-            "function": "Emulsifier",
-            "link": "https:\/\/incidecoder.com\/ingredients\/polysorbate-20"
-          }
-        },
-        "8bad8fa9-e859-4552-b463-80787268da51": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Cocamidopropyl Hydroxysultaine",
-            "function": "Surfactant",
-            "link": "https:\/\/incidecoder.com\/ingredients\/cocamidopropyl-hydroxysultaine\" target=\"_blank"
-          }
-        },
-        "58f9341b-a106-4265-96eb-35c25489a043": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Sodium Benzoate",
-            "function": "Preservative",
-            "link": "https:\/\/incidecoder.com\/ingredients\/sodium-benzoate"
-          }
-        },
-        "c7d67e6b-9fff-4f94-804b-e296e0ed0280": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Potassium Sorbate",
-            "function": "Preservative",
-            "link": "https:\/\/incidecoder.com\/ingredients\/potassium-sorbate"
-          }
-        },
-        "06cfe1b7-8abd-479c-beaa-7b2bce5c52ee": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Phenoxyethanol",
-            "function": "Preservative",
-            "link": "https:\/\/incidecoder.com\/ingredients\/phenoxyethanol"
-          }
-        },
-        "ceca43e7-cea1-496f-9a3c-174ddad36bf2": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Fragrance (Parfum)",
-            "function": "Fragrance",
-            "link": "https:\/\/incidecoder.com\/ingredients\/parfum"
-          }
-        }
-      },
-      "block_order": [
-        "58ad230e-b8a6-4cc0-a6e6-f800d3594072",
-        "75d7b724-548c-4810-befd-652c110e53ed",
-        "d226ab99-1cb1-4d33-83a5-ef8459041cb6",
-        "b760be0a-7514-4add-b670-45570e5b0bb5",
-        "4fabb1a5-c8ed-4f72-9ca2-ccab8f5c3fd6",
-        "d74ab416-5bc8-4d15-91fd-a1d1bf4ee204",
-        "69104a31-af63-4177-a5a9-9483e9968330",
-        "ecad455b-20ae-4cf0-ab21-feda7514d946",
-        "162f78b1-f638-408e-8353-faa609dd130b",
-        "ca13ee93-b373-43db-b981-b7bd262c435b",
-        "41e76438-3bdc-4e79-9be0-7bc8ec3b649b",
-        "463385c0-762c-48d2-8a65-56c9b41108b2",
-        "8bad8fa9-e859-4552-b463-80787268da51",
-        "58f9341b-a106-4265-96eb-35c25489a043",
-        "c7d67e6b-9fff-4f94-804b-e296e0ed0280",
-        "06cfe1b7-8abd-479c-beaa-7b2bce5c52ee",
-        "ceca43e7-cea1-496f-9a3c-174ddad36bf2"
-      ],
-      "settings": {
-        "show_divider": false,
-        "remove_vertical_spacing": false,
-        "section_width": "large",
-        "section_title": "",
-        "section_subhead": ""
-      }
-    },
+
     "16857359762140f085": {
       "type": "apps",
       "blocks": {
         "159fc5db-3707-4b09-b16c-151b44159701": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         }
       },
-      "block_order": [
-        "159fc5db-3707-4b09-b16c-151b44159701"
-      ],
+      "block_order": ["159fc5db-3707-4b09-b16c-151b44159701"],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,
@@ -363,7 +192,6 @@
   "order": [
     "main",
     "ingredient-grid",
-    "full-ingredient-list",
     "16857359762140f085",
     "recently-viewed-products"
   ]

@@ -186,10 +186,10 @@ Supported variables
             {%- else -%}
               {%- render 'product-rating', show_placeholder: true -%}
             {%- endif -%}
-          
+
           {%- when 'separator' -%}
             <hr>
-          
+
           {%- when 'description' -%}
             {%- if product == blank -%}
               {%- assign product_description = 'general.on_boarding.product_description' | t -%}

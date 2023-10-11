@@ -54,7 +54,6 @@
     },
     "b68e1b11-90e7-4796-b41e-76ccf0e578ac": {
       "type": "featured-product",
-      "disabled": true,
       "blocks": {
         "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-1": {
           "type": "title",
@@ -135,6 +134,7 @@
         "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-10",
         "template--16044325699772__b68e1b11-90e7-4796-b41e-76ccf0e578ac-1685973270d1d739a9-11"
       ],
+      "disabled": true,
       "settings": {
         "product": "root-refresh-micellar-rinse",
         "separate_section_with_border": true,

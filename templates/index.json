@@ -216,10 +216,10 @@
         "template--16043082907836__50eead62-8afe-4657-a537-a5939e9ac07e-1685669377a06d4e1b-2"
       ],
       "custom_css": [
-        ".bordered-section {margin-top: 30px; margin-bottom: 30px;}"
+
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "content_width": "sm",
         "text_position": "center",
@@ -298,7 +298,7 @@
         ".bordered-section {margin-top: 50px; margin-bottom: 50px;}"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -342,7 +342,7 @@
         "template--16132781473980__0c8df06b-8ffa-4480-9b46-a5bebebaf217-after-1"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "subheading": "",
         "title": "Before and After",
@@ -386,7 +386,7 @@
         "9832a2a6-fd54-4b71-ae19-f4549f832cf1"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "",
@@ -430,7 +430,7 @@
         "344ecfb2-f59e-4c25-a637-5f5a9d8333e9"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "",
@@ -456,7 +456,7 @@
         "template--16132781473980__363c4539-06eb-4344-b939-53ecc1370774-heading-1"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
@@ -503,7 +503,7 @@
         "f4dc98a6-ec36-44e7-a326-d0ff9cfc11ed"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "image": "shopify:\/\/shop_images\/Edge_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/Edge_-_Mobile.png",
@@ -564,7 +564,7 @@
         "8e0732cb-cd47-408b-9cbd-788f92069d1d"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "image": "shopify:\/\/shop_images\/RootRevive_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/RootRevive_-_Mobile.png",
@@ -614,7 +614,7 @@
         "c65666cb-f886-4bea-a978-811ac3e8c791"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "image": "shopify:\/\/shop_images\/Soothe_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/Soothe_-_Mobile.png",
@@ -661,7 +661,7 @@
         "template--16132781473980__a34c186f-9ccc-48aa-bb9a-3358358dcc28-testimonial-2"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "auto_rotate_between_testimonials": false,
         "cycle_speed": 5,
@@ -738,7 +738,7 @@
 
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "desktop_row_height": 290,
         "mobile_row_height": 180,

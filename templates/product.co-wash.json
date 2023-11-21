@@ -27,7 +27,7 @@
           }
         },
         "72669a14-6e69-4d1e-8dc0-0305e4a273dd": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -47,8 +47,14 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "f9f55c9d-c19d-4cd9-95ec-2f8466edbac9": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
+          }
+        },
         "d6f55416-9398-4cdf-bcd0-9ed4fc19fe5c": {
-          "type": "shopify://apps/appstle-subscriptions-app/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "buy_buttons": {
@@ -68,7 +74,7 @@
             "show_below_gallery": true,
             "icon": "picto-love",
             "title": "Best For",
-            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -78,7 +84,7 @@
             "show_below_gallery": true,
             "icon": "picto-success",
             "title": "Key Benefit",
-            "content": "<p>{{ product.metafields.custom.key_benefit.value }}</p>",
+            "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
             "page": ""
           }
         },
@@ -88,7 +94,7 @@
             "show_below_gallery": true,
             "icon": "picto-user",
             "title": "How To Use",
-            "content": "<p></p>{{ product.metafields.custom.how_to_use_steps | metafield_tag }}",
+            "content": "<p><\/p>{{ product.metafields.custom.how_to_use_steps | metafield_tag }}",
             "page": ""
           }
         }
@@ -101,6 +107,7 @@
         "72669a14-6e69-4d1e-8dc0-0305e4a273dd",
         "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31",
         "quantity_selector",
+        "f9f55c9d-c19d-4cd9-95ec-2f8466edbac9",
         "d6f55416-9398-4cdf-bcd0-9ed4fc19fe5c",
         "buy_buttons",
         "36830a27-2772-4a00-a1bd-98f69ac6cd76",
@@ -131,12 +138,12 @@
             "title_font_color": "#2d2a26",
             "subtitle": "Baobab, Moringa, Nigella, Tamanu, Opuntia, Shea and Coconut Oils",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify://shop_images/7-oil-blends.png",
+            "image": "shopify:\/\/shop_images\/7-oil-blends.png",
             "ingredient_type": "Active",
             "is_active": true,
             "tag_font_color": "#2d2a26",
             "active_tag_font_color": "#246f16",
-            "more_info": "<p>Teofndskfdskvcsvkosd vsd</p>",
+            "more_info": "<p>Teofndskfdskvcsvkosd vsd<\/p>",
             "more_info_button_color": "#ffffff",
             "background_color": "#f4efe3",
             "how_much": "",
@@ -151,7 +158,7 @@
             "title_font_color": "#000000",
             "subtitle": "Adaptogenic Compound of Wheat Bran Extract and Chinese Camelia Oil",
             "subtitle_font_color": "#000000",
-            "image": "shopify://shop_images/wheat-bran-camiela-oil.png",
+            "image": "shopify:\/\/shop_images\/wheat-bran-camiela-oil.png",
             "ingredient_type": "Active",
             "is_active": true,
             "tag_font_color": "#ffffff",
@@ -181,13 +188,15 @@
       "type": "apps",
       "blocks": {
         "a273adee-f006-4ca8-9275-e7b2b0db7ebe": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         }
       },
-      "block_order": ["a273adee-f006-4ca8-9275-e7b2b0db7ebe"],
+      "block_order": [
+        "a273adee-f006-4ca8-9275-e7b2b0db7ebe"
+      ],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,

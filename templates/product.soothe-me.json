@@ -27,7 +27,7 @@
           }
         },
         "dd2cdc62-71f6-4bf4-91f2-8b95665432ee": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -48,7 +48,7 @@
           "settings": {}
         },
         "734c0c5f-1ad3-4318-8f1e-4b6d7270f07b": {
-          "type": "shopify://apps/appstle-subscriptions-app/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "buy_buttons": {
@@ -68,7 +68,7 @@
             "show_below_gallery": true,
             "icon": "picto-love",
             "title": "Best For",
-            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -78,7 +78,7 @@
             "show_below_gallery": true,
             "icon": "picto-success",
             "title": "Key Benefit",
-            "content": "<p>{{ product.metafields.custom.key_benefit.value }}</p>",
+            "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
             "page": ""
           }
         },
@@ -88,7 +88,7 @@
             "show_below_gallery": true,
             "icon": "picto-user",
             "title": "How To Use",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
             "page": ""
           }
         }
@@ -131,7 +131,7 @@
             "title_font_color": "#2d2a26",
             "subtitle": "Antarctic Marine Extract",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify://shop_images/antartic-marine-extract_b5aebf9f-5a9c-4980-ad3b-959cc9c4c9e7.png",
+            "image": "shopify:\/\/shop_images\/antartic-marine-extract_b5aebf9f-5a9c-4980-ad3b-959cc9c4c9e7.png",
             "ingredient_type": "Active Ingredient",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -151,7 +151,7 @@
             "title_font_color": "#000000",
             "subtitle": "Camellia Senensis Leaf Extract",
             "subtitle_font_color": "#000000",
-            "image": "shopify://shop_images/camellia-sinensis-leaf-extract.png",
+            "image": "shopify:\/\/shop_images\/camellia-sinensis-leaf-extract.png",
             "ingredient_type": "Active Ingredient",
             "is_active": true,
             "tag_font_color": "#ffffff",
@@ -171,7 +171,7 @@
             "title_font_color": "#000000",
             "subtitle": "Mentha piperita",
             "subtitle_font_color": "#000000",
-            "image": "shopify://shop_images/peppermint-leaf-extract.png",
+            "image": "shopify:\/\/shop_images\/peppermint-leaf-extract.png",
             "ingredient_type": "Active Ingredient",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -202,13 +202,15 @@
       "type": "apps",
       "blocks": {
         "24dfe8f7-c432-45cf-a849-52570d9d720e": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         }
       },
-      "block_order": ["24dfe8f7-c432-45cf-a849-52570d9d720e"],
+      "block_order": [
+        "24dfe8f7-c432-45cf-a849-52570d9d720e"
+      ],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,

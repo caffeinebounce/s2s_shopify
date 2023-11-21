@@ -8,7 +8,7 @@
     "product_rating_color": "#968b83",
     "heading_font": "avenir_next_n7",
     "heading_text_transform": "uppercase",
-    "text_font": "avenir_next_n3",
+    "text_font": "nunito_sans_n4",
     "show_page_transition": false,
     "show_button_transition": true,
     "show_product_rating": true,
@@ -84,15 +84,17 @@
         "disabled": false,
         "settings": {}
       },
-      "4015264832934714879": {
-        "type": "shopify:\/\/apps\/ecomsend-popups\/blocks\/app\/a5670cf8-5705-4b01-ad9e-447033feae26",
+      "13768625480086291342": {
+        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": false,
         "settings": {}
       },
-      "13694372020385051692": {
-        "type": "shopify:\/\/apps\/analyzely-google-analytics-4\/blocks\/analyzely\/b3a3a697-6f42-4507-a5ae-c447f6da2c9d",
+      "14339172867238703359": {
+        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews_tab\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
-        "settings": {}
+        "settings": {
+          "product": ""
+        }
       }
     }
   },

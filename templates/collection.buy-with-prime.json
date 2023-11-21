@@ -8,50 +8,6 @@
       "type": "shogun-above",
       "settings": {}
     },
-    "c352ce10-24f1-47dd-aa85-aa099a2e3239": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16132781441212__c352ce10-24f1-47dd-aa85-aa099a2e3239-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BFCM_Shop_Banner_daadbcdb-cbff-415f-a3cb-472fa232372c.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16132781441212__c352ce10-24f1-47dd-aa85-aa099a2e3239-image-1"
-      ],
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": false,
-        "media_size": "auto",
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff"
-      }
-    },
     "collection-banner": {
       "type": "collection-banner",
       "disabled": true,
@@ -68,6 +24,51 @@
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 80
+      }
+    },
+    "3d96c629-dc19-43f1-9c9a-3269402cbd35": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16236789203132__3d96c629-dc19-43f1-9c9a-3269402cbd35-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BWP_Banner_Desktop.png",
+            "mobile_image": "shopify:\/\/shop_images\/BWP_Banner_Mobile.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-end sm:text-end",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "shopify:\/\/pages\/buy-with-prime-faq",
+            "button_1_style": "link",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16236789203132__3d96c629-dc19-43f1-9c9a-3269402cbd35-image-1"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "autoplay": false,
+        "autoplay_pause_on_video": false,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff"
       }
     },
     "main": {
@@ -90,6 +91,33 @@
         "show_filter_values_count": false,
         "show_color_swatch": false,
         "open_filters_by_default": false
+      }
+    },
+    "03d22b4b-d0e3-45ad-bc7d-05d4a956db51": {
+      "type": "rich-text",
+      "blocks": {
+        "085680ef-51d9-4882-8447-c948a40bb7fa": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "How Does Buy With Prime Work?",
+            "url": "shopify:\/\/pages\/buy-with-prime-faq",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "085680ef-51d9-4882-8447-c948a40bb7fa"
+      ],
+      "custom_css": [
+        ".container {padding: 5%;}"
+      ],
+      "settings": {
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true
       }
     },
     "recently-viewed-products": {
@@ -116,9 +144,10 @@
   "order": [
     "shogun-helper",
     "shogun-above",
-    "c352ce10-24f1-47dd-aa85-aa099a2e3239",
     "collection-banner",
+    "3d96c629-dc19-43f1-9c9a-3269402cbd35",
     "main",
+    "03d22b4b-d0e3-45ad-bc7d-05d4a956db51",
     "recently-viewed-products",
     "shogun-below"
   ]

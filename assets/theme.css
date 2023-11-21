@@ -48,16 +48,65 @@
   font-family: var(--text-font-style) var(--text-font-family) !important;
 }
 
-/* buy button spacing override */
-.buy-buttons {
-  row-gap: 2px !important;
-}
-
 /* dropdown menu clean up */
 .header__dropdown-menu :is(a,summary) {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
+}
+
+/* Add this CSS to your theme's stylesheet */
+.limited-time-deal-container {
+    text-align: left; /* Center the text */
+    padding: 5px; /* Add some padding around the text */
+}
+
+.limited-time-deal {
+    display: inline-block;
+    background-color: #de0034; /* Red background */
+    color: white; /* White text */
+    padding: 5px 10px; /* Add some padding inside the red box */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+.deal-info {
+    font-size: 0.8em; /* Set the font size for the deal info */
+    font-weight: 600; /* Make the deal info text bold */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: left; /* Center the content horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.buy-with-prime-logo {
+    margin-left: 5px; /* Add space between text and logo */
+    height: 24px; /* Set the logo size */
+    vertical-align: middle; /* Align the logo vertically with the text */
+}
+
+.logo-section {
+  text-align: left;
+}
+
+.best-for-container {
+  display: flex;
+  align-items: center; /* This will vertically center the text with the logos */
+  gap: 10px; /* Adjust the space between the text and logos as needed */
+}
+
+.best-for-container h6 {
+  margin: 0; /* Removes default margin from h6 */
+  /* Additional styling for h6 if needed */
+}
+
+.logo-thumbnails {
+  display: flex;
+  gap: 20px; /* Space between logos */
+}
+
+.logo-thumbnails img {
+  max-width: 75px; /* Maximum width of each logo */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Doug's additions end */

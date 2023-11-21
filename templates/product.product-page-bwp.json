@@ -1,0 +1,166 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "db357489-faed-409c-af58-3c76a6edb3ec": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "c6198b5a-ef2d-476b-8f74-f55e60432981": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "d687d06d-63ac-4d98-b899-64a6c48a1cad": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "3cc50d3f-6984-4d4e-93b5-80bb3d6e8907": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "36830a27-2772-4a00-a1bd-98f69ac6cd76": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-love",
+            "title": "Best For",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "75b05d2a-6c2b-46a1-a6df-a9e516fd71b0": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-success",
+            "title": "Key Benefit",
+            "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
+            "page": ""
+          }
+        },
+        "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-happy-face",
+            "title": "Ingredients",
+            "content": "{{ product.metafields.custom.ingredient_list | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "ab375b75-f6d4-46de-a935-1fc021d1a997": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-user",
+            "title": "How To Use",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "25a671b7-1239-49f7-aecc-164ba5182199": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "db357489-faed-409c-af58-3c76a6edb3ec",
+        "c6198b5a-ef2d-476b-8f74-f55e60432981",
+        "d687d06d-63ac-4d98-b899-64a6c48a1cad",
+        "3cc50d3f-6984-4d4e-93b5-80bb3d6e8907",
+        "36830a27-2772-4a00-a1bd-98f69ac6cd76",
+        "75b05d2a-6c2b-46a1-a6df-a9e516fd71b0",
+        "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31",
+        "ab375b75-f6d4-46de-a935-1fc021d1a997",
+        "quantity_selector",
+        "25a671b7-1239-49f7-aecc-164ba5182199",
+        "buy_buttons",
+        "share_buttons"
+      ],
+      "settings": {
+        "container_size": "lg",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid_2x_highlighted",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "16857359762140f085": {
+      "type": "apps",
+      "blocks": {
+        "7fa833f5-2555-4528-9b0e-90e15825987d": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "7fa833f5-2555-4528-9b0e-90e15825987d"
+      ],
+      "settings": {
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Recently viewed",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16857359762140f085",
+    "recently-viewed-products"
+  ]
+}

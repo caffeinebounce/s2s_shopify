@@ -13,12 +13,6 @@
             "heading_tag": "h3"
           }
         },
-        "861d0a09-885c-4712-bf67-622dab811bf7": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"logo-section\">\n  <div class=\"best-for-container\">\n    <h6 class='h6'>Best For<\/h6>\n    <div class=\"logo-thumbnails\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/wavy.png?v=1700525001\" alt=\"Wavy Hair Logo\" \/>\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/curly.png?v=1700525001\" alt=\"Curly Hair Logo\" \/>\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/very-curly.png?v=1700525001\" alt=\"Very Curly Hair Logo\" \/>\n    <\/div>\n  <\/div>\n<\/div>"
-          }
-        },
         "c6198b5a-ef2d-476b-8f74-f55e60432981": {
           "type": "description",
           "settings": {
@@ -32,7 +26,7 @@
             "show_taxes_notice": false
           }
         },
-        "378b547c-0e9a-474e-b6bd-c2f316acfa1b": {
+        "d393ec93-f9e2-460f-a32a-c6ae9ce44667": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
@@ -53,7 +47,13 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "8394ac3d-cf11-4b78-8c8d-469eb52c39df": {
+        "d86b7654-ffda-4f4e-8e59-003cde9f3295": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
+          }
+        },
+        "8b23db0b-b53d-4932-bdaf-100a9ed9b9d7": {
           "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
@@ -66,6 +66,16 @@
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
+          }
+        },
+        "36830a27-2772-4a00-a1bd-98f69ac6cd76": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "picto-love",
+            "title": "Best For",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "page": ""
           }
         },
         "75b05d2a-6c2b-46a1-a6df-a9e516fd71b0": {
@@ -92,14 +102,15 @@
       "block_order": [
         "share_buttons",
         "db357489-faed-409c-af58-3c76a6edb3ec",
-        "861d0a09-885c-4712-bf67-622dab811bf7",
         "c6198b5a-ef2d-476b-8f74-f55e60432981",
         "d687d06d-63ac-4d98-b899-64a6c48a1cad",
-        "378b547c-0e9a-474e-b6bd-c2f316acfa1b",
+        "d393ec93-f9e2-460f-a32a-c6ae9ce44667",
         "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31",
         "quantity_selector",
-        "8394ac3d-cf11-4b78-8c8d-469eb52c39df",
+        "d86b7654-ffda-4f4e-8e59-003cde9f3295",
+        "8b23db0b-b53d-4932-bdaf-100a9ed9b9d7",
         "buy_buttons",
+        "36830a27-2772-4a00-a1bd-98f69ac6cd76",
         "75b05d2a-6c2b-46a1-a6df-a9e516fd71b0",
         "ab375b75-f6d4-46de-a935-1fc021d1a997"
       ],
@@ -123,11 +134,11 @@
         "ccaf7208-857a-4253-a189-67ce7d20028b": {
           "type": "ingredient_card",
           "settings": {
-            "title": "Seascalp",
+            "title": "Banana Extract",
             "title_font_color": "#2d2a26",
-            "subtitle": "Antarctic Marine Extract",
+            "subtitle": "Musa Spp",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify:\/\/shop_images\/antartic-marine-extract_b5aebf9f-5a9c-4980-ad3b-959cc9c4c9e7.png",
+            "image": "shopify:\/\/shop_images\/banana-extract_bdd9ebc1-b8c6-47ee-9981-4f6d81ef9910.png",
             "ingredient_type": "Active",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -136,55 +147,13 @@
             "more_info_button_color": "#ffffff",
             "background_color": "#f4efe3",
             "how_much": "",
-            "why_included": "We use Seascalp, derived from Antarctic sea plants, for its ability to soothe the scalp, reduce dandruff, and protect hair from environmental damage with its antioxidants.",
-            "what_it_does": "Seascalp balances scalp oil production, reduces dandruff, and shields hair from pollution, promoting a healthier and more vibrant appearance."
-          }
-        },
-        "5b25ab81-bf1a-48d4-b4fd-fee5c05e604f": {
-          "type": "ingredient_card",
-          "settings": {
-            "title": "Mushroom Extract",
-            "title_font_color": "#000000",
-            "subtitle": "Actisoothe Himalayan Mushroom Extract",
-            "subtitle_font_color": "#000000",
-            "image": "shopify:\/\/shop_images\/himalayan-mushroom-extract.png",
-            "ingredient_type": "Active",
-            "is_active": true,
-            "tag_font_color": "#ffffff",
-            "active_tag_font_color": "#246f16",
-            "more_info": "",
-            "more_info_button_color": "#ffffff",
-            "background_color": "#f4efe3",
-            "how_much": "",
-            "why_included": "Himalayan Mushroom Extract includes a rich blend of nutrients that provide exceptional calming effects to the scalp and have properties that strengthen hair roots.",
-            "what_it_does": "Himalayan Mushroom Extract can provide antioxidant and immunomodulatory properties, downregulate enzyme gene expression for an anti-inflammatory response, protect the scalp with a reduction in skin redness and flakiness after UV exposure, and lower skin irritant reactivity providing long-term soothing."
-          }
-        },
-        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f": {
-          "type": "ingredient_card",
-          "settings": {
-            "title": "Bran Extract",
-            "title_font_color": "#000000",
-            "subtitle": "Actiguard Bran Extract",
-            "subtitle_font_color": "#000000",
-            "image": "shopify:\/\/shop_images\/bran-extract.png",
-            "ingredient_type": "Active",
-            "is_active": true,
-            "tag_font_color": "#2d2a26",
-            "active_tag_font_color": "#246f16",
-            "more_info": "",
-            "more_info_button_color": "#ffffff",
-            "background_color": "#f4efe3",
-            "how_much": "",
-            "why_included": "Actiguard Bran Extract is added for its nutritional richness and anti-inflammatory properties, which are essential for the hair and scalp’s health.",
-            "what_it_does": "It nourishes the hair, alleviates scalp irritation, and protects hair from environmental stressors, improving hair health and appearance."
+            "why_included": "Banana Extract is packed with essential nutrients such as Vitamin B6 and antioxidants. Vitamin B6 is vital for hair health, as it helps prevent hair breakage by strengthening the hair shaft. It also moisturizes and protects the scalp.",
+            "what_it_does": "This extract deeply nourishes and hydrates the skin and hair. The combination of potassium, natural oils, and Vitamin B6 in bananas results in smoother, softer skin, and stronger, shinier hair. It minimizes hair breakage and has soothing properties that calm sensitive and irritated skin."
           }
         }
       },
       "block_order": [
-        "ccaf7208-857a-4253-a189-67ce7d20028b",
-        "5b25ab81-bf1a-48d4-b4fd-fee5c05e604f",
-        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f"
+        "ccaf7208-857a-4253-a189-67ce7d20028b"
       ],
       "settings": {
         "show_divider": false,
@@ -197,7 +166,7 @@
     "16857359762140f085": {
       "type": "apps",
       "blocks": {
-        "f04a9129-6bb0-4330-b401-038549fe2c2f": {
+        "159fc5db-3707-4b09-b16c-151b44159701": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
@@ -205,7 +174,7 @@
         }
       },
       "block_order": [
-        "f04a9129-6bb0-4330-b401-038549fe2c2f"
+        "159fc5db-3707-4b09-b16c-151b44159701"
       ],
       "settings": {
         "separate_section_with_border": false,

@@ -56,13 +56,13 @@
         },
         "17becc6b-ad72-4931-9fd0-aab7538d029f": {
           "type": "liquid",
-          "disabled": true,
           "settings": {
             "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 40% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
           }
         },
         "f4a5d2f1-6cd5-4f77-83f9-2b10e8d3dbef": {
           "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
           "settings": {}
         },
         "36830a27-2772-4a00-a1bd-98f69ac6cd76": {

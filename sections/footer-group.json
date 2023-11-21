@@ -5,19 +5,17 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "text",
-          "disabled": true,
+        "83f5ce2f-9bed-4d7e-8052-d22d08391fdd": {
+          "type": "links",
           "settings": {
-            "title": "About the shop",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
-            "enable_follow_on_shop": true
+            "menu": "footer",
+            "show_menu_title": true
           }
         },
         "footer-1": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "work-with-us",
             "show_menu_title": true
           }
         },
@@ -36,13 +34,22 @@
             "button_background": "",
             "button_text_color": ""
           }
+        },
+        "footer-0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "content": "",
+            "enable_follow_on_shop": true
+          }
         }
       },
       "block_order": [
-        "footer-0",
+        "83f5ce2f-9bed-4d7e-8052-d22d08391fdd",
         "footer-1",
         "11bcdb32-2ca7-4e64-b3b6-05958825fc12",
-        "footer-2"
+        "footer-2",
+        "footer-0"
       ],
       "settings": {
         "separate_section_with_border": false,

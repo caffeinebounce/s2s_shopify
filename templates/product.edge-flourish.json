@@ -27,7 +27,7 @@
           }
         },
         "d393ec93-f9e2-460f-a32a-c6ae9ce44667": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -48,7 +48,7 @@
           "settings": {}
         },
         "8b23db0b-b53d-4932-bdaf-100a9ed9b9d7": {
-          "type": "shopify://apps/appstle-subscriptions-app/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "buy_buttons": {
@@ -68,7 +68,7 @@
             "show_below_gallery": true,
             "icon": "picto-love",
             "title": "Best For",
-            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -78,7 +78,7 @@
             "show_below_gallery": true,
             "icon": "picto-success",
             "title": "Key Benefit",
-            "content": "<p>{{ product.metafields.custom.key_benefit.value }}</p>",
+            "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
             "page": ""
           }
         },
@@ -88,7 +88,7 @@
             "show_below_gallery": true,
             "icon": "picto-user",
             "title": "How To Use",
-            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
             "page": ""
           }
         }
@@ -131,7 +131,7 @@
             "title_font_color": "#2d2a26",
             "subtitle": "Musa Spp",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify://shop_images/banana-extract_bdd9ebc1-b8c6-47ee-9981-4f6d81ef9910.png",
+            "image": "shopify:\/\/shop_images\/banana-extract_bdd9ebc1-b8c6-47ee-9981-4f6d81ef9910.png",
             "ingredient_type": "Active",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -145,7 +145,9 @@
           }
         }
       },
-      "block_order": ["ccaf7208-857a-4253-a189-67ce7d20028b"],
+      "block_order": [
+        "ccaf7208-857a-4253-a189-67ce7d20028b"
+      ],
       "settings": {
         "show_divider": false,
         "remove_vertical_spacing": true,
@@ -154,18 +156,19 @@
         "section_subhead": "Always"
       }
     },
-
     "16857359762140f085": {
       "type": "apps",
       "blocks": {
         "159fc5db-3707-4b09-b16c-151b44159701": {
-          "type": "shopify://apps/yotpo-product-photo-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         }
       },
-      "block_order": ["159fc5db-3707-4b09-b16c-151b44159701"],
+      "block_order": [
+        "159fc5db-3707-4b09-b16c-151b44159701"
+      ],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,

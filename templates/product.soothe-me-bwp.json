@@ -26,17 +26,10 @@
             "show_taxes_notice": false
           }
         },
-        "31e134ec-6767-489d-8072-5c2eef414192": {
+        "dd2cdc62-71f6-4bf4-91f2-8b95665432ee": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
-          }
-        },
-        "89b035da-fb8c-498f-8ece-93c547eef4fc": {
-          "type": "liquid",
-          "disabled": true,
-          "settings": {
-            "liquid": "{% if product.sku %}\n    <div\n        id=\"amzn-roa-rating\"\n        data-site-id=\"19o12abjdd\"\n        data-roa-instance-id=\"zkhj91mk47n31\"\n        data-sku=\"{{product.sku}}\"\n    ><\/div>\n{% else %}\n    <div\n        id=\"amzn-roa-rating\"\n        data-site-id=\"19o12abjdd\"\n        data-roa-instance-id=\"zkhj91mk47n31\"\n        data-sku=\"{{product.selected_or_first_available_variant.sku}}\">\n    <\/div>\n{% endif %}"
           }
         },
         "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31": {
@@ -54,16 +47,26 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "17becc6b-ad72-4931-9fd0-aab7538d029f": {
+        "923c325e-31c0-4729-8119-9feb895b97cf": {
           "type": "liquid",
-          "disabled": true,
           "settings": {
-            "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 40% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
+            "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
           }
         },
-        "f4a5d2f1-6cd5-4f77-83f9-2b10e8d3dbef": {
+        "734c0c5f-1ad3-4318-8f1e-4b6d7270f07b": {
           "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
         },
         "36830a27-2772-4a00-a1bd-98f69ac6cd76": {
           "type": "accordion",
@@ -94,21 +97,6 @@
             "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
             "page": ""
           }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "8d5578d9-c87e-410f-8246-af1fa591279f": {
-          "type": "payment_terms",
-          "settings": {}
         }
       },
       "block_order": [
@@ -116,17 +104,15 @@
         "db357489-faed-409c-af58-3c76a6edb3ec",
         "c6198b5a-ef2d-476b-8f74-f55e60432981",
         "d687d06d-63ac-4d98-b899-64a6c48a1cad",
-        "31e134ec-6767-489d-8072-5c2eef414192",
-        "89b035da-fb8c-498f-8ece-93c547eef4fc",
+        "dd2cdc62-71f6-4bf4-91f2-8b95665432ee",
         "ec6f4fe8-f7b1-4677-930a-20b8ebcd2c31",
         "quantity_selector",
-        "17becc6b-ad72-4931-9fd0-aab7538d029f",
-        "f4a5d2f1-6cd5-4f77-83f9-2b10e8d3dbef",
+        "923c325e-31c0-4729-8119-9feb895b97cf",
+        "734c0c5f-1ad3-4318-8f1e-4b6d7270f07b",
+        "buy_buttons",
         "36830a27-2772-4a00-a1bd-98f69ac6cd76",
         "75b05d2a-6c2b-46a1-a6df-a9e516fd71b0",
-        "ab375b75-f6d4-46de-a935-1fc021d1a997",
-        "buy_buttons",
-        "8d5578d9-c87e-410f-8246-af1fa591279f"
+        "ab375b75-f6d4-46de-a935-1fc021d1a997"
       ],
       "settings": {
         "container_size": "xl",
@@ -142,49 +128,17 @@
         "max_image_zoom_level": 3
       }
     },
-    "881df6d9-a3d4-4379-85c4-6590fb45a772": {
-      "type": "video",
-      "blocks": {
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-play-1": {
-          "type": "play",
-          "settings": {
-            "icon_color": "#ffffff"
-          }
-        },
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-heading-1": {
-          "type": "heading",
-          "settings": {
-            "text": "What is Root Refresh?",
-            "heading_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-play-1",
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-heading-1"
-      ],
-      "custom_css": [],
-      "settings": {
-        "autoplay": false,
-        "show_controls": true,
-        "video_size": "sm",
-        "video": "shopify:\/\/files\/videos\/root-refresh-pdp.mp4",
-        "external_video_url": "",
-        "poster": "shopify:\/\/shop_images\/root-refresh-ingredients-banner-product-pdp_c3dec27f-6082-401d-b1ba-da165f5a9de1.png",
-        "text_color": "#303030"
-      }
-    },
     "ingredient-grid": {
       "type": "ingredient-grid",
       "blocks": {
         "ccaf7208-857a-4253-a189-67ce7d20028b": {
           "type": "ingredient_card",
           "settings": {
-            "title": "Micellar Water",
+            "title": "Seascalp",
             "title_font_color": "#2d2a26",
-            "subtitle": "Allantoin",
+            "subtitle": "Antarctic Marine Extract",
             "subtitle_font_color": "#2d2a26",
-            "image": "shopify:\/\/shop_images\/allantoin.png",
+            "image": "shopify:\/\/shop_images\/antartic-marine-extract_b5aebf9f-5a9c-4980-ad3b-959cc9c4c9e7.png",
             "ingredient_type": "Active Ingredient",
             "is_active": true,
             "tag_font_color": "#2d2a26",
@@ -193,31 +147,11 @@
             "more_info_button_color": "#ffffff",
             "background_color": "#f4efe3",
             "how_much": "",
-            "why_included": "Micellar Water effectively cleanses the scalp and hair without stripping away natural oils. Its gentle properties make it perfect for all hair types, including sensitive and color-treated hair.",
-            "what_it_does": "Micellar Water attracts and lifts dirt, oils, and impurities from the hair and scalp, leaving it refreshed and hydrated. Its mild cleansing action helps maintain the hair’s natural pH balance and promotes a healthier scalp."
+            "why_included": "We use Seascalp, derived from Antarctic sea plants, for its ability to soothe the scalp, reduce dandruff, and protect hair from environmental damage with its antioxidants.",
+            "what_it_does": "Seascalp balances scalp oil production, reduces dandruff, and shields hair from pollution, promoting a healthier and more vibrant appearance."
           }
         },
         "5b25ab81-bf1a-48d4-b4fd-fee5c05e604f": {
-          "type": "ingredient_card",
-          "settings": {
-            "title": "Myrrh Extract",
-            "title_font_color": "#000000",
-            "subtitle": "Commiphora Myrrha Resin Extract",
-            "subtitle_font_color": "#000000",
-            "image": "shopify:\/\/shop_images\/myrrh.png",
-            "ingredient_type": "Active Ingredient",
-            "is_active": true,
-            "tag_font_color": "#ffffff",
-            "active_tag_font_color": "#246f16",
-            "more_info": "",
-            "more_info_button_color": "#ffffff",
-            "background_color": "#f4efe3",
-            "how_much": "",
-            "why_included": "Myrrh Extract has powerful antiseptic and anti-inflammatory properties, which are essential for maintaining a healthy scalp. Myrrh also imparts a natural shine and smoothness to hair.",
-            "what_it_does": "Myrrh Extract helps in treating scalp irritations and dandruff, providing relief from itchiness. It also strengthens the hair, making it less prone to breakage, and leaves it looking lustrous and feeling silky smooth."
-          }
-        },
-        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f": {
           "type": "ingredient_card",
           "settings": {
             "title": "Green Tea Extract",
@@ -227,7 +161,7 @@
             "image": "shopify:\/\/shop_images\/camellia-sinensis-leaf-extract.png",
             "ingredient_type": "Active Ingredient",
             "is_active": true,
-            "tag_font_color": "#2d2a26",
+            "tag_font_color": "#ffffff",
             "active_tag_font_color": "#246f16",
             "more_info": "",
             "more_info_button_color": "#ffffff",
@@ -237,36 +171,35 @@
             "what_it_does": "Green Tea Extract helps to strengthen hair follicles and encourage hair growth by promoting blood circulation to the scalp. It also aids in shielding the hair and scalp from damage due to UV rays and pollution, thus maintaining hair health."
           }
         },
-        "d35f16ab-3910-465d-9eca-a9d4b722a7f5": {
+        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f": {
           "type": "ingredient_card",
           "settings": {
-            "title": "Apple Cider Vinegar",
+            "title": "Peppermint Leaf Extract",
             "title_font_color": "#000000",
-            "subtitle": "Vinegar (Acetum)",
+            "subtitle": "Mentha piperita",
             "subtitle_font_color": "#000000",
-            "image": "shopify:\/\/shop_images\/apple-cider-vinegar.png",
-            "ingredient_type": "pH Modifier",
-            "is_active": false,
+            "image": "shopify:\/\/shop_images\/peppermint-leaf-extract.png",
+            "ingredient_type": "Active Ingredient",
+            "is_active": true,
             "tag_font_color": "#2d2a26",
             "active_tag_font_color": "#246f16",
             "more_info": "",
             "more_info_button_color": "#ffffff",
             "background_color": "#f4efe3",
             "how_much": "",
-            "why_included": "Apple Cider Vinegar helps to balance the pH levels of the scalp and hair. It’s also excellent for removing product build-up and adding shine to the hair.",
-            "what_it_does": "Apple Cider Vinegar clarifies and cleanses the scalp, reducing dandruff and promoting healthier hair growth. It also smoothens the hair cuticle, which helps to detangle and give the hair a natural shine."
+            "why_included": "We use Peppermint Leaf Extract for its invigorating scent and ability to stimulate the scalp.",
+            "what_it_does": "Peppermint Oil may inhibit enzyme activity, helping to reduce sebum secretion and control oily skin. Containing menthol, Peppermint Oil helps dilate blood vessels, causing a cooling sensation. Menthol, zinc, and selenium contribute anti-flaking properties."
           }
         }
       },
       "block_order": [
         "ccaf7208-857a-4253-a189-67ce7d20028b",
         "5b25ab81-bf1a-48d4-b4fd-fee5c05e604f",
-        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f",
-        "d35f16ab-3910-465d-9eca-a9d4b722a7f5"
+        "97a63504-5fb9-4e6c-949d-6bb3b8aaa47f"
       ],
       "settings": {
-        "show_divider": true,
-        "remove_vertical_spacing": false,
+        "show_divider": false,
+        "remove_vertical_spacing": true,
         "section_width": "large",
         "section_title": "Clean Ingredients",
         "section_subhead": "Always"
@@ -275,7 +208,7 @@
     "16857359762140f085": {
       "type": "apps",
       "blocks": {
-        "3faa0794-e0bb-44ee-96f8-8278067c0410": {
+        "24dfe8f7-c432-45cf-a849-52570d9d720e": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
@@ -283,23 +216,12 @@
         }
       },
       "block_order": [
-        "3faa0794-e0bb-44ee-96f8-8278067c0410"
+        "24dfe8f7-c432-45cf-a849-52570d9d720e"
       ],
       "settings": {
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
-      }
-    },
-    "81e51ff5-e6ae-4706-b08a-132050b81eca": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": false,
-        "liquid": "{% if product.sku %}\n    <div\n        id=\"amzn-roa-reviews\"\n        data-site-id=\"19o12abjdd\"\n        data-roa-instance-id=\"zkhj91mk47n31\"\n        data-sku=\"{{product.sku}}\"\n    ><\/div>\n{% else %}\n    <div\n        id=\"amzn-roa-reviews\"\n        data-site-id=\"19o12abjdd\"\n        data-roa-instance-id=\"zkhj91mk47n31\"\n        data-sku=\"{{product.selected_or_first_available_variant.sku}}\">\n    <\/div>\n{% endif %}",
-        "text_alignment": "center"
       }
     },
     "recently-viewed-products": {
@@ -321,10 +243,8 @@
   },
   "order": [
     "main",
-    "881df6d9-a3d4-4379-85c4-6590fb45a772",
     "ingredient-grid",
     "16857359762140f085",
-    "81e51ff5-e6ae-4706-b08a-132050b81eca",
     "recently-viewed-products"
   ]
 }

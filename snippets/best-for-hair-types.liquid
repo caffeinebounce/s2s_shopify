@@ -3,8 +3,20 @@
     <h6 class='h6'>Best For</h6>
     <div class="logo-thumbnails">
       <img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/wavy.png?v=1700525001" alt="Wavy Hair Logo" />
-      <img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/curly.png?v=1700525001" alt="Curly Hair Logo" />
-      <img src="https://cdn.shopify.com/s/files/1/0318/7238/5161/files/very-curly.png?v=1700525001" alt="Very Curly Hair Logo" />
+      <img src="" alt="Curly Hair Logo" />
+      <img src="" alt="Very Curly Hair Logo" />
+      {% if block.settings.show_type_1 %}
+  <img src="{{ 'https://cdn.shopify.com/s/files/1/0318/7238/5161/files/straight.png?v=1700525001' | file_img_url: 'master' }}" alt="Type 1 Straight Hair" />
+{% endif %}
+{% if block.settings.show_type_2 %}
+  <img src="{{ 'https://cdn.shopify.com/s/files/1/0318/7238/5161/files/wavy.png?v=1700525001' | file_img_url: 'master' }}" alt="Type 2 Wavy Hair" />
+{% endif %}
+{% if block.settings.show_type_3 %}
+  <img src="{{ 'https://cdn.shopify.com/s/files/1/0318/7238/5161/files/curly.png?v=1700525001' | file_img_url: 'master' }}" alt="Type 3 Curly Hair" />
+{% endif %}
+{% if block.settings.show_type_4 %}
+  <img src="{{ 'https://cdn.shopify.com/s/files/1/0318/7238/5161/files/very-curly.png?v=1700525001' | file_img_url: 'master' }}" alt="Type 4 Very Curly Hair" />
+{% endif %}
     </div>
   </div>
 </div>

@@ -36,7 +36,6 @@ This file can be re-written at any time.
 
     {%- comment -%}Few prefetch to increase performance on commonly used third-parties{%- endcomment -%}
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
 
     {%- unless settings.heading_font.system? -%}
       <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
@@ -55,7 +54,15 @@ This file can be re-written at any time.
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
 
-    <script async src="{{ 'es-module-shims.min.js' | asset_url }}"></script>
+    <script>
+      if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('importmap'))) {
+        const importMapPolyfill = document.createElement('script');
+        importMapPolyfill.async = true;
+        importMapPolyfill.src = "{{ 'es-module-shims.min.js' | asset_url }}";
+
+        document.head.appendChild(importMapPolyfill);
+      }
+    </script>
 
     <script type="importmap">
       {%- comment -%}On Safari 16.3 and lower, a polyfill is used to load importmap{%- endcomment -%}
@@ -120,4 +127,6 @@ This file can be re-written at any time.
   
 </body>
 
+ 
 </html>
+

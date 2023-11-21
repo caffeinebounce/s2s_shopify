@@ -122,7 +122,7 @@
         "ab375b75-f6d4-46de-a935-1fc021d1a997"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "container_size": "xl",
         "product_info_size": 50,
         "show_sticky_add_to_cart": true,
@@ -151,11 +151,11 @@
             "is_active": true,
             "tag_font_color": "#2d2a26",
             "active_tag_font_color": "#246f16",
-            "more_info": "<p>Teofndskfdskvcsvkosd vsd<\/p>",
+            "more_info": "",
             "more_info_button_color": "#ffffff",
             "background_color": "#f4efe3",
             "how_much": "",
-            "why_included": "The Native-African 7-Oil Blend includes a treasure trove of essential fatty acids and antioxidants. This rich combination of oils has been used by African communities for centuries for its nourishing properties. The blend is known to deeply moisturize the skin, promote a youthful appearance, and protect against environmental stressors.",
+            "why_included": "The Native-African 7-Oil Blend includes a treasure trove of essential fatty acids and antioxidants. This rich combination of oils has been used by African communities for centuries for its nourishing properties.",
             "what_it_does": "Native-African 7-Oil Blend is highly moisturizing and conditioning, making it excellent for both skin and hair. It helps to restore the skin's moisture barrier, leading to smoother, more supple skin. The antioxidants in the blend protect the skin from free radicals, thereby reducing signs of aging."
           }
         },

@@ -23,6 +23,7 @@
         "05d455cc-340f-4d09-94cb-88a549133075"
       ],
       "settings": {
+        "color_scheme": "",
         "enable_sticky": false,
         "autoplay": true,
         "cycle_speed": 5,
@@ -37,6 +38,7 @@
         ".header__primary-nav-item:first-child:hover {background-color: #000000; color: #f0f0f0;}"
       ],
       "settings": {
+        "color_scheme": "scheme-1",
         "enable_sticky": true,
         "show_separation_border": true,
         "reduce_padding": true,
@@ -47,6 +49,7 @@
         "sidebar_menu": "",
         "menu_open_trigger": "click",
         "enable_search": true,
+        "sidebar_color_scheme": "",
         "sidebar_text_font": "heading",
         "sidebar_show_dividers": true,
         "layout": "logo_center_navigation_below",

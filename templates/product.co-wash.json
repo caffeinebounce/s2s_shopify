@@ -216,7 +216,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 9,

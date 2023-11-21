@@ -29,7 +29,6 @@
 
     {%- comment -%}Few prefetch to increase performance on commonly used third-parties{%- endcomment -%}
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
 
     {%- unless settings.heading_font.system? -%}
       <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
@@ -48,7 +47,15 @@
       <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
 
-    <script async src="{{ 'es-module-shims.min.js' | asset_url }}"></script>
+    <script>
+      if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('importmap'))) {
+        const importMapPolyfill = document.createElement('script');
+        importMapPolyfill.async = true;
+        importMapPolyfill.src = "{{ 'es-module-shims.min.js' | asset_url }}";
+
+        document.head.appendChild(importMapPolyfill);
+      }
+    </script>
 
     <script type="importmap">
       {%- comment -%}On Safari 16.3 and lower, a polyfill is used to load importmap{%- endcomment -%}
@@ -111,13 +118,17 @@
 
     <main id="main" class="anchor">
       {{ content_for_layout }}
+
+      {%- comment -%}
+      IMPLEMENTATION NOTE: For best semantics, having the footer group outside the main would be slightly better, but
+        moving it inside the main allows to have all the sections (including sections inside the footer group) to be
+        consecutive, and hence having a cleaner margin collapsing management.
+      {%- endcomment -%}
+      {%- if request.page_type != 'password' -%}
+        {%- sections 'footer-group' -%}
+      {%- endif -%}
     </main>
-
-    {%- if request.page_type != 'password' -%}
-      {%- sections 'footer-group' -%}
-    {%- endif -%}
-
-    <script>
+     <script>
       function openModal(modalId) {
         document.getElementById(modalId).style.display = "block";
       }
@@ -126,5 +137,6 @@
         document.getElementById(modalId).style.display = "none";
       }
     </script>
-  {% render 'automizely-recommendations' %}</body>
+  </body>
+ 
 </html>

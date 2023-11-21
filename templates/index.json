@@ -314,10 +314,7 @@
             "text": "Before",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "outline",
-            "text_color": "#000000",
-            "button_background": "#000000",
-            "button_text_color": "#1c1c1c"
+            "link_style": "outline"
           }
         },
         "template--16132781473980__0c8df06b-8ffa-4480-9b46-a5bebebaf217-after-1": {
@@ -328,10 +325,7 @@
             "text": "After",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "link",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#1c1c1c"
+            "link_style": "link"
           }
         }
       },
@@ -361,10 +355,7 @@
             "text": "Before",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "outline",
-            "text_color": "#000000",
-            "button_background": "#000000",
-            "button_text_color": "#1c1c1c"
+            "link_style": "outline"
           }
         },
         "9832a2a6-fd54-4b71-ae19-f4549f832cf1": {
@@ -375,10 +366,7 @@
             "text": "After",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "link",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#1c1c1c"
+            "link_style": "link"
           }
         }
       },
@@ -408,10 +396,7 @@
             "text": "Before",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "outline",
-            "text_color": "#000000",
-            "button_background": "#000000",
-            "button_text_color": "#1c1c1c"
+            "link_style": "outline"
           }
         },
         "344ecfb2-f59e-4c25-a637-5f5a9d8333e9": {
@@ -422,10 +407,7 @@
             "text": "After",
             "link_text": "",
             "link_url": "shopify:\/\/collections\/all",
-            "link_style": "link",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#1c1c1c"
+            "link_style": "link"
           }
         }
       },
@@ -666,9 +648,7 @@
         "font_size_factor": 0.8,
         "subheading": "Verified Testimonials",
         "title": "What People Are Saying",
-        "content": "",
-        "background": "#53575a",
-        "text_color": "#ffffff"
+        "content": ""
       }
     },
     "e2bb1e0c-3c91-4478-9222-e9adf81d3b33": {
@@ -687,9 +667,6 @@
             "link_url": "shopify:\/\/collections\/hair-kit-collection",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 20
           }
@@ -707,9 +684,6 @@
             "link_url": "shopify:\/\/collections\/wash-day-kit",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "rgba(0,0,0,0)",
-            "button_text_color": "#1c1c1c",
             "overlay_color": "#000000",
             "overlay_opacity": 20
           }
@@ -727,9 +701,6 @@
             "link_url": "shopify:\/\/collections\/signature-travel-post-gym-hair-collection",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 20
           }
@@ -749,9 +720,7 @@
         "spacing": "sm",
         "subheading": "",
         "title": "",
-        "content": "",
-        "background": "",
-        "text_color": ""
+        "content": ""
       }
     },
     "16414887070d2f660b": {

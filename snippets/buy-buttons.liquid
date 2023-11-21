@@ -22,6 +22,13 @@ Supported variables
 {%- if product != blank -%}
   {%- assign variant_picker_block = section.blocks | where: 'type', 'variant_picker' | first -%}
 
+  {%- assign recipient_feature_active = false -%}
+
+  {%- if product.gift_card? and show_gift_card_recipient -%}
+    {%- assign recipient_feature_active = true -%}
+    {%- assign show_payment_button = false -%}
+  {%- endif -%}
+
   {%- form 'product', product, is: 'product-form', id: form_id -%}
     <input type="hidden" {% if variant_picker_block != blank %}disabled{% endif %} name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
@@ -41,7 +48,7 @@ Supported variables
     %}
 
     <div class="v-stack gap-4">
-      {%- if product.gift_card? and show_gift_card_recipient -%}
+      {%- if recipient_feature_active -%}
         <gift-card-recipient class="gift-card-recipient v-stack gap-3">
           {%- assign checkbox_label = 'gift_card.recipient.checkbox' | t -%}
           {%- render 'checkbox', label: checkbox_label, name: 'properties[__shopify_send_gift_card_to_recipient]' -%}
@@ -55,8 +62,12 @@ Supported variables
                 assign recipient_name_label = 'gift_card.recipient.name_label' | t
                 render 'input', label: recipient_name_label, name: 'properties[Recipient name]', value: form.name
 
+                assign send_on_label = 'gift_card.recipient.send_on_label' | t
+                render 'input', type: 'date', label: send_on_label, name: 'properties[Send on]', value: form.send_on, pattern: '\d{4}-\d{2}-\d{2}'
+                render 'input', type: 'hidden', name: 'properties[__shopify_offset]'
+
                 assign message_label = 'gift_card.recipient.message_label' | t
-                render 'input', label: message_label, name: 'properties[Recipient message]', value: form.message, multiline: 3, maxlength: 200, show_max_characters_count: true
+                render 'input', label: message_label, name: 'properties[Message]', value: form.message, multiline: 3, maxlength: 200, show_max_characters_count: true
               -%}
             </div>
           </div>

@@ -426,6 +426,7 @@
       "checkbox": "Ik wil dit als cadeau sturen",
       "email_label": "E-mailadres ontvanger",
       "name_label": "Naam ontvanger (optioneel)",
+      "send_on_label": "Verzenden op (optioneel)",
       "message_label": "Bericht (optioneel)"
     }
   },

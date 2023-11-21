@@ -433,6 +433,7 @@
       "checkbox": "Noriu siųsti kaip dovaną",
       "email_label": "Gavėjo el. pašto adresas",
       "name_label": "Gavėjo vardas (pasirinktinai)",
+      "send_on_label": "Išsiuntimo data (pasirinktinai)",
       "message_label": "Žinutė (pasirinktinai)"
     }
   },

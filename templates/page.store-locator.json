@@ -8,7 +8,6 @@
       "type": "image-with-text-overlay",
       "settings": {
         "image": "shopify:\/\/shop_images\/S2S_Sweat_Model_Banner.jpg",
-        "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
@@ -17,7 +16,6 @@
       "type": "image-with-text-overlay",
       "settings": {
         "image": "shopify:\/\/shop_images\/Keenan_B_Banner.jpg",
-        "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 16
       }

@@ -30,7 +30,9 @@ LIQUID
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
-<div class="section-spacing section-spacing--tight">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if collections.size == 0 -%}
     <div class="container container--xs">
       <div class="empty-state">
@@ -65,7 +67,14 @@ LIQUID
                 <a href="{{ collection.url }}" class="collection-card group">
                   <div class="content-over-media content-over-media--{{ section.settings.image_size }}" style="--content-over-media-overlay: {{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }};">
                     {%- capture sizes -%}(max-width: 699px) 100vw, (max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{%- endcapture -%}
-                    {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
+
+                    {%- assign loading_strategy = nil -%}
+
+                    {%- if forloop.index > 3 -%}
+                      {%- assign loading_strategy = 'lazy' -%}
+                    {%- endif -%}
+
+                    {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
 
                     <div class="collection-card__content prose prose--tight {{ section.settings.content_position }}" style="{% render 'surface', text_color: section.settings.text_color %}">
                       <p class="h3">{{ collection.title }}</p>
@@ -91,6 +100,12 @@ LIQUID
   "class": "shopify-section--main-list-collections",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "show_title",

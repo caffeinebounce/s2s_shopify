@@ -17,7 +17,9 @@
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
-  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <image-with-text class="image-with-text {% if section.settings.image_position == 'end' %}image-with-text--reverse{% endif %}">
       {%- if section.settings.image != blank -%}
         <picture>
@@ -32,10 +34,10 @@
             >
           {%- endif -%}
 
-          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll -}}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', reveal-on-scroll: section.settings.reveal_on_scroll -}}
         </picture>
       {%- else -%}
-        {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder' -}}
+        {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
       {%- endif -%}
 
       <div class="prose text-center sm:text-start">
@@ -96,6 +98,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",
@@ -235,13 +243,13 @@
       "type": "page",
       "name": "t:sections.image_with_text.blocks.page.name",
       "settings": [
-        {	
-          "type": "page",	
-          "id": "page",	
-          "label": "Page"	
-        }	
-      ]	
-    },	
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        }
+      ]
+    },
     {
       "type": "liquid",
       "name": "t:sections.image_with_text.blocks.liquid.name",
@@ -250,23 +258,23 @@
           "type": "liquid",
           "id": "liquid",
           "label": "t:global.code.liquid",
-          "default": "<p>Write custom Liquid code to include widget or dynamic code.</p>"	
-        }	
-      ]	
-    },	
-    {	
+          "default": "<p>Write custom Liquid code to include widget or dynamic code.</p>"
+        }
+      ]
+    },
+    {
       "type": "link",
       "name": "t:sections.image_with_text.blocks.link.name",
       "settings": [
-        {	
-          "type": "text",	
-          "id": "text",	
+        {
+          "type": "text",
+          "id": "text",
           "label": "t:global.text.text",
-          "default": "Text"	
-        },	
-        {	
-          "type": "url",	
-          "id": "url",	
+          "default": "Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
           "label": "t:global.text.link"
         }
       ]
@@ -275,44 +283,44 @@
       "type": "button",
       "name": "t:sections.image_with_text.blocks.button.name",
       "settings": [
-        {	
-          "type": "select",	
-          "id": "style",	
+        {
+          "type": "select",
+          "id": "style",
           "label": "t:global.text.style",
-          "options": [	
-            {	
-              "value": "outline",	
+          "options": [
+            {
+              "value": "outline",
               "label": "t:global.text.button_style_options.outline"
-            },	
-            {	
+            },
+            {
               "value": "solid",
               "label": "t:global.text.button_style_options.solid"
-            }	
-          ],	
+            }
+          ],
           "default": "solid"
-        },	
-        {	
-          "type": "text",	
-          "id": "text",	
+        },
+        {
+          "type": "text",
+          "id": "text",
           "label": "t:global.text.text",
-          "default": "Button text"	
-        },	
-        {	
-          "type": "url",	
-          "id": "url",	
+          "default": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "url",
           "label": "t:global.text.link"
-        },	
-        {	
-          "type": "color",	
-          "id": "background",	
+        },
+        {
+          "type": "color",
+          "id": "background",
           "label": "t:global.colors.background"
-        },	
-        {	
-          "type": "color",	
-          "id": "text_color",	
+        },
+        {
+          "type": "color",
+          "id": "text_color",
           "label": "t:global.text.text"
-        }	
-      ]	
+        }
+      ]
     }
   ],
   "presets": [

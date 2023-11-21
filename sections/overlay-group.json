@@ -22,11 +22,7 @@
         "show_only_once": true,
         "title": "Hear From Us More",
         "content": "",
-        "button_text": "Subscribe",
-        "background": "#1c1c1c",
-        "text_color": "#ffffff",
-        "button_background": "#ffffff",
-        "button_text_color": "#1c1c1c"
+        "button_text": "Subscribe"
       }
     },
     "privacy-banner": {
@@ -34,9 +30,7 @@
       "disabled": true,
       "settings": {
         "title": "🍪 Cookie policy",
-        "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>",
-        "background": "#1c1c1c",
-        "text_color": "#ffffff"
+        "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
       }
     }
   },

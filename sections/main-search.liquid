@@ -47,7 +47,7 @@
     </style>
 
     {%- paginate search.results by 48 -%}
-      <div class="section-spacing section-spacing--tight">
+      <div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
         <div class="container">
           <div class="section-stack">
             <div class="section-header justify-self-center text-center">
@@ -108,7 +108,7 @@
                                   </span>
                                 </button>
 
-                                <facets-sort-popover id="sort-by-popover" section-id="{{ section.id }}" class="popover popover--bottom-end" close-on-listbox-select>
+                                <facets-sort-popover id="sort-by-popover" section-id="{{ section.id }}" class="popover popover--bottom-end color-scheme color-scheme--dialog" close-on-listbox-select>
                                   <p class="h4" slot="header">{{ 'collection.faceting.sort_by' | t }}</p>
 
                                   <x-listbox class="popover__value-list">
@@ -129,7 +129,7 @@
 
                       <div class="collection">
                         {%- if show_filters -%}
-                          <facets-drawer id="facets-drawer" class="facets-drawer drawer drawer--sm md:hidden">
+                          <facets-drawer id="facets-drawer" class="facets-drawer drawer drawer--sm color-scheme color-scheme--dialog md:hidden">
                             <p class="h4" slot="header">{{ 'collection.faceting.filters' | t }}</p>
 
                             {%- render 'facets', results: search, show_filters: section.settings.show_filters, open_filters_by_default: section.settings.open_filters_by_default, update_on_change: false, context: 'drawer' -%}
@@ -208,12 +208,35 @@
       </div>
     {%- endpaginate -%}
   {%- else -%}
+    <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
+      <div class="container container--xs">
+        <div class="empty-state">
+          <div class="v-stack gap-4">
+            <div class="prose">
+              <h1 class="h4">{{ 'search.general.title' | t }}</h1>
+              <p>{{ 'search.general.no_results' | t }}</p>
+            </div>
+
+            <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">
+              {%- assign placeholder = 'search.general.search_placeholder' | t -%}
+
+              <div class="relative">
+                {%- render 'input', type: 'text', name: 'q', label: placeholder, autocomplete: 'off', autocorrect: 'off' -%}
+                <button type="submit" class="input-suffix link-faded">{% render 'icon' with 'search' %}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- else -%}
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
     <div class="container container--xs">
       <div class="empty-state">
         <div class="v-stack gap-4">
           <div class="prose">
             <h1 class="h4">{{ 'search.general.title' | t }}</h1>
-            <p>{{ 'search.general.no_results' | t }}</p>
           </div>
 
           <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">
@@ -227,25 +250,6 @@
         </div>
       </div>
     </div>
-  {%- endif -%}
-{%- else -%}
-  <div class="container container--xs">
-    <div class="empty-state">
-      <div class="v-stack gap-4">
-        <div class="prose">
-          <h1 class="h4">{{ 'search.general.title' | t }}</h1>
-        </div>
-
-        <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">
-          {%- assign placeholder = 'search.general.search_placeholder' | t -%}
-
-          <div class="relative">
-            {%- render 'input', type: 'text', name: 'q', label: placeholder, autocomplete: 'off', autocorrect: 'off' -%}
-            <button type="submit" class="input-suffix link-faded">{% render 'icon' with 'search' %}</button>
-          </div>
-        </form>
-      </div>
-    </div>
   </div>
 {%- endif -%}
 
@@ -255,6 +259,12 @@
   "class": "shopify-section--main-search",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "header",
       "content": "t:sections.main_search.product_results_category"

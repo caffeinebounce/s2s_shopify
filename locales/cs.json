@@ -440,6 +440,7 @@
       "checkbox": "Chci zboží poslat jako dárek",
       "email_label": "E-mail příjemce",
       "name_label": "Jméno příjemce (volitelné)",
+      "send_on_label": "Datum odeslání (volitelné)",
       "message_label": "Zpráva (volitelné)"
     }
   },

@@ -422,6 +422,7 @@
       "checkbox": "Quero enviar como presente",
       "email_label": "E-mail do destinatário",
       "name_label": "Nome do destinatário (opcional)",
+      "send_on_label": "Enviar em (opcional)",
       "message_label": "Mensagem (opcional)"
     }
   },

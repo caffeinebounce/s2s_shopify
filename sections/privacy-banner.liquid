@@ -1,4 +1,4 @@
-<privacy-banner class="pop-in privacy-banner" handle-editor-events style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+<privacy-banner class="pop-in privacy-banner color-scheme color-scheme--{{ section.settings.color_scheme.id }}" handle-editor-events>
   <button class="pop-in__close-button tap-area" is="dialog-close-button">
     <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
     {%- render 'icon' with 'close' -%}
@@ -33,6 +33,12 @@
       "content": "t:sections.privacy_banner.show_privacy_banner_info"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "label": "t:global.text.heading",
@@ -43,18 +49,6 @@
       "id": "content",
       "label": "t:global.text.content",
       "default": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
     }
   ]
 }

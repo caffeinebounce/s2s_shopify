@@ -426,6 +426,7 @@
       "checkbox": "Jeg vil sende dette som en gave",
       "email_label": "Mottakerens e-post",
       "name_label": "Mottakerens navn (valgfritt)",
+      "send_on_label": "Send (valgfritt)",
       "message_label": "Melding (valgfritt)"
     }
   },

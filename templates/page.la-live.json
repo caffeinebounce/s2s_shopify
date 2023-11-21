@@ -301,9 +301,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -321,9 +318,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -341,9 +335,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -362,9 +353,7 @@
         "spacing": "md",
         "subheading": "",
         "title": "MORE THAN CURLY. HEALTHY.",
-        "content": "<h3>GET 20% Off with Discount Code: <strong>LALIVE<\/strong><\/h3>",
-        "background": "#efefef",
-        "text_color": ""
+        "content": "<h3>GET 20% Off with Discount Code: <strong>LALIVE<\/strong><\/h3>"
       }
     },
     "c97e3089-8d10-491b-b89d-66f7d2b26c94": {
@@ -519,9 +508,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -541,9 +527,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -563,9 +546,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -584,9 +564,7 @@
         "spacing": "md",
         "subheading": "",
         "title": "",
-        "content": "",
-        "background": "",
-        "text_color": ""
+        "content": ""
       }
     }
   },

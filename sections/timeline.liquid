@@ -1,12 +1,21 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <style>
+    #shopify-section-{{ section.id }} {
+      --timeline-nav-mobile-background: {{ section.settings.item_color_scheme.settings.background.rgb }};
+      --timeline-nav-mobile-text-color: {{ section.settings.item_color_scheme.settings.text_color.rgb }};
+    }
+  </style>
+
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container container--md">
       <div class="timeline">
         {%- assign carousel_id = 'carousel-' | append: section.id -%}
 
         <timeline-carousel id="{{ carousel_id }}" class="timeline__carousel full-bleed sm:unbleed">
           {%- for block in section.blocks -%}
-            <div class="timeline__item {% if forloop.first %}is-selected{% endif %}" style="--timeline-item-mobile-text-color: {{ block.settings.mobile_text_color.rgb }}" {{ block.shopify_attributes }}>
+            <div class="timeline__item color-scheme color-scheme--{{ section.settings.item_color_scheme.id }} {% if forloop.first %}is-selected{% endif %}" style="--timeline-item-mobile-text-color: {{ block.settings.mobile_text_color.rgb }}" {{ block.shopify_attributes }}>
               <div class="timeline__item-image-wrapper">
                 {%- if block.settings.image -%}
                   <picture>
@@ -70,6 +79,18 @@
   },
   "max_blocks": 10,
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "item_color_scheme",
+      "label": "t:sections.timeline.item_color_scheme",
+      "default": "scheme-2"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",

@@ -3,15 +3,11 @@
 SURFACE COMPONENT
 ----------------------------------------------------------------------------------------------------------------------
 
-This component allows to setup a new style context for a given component by outputting style properties to change
-the background and text color.
+This snippet allows to create a dynamic surface coming from manual colors. This should only be used for overriding a
+color scheme.
 
-This snippet will actually create a --background-gradient, --background, --text-color and/or --border-color based
-on the provided variables, and create a new context. Because everything uses variables, it inherits to children and
-can be retrieved in your code.
-
-The border is calculated in a smart way, either by blending the background and text color if both are set, or by
-using the text color with a reduced opacity.
+If you need to set a new color context coming from a color scheme, you should instead add the following classes to an
+item: "color-scheme color-scheme--{{ color_scheme.id }}"
 
 ********************************************
 Supported variables

@@ -303,9 +303,6 @@
             "link_url": "shopify:\/\/collections\/post-workout-hair-essentials",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -323,9 +320,6 @@
             "link_url": "shopify:\/\/collections\/post-workout-hair-essentials",
             "link_style": "link",
             "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -343,9 +337,6 @@
             "link_url": "shopify:\/\/collections\/post-workout-hair-essentials",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -364,9 +355,7 @@
         "spacing": "sm",
         "subheading": "",
         "title": "MORE THAN CURLY. HEALTHY.",
-        "content": "<h3>GET 24% Off with Discount Code: <strong>24HOURS<\/strong><\/h3>",
-        "background": "#efefef",
-        "text_color": ""
+        "content": "<h3>GET 24% Off with Discount Code: <strong>24HOURS<\/strong><\/h3>"
       }
     },
     "d9de5232-40e7-4d9a-ab75-59b4d8433b63": {
@@ -534,9 +523,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -556,9 +542,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -578,9 +561,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -599,9 +579,7 @@
         "spacing": "md",
         "subheading": "",
         "title": "",
-        "content": "",
-        "background": "",
-        "text_color": ""
+        "content": ""
       }
     }
   },

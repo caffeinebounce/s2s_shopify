@@ -11,9 +11,7 @@
         "show_category": true,
         "show_author": true,
         "show_share_buttons": true,
-        "show_sticky_bar": true,
-        "background": "#1c1c1c",
-        "text_color": "#ffffff"
+        "show_sticky_bar": true
       }
     },
     "17005042639b5fb2f1": {
@@ -54,9 +52,7 @@
         "title": "Read more",
         "show_category": true,
         "show_excerpt": true,
-        "show_read_more": true,
-        "background": "#1c1c1c",
-        "text_color": "#ffffff"
+        "show_read_more": true
       }
     }
   },

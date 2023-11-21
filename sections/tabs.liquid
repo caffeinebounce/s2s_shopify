@@ -1,5 +1,7 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container {% if section.settings.text_alignment == 'center' %}container--xl{% endif %}">
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
@@ -24,10 +26,6 @@
                   {{- content -}}
                 </div>
               </div>
-
-              <div slot="accordion-tab">
-                {%- render 'accordion', title: title, content: content, open: block.settings.open_on_mobile -%}
-              </div>
             {%- endif -%}
           {%- endfor -%}
         </x-tabs>
@@ -40,7 +38,7 @@
             {%- assign content = block.settings.page.content | default: block.settings.content -%}
 
             {%- if title != blank and content != blank -%}
-              {%- render 'accordion', title: title, content: content, open: block.settings.open_on_mobile -%}
+              {%- render 'accordion', title: title, content: content, open: block.settings.open_on_mobile, prose_content: true -%}
             {%- endif -%}
           {%- endfor -%}
         </div>
@@ -58,6 +56,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",

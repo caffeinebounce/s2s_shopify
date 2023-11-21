@@ -1,4 +1,6 @@
-<div class="section-spacing section-spacing--tight">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if cart.empty? -%}
     <div class="container container--xs">
       <div class="empty-state">
@@ -171,6 +173,12 @@
   "class": "shopify-section--main-cart",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "show_cart_note",

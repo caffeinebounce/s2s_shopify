@@ -1,4 +1,6 @@
-<div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   <div class="container container--xs">
     <div class="section-stack text-center">
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
@@ -64,6 +66,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",

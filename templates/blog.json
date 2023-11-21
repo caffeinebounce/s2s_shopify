@@ -8,9 +8,6 @@
         "show_tags": false,
         "posts_per_page": 10,
         "feature_first_blog_post": true,
-        "featured_blog_post_text_color": "#ffffff",
-        "featured_blog_post_button_background": "#ffffff",
-        "featured_blog_post_button_text_color": "#1c1c1c",
         "show_category": true,
         "show_excerpt": true,
         "show_read_more": true

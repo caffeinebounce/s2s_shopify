@@ -426,6 +426,7 @@
       "checkbox": "Vreau să trimit acest lucru drept cadou",
       "email_label": "Adresă de e-mail destinatar",
       "name_label": "Nume destinatar (opțional)",
+      "send_on_label": "Trimite pe (opțional)",
       "message_label": "Mesaj (opțional)"
     }
   },

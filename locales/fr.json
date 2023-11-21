@@ -426,6 +426,7 @@
       "checkbox": "Je veux envoyer ce produit comme cadeau",
       "email_label": "E‑mail du destinataire",
       "name_label": "Nom du destinataire (facultatif)",
+      "send_on_label": "Envoyer le (facultatif)",
       "message_label": "Message (facultatif)"
     }
   },

@@ -263,16 +263,16 @@ Supported variables
 
                         case block.settings.color_selector_type
                           when 'color'
-                            render 'swatch' with 'color', href: product_variation.url, value: value, selected: selected
+                            render 'swatch', type: 'colors', href: product_variation.url, value: value, selected: selected
 
                           when 'variant'
-                            render 'swatch' with 'media', href: product_variation.url, value: value, media: product_variation.featured_media, selected: selected
+                            render 'swatch', type: 'thumbnail', href: product_variation.url, value: value, image: product_variation.featured_media, selected: selected
 
                           when 'block'
-                            render 'swatch' with 'block', href: product_variation.url, value: value, selected: selected
+                            render 'swatch', type: 'block', href: product_variation.url, value: value, selected: selected
 
                           when 'block_swatch'
-                            render 'swatch' with 'block', href: product_variation.url, value: value, selected: selected, show_color: true
+                            render 'swatch', type: 'block', href: product_variation.url, value: value, selected: selected, show_colors: true
                         endcase
                       endfor
                     -%}
@@ -398,7 +398,7 @@ Supported variables
           {%- when 'accordion' -%}
             {%- liquid
               assign accordion_title = block.settings.title | default: block.settings.page.title
-              assign accordion_content = block.settings.page.content | default: block.settings.content
+              assign accordion_content = block.settings.page.content | default: block.settings.liquid | default: block.settings.content
 
               if accordion_title != blank and accordion_content != blank
                 render 'accordion', title: accordion_title, content: accordion_content, prose_content: true, icon: block.settings.icon, custom_icon: block.settings.custom_icon, block: block
@@ -452,7 +452,7 @@ Supported variables
 
               {%- render 'button', content: block.settings.button_title, aria_controls: modal_id, style: block.settings.button_style, stretch: block.settings.stretch_button, background: block.settings.button_background, text_color: block.settings.button_text_color -%}
 
-              <x-modal id="{{ modal_id | escape }}" class="modal modal--lg">
+              <x-modal id="{{ modal_id | escape }}" class="modal modal--lg color-scheme color-scheme--dialog">
                 <span class="h5" slot="header">{{ block.settings.modal_title }}</span>
 
                 <div class="prose">

@@ -28,7 +28,7 @@
   </style>
 
   <height-observer variable="announcement-bar">
-    <div class="announcement-bar" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+    <div class="announcement-bar color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
       {%- assign carousel_id = 'carousel-' | append: section.id -%}
 
       {%- if section.blocks.size > 1 -%}
@@ -80,6 +80,12 @@
   ],
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
+    {
       "type": "checkbox",
       "id": "enable_sticky",
       "label": "t:sections.announcement_bar.enable_sticky_bar"
@@ -117,18 +123,6 @@
       "unit": "px",
       "label": "t:sections.announcement_bar.mobile_text_size",
       "default": 10
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
     }
   ]
 }

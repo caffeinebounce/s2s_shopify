@@ -4,7 +4,9 @@
   }
 </style>
 
-<div class="footer {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="footer color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   <div class="container">
     <div class="footer__inner">
       {%- comment -%}
@@ -60,7 +62,7 @@
                   {%- if menu != blank and menu.links.size > 0 -%}
                     <div class="v-stack gap-4 sm:gap-5">
                       {%- if block.settings.show_menu_title != blank -%}
-                        <p class="h6">{{ menu.title }}</p>
+                        <p class="h6">{{ block.settings.menu_title | default: menu.title }}</p>
                       {%- endif -%}
 
                       <ul class="v-stack gap-2.5 unstyled-list" role="list">
@@ -180,6 +182,12 @@
   "tag": "footer",
   "max_blocks": 6,
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-2"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",
@@ -303,6 +311,12 @@
           "id": "show_menu_title",
           "label": "t:sections.footer.blocks.links.show_menu_title",
           "default": true
+        },
+        {
+          "type": "inline_richtext",
+          "id": "menu_title",
+          "label": "t:sections.footer.blocks.links.menu_title",
+          "info": "t:sections.footer.blocks.links.menu_title_info"
         }
       ]
     },

@@ -19,7 +19,9 @@
     }
   </style>
 
-  <div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container container--xl">
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, text_alignment: 'center' -%}
@@ -31,9 +33,9 @@
                 {%- capture sizes -%}{{ block.settings.logo_width }}px{%- endcapture -%}
                 {%- capture widths -%}{{ block.settings.logo_width }}, {{ block.settings.logo_width | times: 2 | at_most: block.settings.logo.width }}{%- endcapture -%}
                 {%- capture max_width -%}--image-max-width: {{ block.settings.logo_width }}px{%- endcapture -%}
-                {{- block.settings.logo | image_url: width: block.settings.logo.width | image_tag: style: max_width, loading: 'lazy', widths: widths, sizes: sizes, class: 'constrained-image' -}}
+                {{- block.settings.logo | image_url: width: block.settings.logo.width | image_tag: style: max_width, widths: widths, sizes: sizes, class: 'constrained-image' -}}
               {%- else -%}
-                {{- 'image' | placeholder_svg_tag: 'image' -}}
+                {{- 'image' | placeholder_svg_tag: 'image placeholder' -}}
               {%- endif -%}
             {%- endcapture -%}
 
@@ -59,6 +61,12 @@
   "class": "shopify-section--logo-list",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",

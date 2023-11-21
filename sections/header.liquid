@@ -7,7 +7,7 @@
     --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
     --header-padding-block: 1rem;
     --header-transparent-header-text-color: {{ section.settings.transparent_header_text_color.rgb }};
-    --header-separation-border-color: {% if section.settings.show_separation_border %}var(--border-color){% else %}0 0 0 / 0{% endif %};
+    --header-separation-border-color: {% if section.settings.show_separation_border %}{{ section.settings.color_scheme.settings.text_color.rgb }} / 0.15{% else %}0 0 0 / 0{% endif %};
 
     position: relative;
     z-index: 5;
@@ -48,20 +48,18 @@
   {%- if section.settings.logo != blank -%}
     #shopify-section-{{ section.id }} {
       --header-logo-width: {{ section.settings.logo_mobile_max_width }}px;
-      --header-logo-height: {{ section.settings.logo_mobile_max_width | divided_by: section.settings.logo.aspect_ratio | round }}px;
     }
 
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} {
         --header-logo-width: {{ section.settings.logo_max_width }}px;
-        --header-logo-height: {{ section.settings.logo_max_width | divided_by: section.settings.logo.aspect_ratio | round }}px;
       }
     }
   {%- endif -%}
 </style>
 
 <height-observer variable="header">
-  <x-header class="header">
+  <x-header class="header color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
     {%- comment -%}
     --------------------------------------------------------------------------------------------------------------------
     LOGO AREA
@@ -257,7 +255,7 @@
     {%- assign sidebar_menu = section.settings.sidebar_menu | default: section.settings.menu -%}
 
     {%- if sidebar_menu.links.size > 0 -%}
-      {%- render 'header-sidebar', menu: sidebar_menu, show_dividers: section.settings.sidebar_show_dividers -%}
+      {%- render 'header-sidebar', menu: sidebar_menu, color_scheme: section.settings.sidebar_color_scheme, show_dividers: section.settings.sidebar_show_dividers -%}
     {%- endif -%}
   </x-header>
 </height-observer>
@@ -272,6 +270,12 @@
   "class": "shopify-section--header",
   "tag": "header",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-2"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky",
@@ -361,6 +365,12 @@
     {
       "type": "header",
       "content": "t:sections.header.sidebar_navigation_category"
+    },
+    {
+      "type": "color_scheme",
+      "id": "sidebar_color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-2"
     },
     {
       "type": "select",

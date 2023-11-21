@@ -16,8 +16,15 @@ may have important consequence on the section itself.
           {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
           {%- if block.type == 'image' -%}
             {%- if block.settings.image != blank -%}
-              {%- capture loading_strategy -%}{% if forloop.first %}eager{% else %}lazy{% endif %}{%- endcapture -%}
-              {%- capture fetch_priority -%}{% if forloop.first %}high{% else %}low{% endif %}{%- endcapture -%}
+              {%- liquid
+                if forloop.first
+                  assign loading_strategy = nil
+                  assign fetch_priority = 'high'
+                else
+                  assign loading_strategy = 'lazy'
+                  assign fetch_priority = 'low'
+                endif
+              -%}
 
               <picture>
                 {%- if block.settings.mobile_image != blank -%}

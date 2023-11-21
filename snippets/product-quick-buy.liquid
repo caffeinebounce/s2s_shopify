@@ -39,7 +39,7 @@ Supported variables
       -%}
       
       <div class="quick-buy-modal__mobile-info v-stack gap-1 justify-center text-center sm:hidden">
-        <a href="{{ product.title }}" class="product-title h6">{{ product.title }}</a>
+        <a href="{{ product.url }}" class="product-title h6">{{ product.title }}</a>
         {% render 'price-list', product: product, variant: product.selected_or_first_available_variant, hide_unit_price: true, form_id: product_form_id, context: 'card' %}
       </div>
     </div>

@@ -2,11 +2,14 @@
   "global": {
     "colors": {
       "category": "Colors",
+      "scheme": "Color scheme",
       "background": "Background",
+      "background_gradient": "Background gradient",
       "background_opacity": "Background opacity",
       "text": "Text",
       "text_shadow": "Text shadow",
       "border": "Border",
+      "icon": "Icon",
       "button_background": "Button background",
       "button_text": "Button text",
       "overlay_color": "Overlay",
@@ -282,21 +285,22 @@
       "general_category": "General",
       "heading_color": "Heading",
       "body_text_color": "Body text",
-      "secondary_background": "Secondary background",
-      "secondary_background_info": "Choose a color close to the primary background.",
+      "default_color_scheme": "Default color scheme",
+      "default_color_scheme_info": "Used on secondary pages like customer accounts or policy pages.",
+      "notification_category": "Notification",
       "success_color": "Success",
       "warning_color": "Warning",
       "error_color": "Error",
-      "header_category": "Header",
-      "footer_category": "Footer",
       "button_category": "Button",
+      "button_icon_category": "Button with icon",
+      "button_icon_category_info": "Applies to circled buttons such as navigation or close buttons.",
       "modal_category": "Modal\/drawer",
       "product_category": "Product",
       "product_rating_color": "Star rating",
       "on_sale_accent": "On sale accent",
       "sold_out_badge_background": "Sold out badge",
       "custom_badge": "Custom badge",
-      "custom_badge_info": "[Learn more](https:\/\/support.maestrooo.com\/article\/75-collection-displaying-custom-label)"
+      "custom_badge_info": "[Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/437-custom-badges-with-metafields)"
     },
     "typography": {
       "name": "Typography",
@@ -352,7 +356,7 @@
       "name": "Color swatch",
       "round_color_swatches": "Round color swatches",
       "configuration": "Configuration",
-      "configuration_info": "Each rule must be in its own line. [Learn more](https:\/\/support.maestrooo.com\/article\/80-product-uploading-custom-color-for-color-swatch) about the exact naming convention."
+      "configuration_info": "Each rule must be in its own line. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/417-configuring-color-swatches) about the exact naming convention."
     },
     "product_card": {
       "name": "Product card",
@@ -525,7 +529,12 @@
       "show_shipping_text": "Show shipping text",
       "show_view_cart_button": "Show view cart button",
       "show_checkout_button": "Show checkout button",
-      "show_price_in_checkout_button": "Show price in checkout button"
+      "show_price_in_checkout_button": "Show price in checkout button",
+      "cross_sell_category": "Cross-sell",
+      "cross_sell_products": "Products",
+      "cross_sell_products_info": "Products already in the cart or that are sold out are hidden.",
+      "cross_sell_heading": "Heading",
+      "cross_sell_stack_products": "Stack products"
     },
     "collection_banner": {
       "name": "Collection banner",
@@ -534,11 +543,11 @@
       "reveal": "Reveal image with animation",
       "enable_parallax": "Enable parallax effect",
       "enable_parallax_info": "Parallax crops image.",
+      "show_image": "Show image",
       "show_collection_title": "Show collection title",
       "show_collection_description": "Show collection description",
       "show_breadcrumb": "Show breadcrumb",
-      "colors_category_info": "Ignored when there is no image.",
-      "background_info": "Visible while the image is loading."
+      "colors_category_info": "Ignored when there is no image."
     },
     "collection_list": {
       "name": "Collection list",
@@ -546,10 +555,6 @@
       "space_items": "Space items",
       "stack_collections": "Stack collections",
       "collections_per_row_desktop": "Collections per row (desktop)",
-      "navigation_button_category": "Navigation buttons",
-      "navigation_button_category_info": "Only applicable when collections are not stacked.",
-      "navigation_button_background": "Background",
-      "navigation_button_text_color": "Arrow",
       "blocks": {
         "collection": {
           "name": "Collection",
@@ -690,7 +695,9 @@
           "name": "Links",
           "menu": "Menu",
           "menu_info": "This menu won't show dropdown items.",
-          "show_menu_title": "Show menu title"
+          "show_menu_title": "Show menu title",
+          "menu_title": "Title",
+          "menu_title_info": "Replaces default menu title"
         },
         "newsletter": {
           "name": "Newsletter",
@@ -733,14 +740,14 @@
       },
       "show_icons": "Show icons",
       "transparent_header_category": "Transparent header",
-      "transparent_header_info": "To show a transparent header, add a compatible section (such as slideshow) as the first section. [Learn more](https:\/\/support.maestrooo.com\/article\/312-header-how-to-enable-transparent-header)",
+      "transparent_header_info": "To show a transparent header, add a compatible section (such as slideshow) as the first section. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/501-transparent-header)",
       "transparent_header_logo_image": "Logo image",
       "transparent_header_logo_size_recommendation": "Use the same dimensions as main logo.",
       "blocks": {
         "mega_menu": {
           "name": "Mega menu",
           "menu_item": "Menu item",
-          "menu_item_info": "Enter menu item to apply a mega menu dropdown. [Learn more](https:\/\/support.maestrooo.com\/article\/180-navigation-enabling-and-configuring-mega-navigation).",
+          "menu_item_info": "Enter menu item to apply a mega menu dropdown. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/412-mega-menu).",
           "images_position": "Images position",
           "image_1": "Image 1",
           "image_2": "Image 2",
@@ -845,7 +852,6 @@
       "instructions": "Configure content by adding blocks. The section adapts automatically to fill exactly the screen height.",
       "background_image_info": "3000 x 1800px .jpg recommended. Image edges may be cut to adjust to the screen size.",
       "mobile_background_image_info": "1600 x 2000px .jpg recommended. Image edges may be cut to adjust to the screen size.",
-      "background_info": "Ignored if a background image is used.",
       "image_position": "Image position",
       "blocks": {
         "image_with_text": {
@@ -1009,7 +1015,6 @@
       "logo_info": "280 x 80px .png recommended",
       "background_category": "Background",
       "background_image_size_recommendation": "2000 x 1500px .jpg recommended",
-      "background_color_info": "Only used if no image is uploaded.",
       "blocks": {
         "content": {
           "name": "Content",
@@ -1067,7 +1072,7 @@
         },
         "badges": {
           "name": "Badges",
-          "instructions": "Use metafields to add custom badges. [Learn more](https:\/\/support.maestrooo.com\/article\/75-collection-displaying-custom-label)"
+          "instructions": "Use metafields to add custom badges. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/437-custom-badges-with-metafields)"
         },
         "price": {
           "name": "Price",
@@ -1104,7 +1109,7 @@
             "dropdown": "Dropdown"
           },
           "color_selector_type": "Color selector type",
-          "color_selector_type_info": "If color swatches are not visible, upload your own color swatches. [Learn more](https:\/\/support.maestrooo.com\/article\/80-product-uploading-custom-color-for-color-swatch)",
+          "color_selector_type_info": "If color swatches are not visible, upload your own color swatches. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/417-configuring-color-swatches)",
           "color_selector_type_options": {
             "block": "Block",
             "block_swatch": "Block with color swatch",
@@ -1117,7 +1122,7 @@
         },
         "product_variations": {
           "name": "Product variations",
-          "instructions": "Use metafields to easily setup product variations. [Learn more](https:\/\/support.maestrooo.com\/article\/307-product-creating-product-variations-that-link-to-different-pages)",
+          "instructions": "Use metafields to easily setup product variations. [Learn more](https:\/\/prestige-theme.helpscoutdocs.com\/article\/426-product-variations-linked-products)",
           "option_name": "Option name",
           "option_name_placeholder": "Color",
           "option_value_metafield": "Option value metafield",
@@ -1212,6 +1217,7 @@
         "collapsible_text": {
           "name": "Collapsible text",
           "show_below_gallery": "Show below gallery on desktop",
+          "liquid_info": "Replaces inline content if specified.",
           "page": "Page",
           "page_info": "Replaces inline content if specified."
         },
@@ -1565,6 +1571,7 @@
     },
     "timeline": {
       "name": "Timeline",
+      "item_color_scheme": "Item color scheme",
       "blocks": {
         "item": {
           "name": "Item",

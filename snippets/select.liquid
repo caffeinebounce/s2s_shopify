@@ -19,9 +19,10 @@ Supported variables
 * show_empty_value: when true, an empty value is set from the label (only usable when option_values is set and label is not as block)
 * required: if set to true, the "required" attribute is added to the input
 * autocomplete: a hint to the browser for help autocompletion. List can be found here: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#values
+* id_prefix: an optional prefix to be used to dissociate the ID
 {%- endcomment -%}
 
-{%- capture id -%}select-{{ section.id }}-{{ form }}-{{ name | handle }}{%- endcapture -%}
+{%- capture id -%}select-{{ id_prefix }}-{{ section.id }}-{{ form }}-{{ name | handle }}{%- endcapture -%}
 
 {%- capture optional_attributes -%}
   {% if form %}form="{{ form }}"{% endif %}

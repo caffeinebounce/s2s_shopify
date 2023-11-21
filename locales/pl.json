@@ -437,6 +437,7 @@
       "checkbox": "Chcę to wysłać jako prezent",
       "email_label": "E-mail odbiorcy",
       "name_label": "Nazwa odbiorcy (opcjonalnie)",
+      "send_on_label": "Wyślij dnia (opcjonalnie)",
       "message_label": "Wiadomość (opcjonalna)"
     }
   },

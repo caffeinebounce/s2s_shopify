@@ -6,7 +6,9 @@
 </style>
 
 {%- if request.design_mode or section.blocks.size > 0 -%}
-  <div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container container--lg">
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
@@ -32,7 +34,7 @@
               {%- assign image_class = 'image-background' -%}
             {%- endif -%}
 
-            <div class="{{ container_class }}" style="{% render 'surface', text_color: block.settings.text_color %}" {{ block.shopify_attributes }}>
+            <div class="{{ container_class }} color-scheme color-scheme--{{ block.settings.color_scheme.id }}" {{ block.shopify_attributes }}>
               {%- capture sizes -%}(max-width: 999px) 100vw, min(1260px, 100vw){%- endcapture -%}
 
               {%- if block.settings.image != blank -%}
@@ -46,7 +48,7 @@
                     >
                   {%- endif -%}
 
-                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: image_class, draggable: false -}}
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: '300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: image_class, draggable: false -}}
                 </picture>
               {%- else -%}
                 {%- capture placeholder_image -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
@@ -98,6 +100,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",
@@ -170,6 +178,12 @@
       "limit": 1,
       "settings": [
         {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:global.colors.scheme",
+          "default": "scheme-4"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "t:global.image.image",
@@ -216,28 +230,6 @@
             }
           ],
           "default": "link"
-        },
-        {
-          "type": "header",
-          "content": "t:global.colors.category"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:global.colors.text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:global.colors.button_background",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "t:global.colors.button_text",
-          "default": "#1c1c1c"
         }
       ]
     },
@@ -246,6 +238,12 @@
       "name": "t:sections.before_after.blocks.after.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:global.colors.scheme",
+          "default": "scheme-4"
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -293,28 +291,6 @@
             }
           ],
           "default": "link"
-        },
-        {
-          "type": "header",
-          "content": "t:global.colors.category"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:global.colors.text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:global.colors.button_background",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "t:global.colors.button_text",
-          "default": "#1c1c1c"
         }
       ]
     }

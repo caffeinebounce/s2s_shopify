@@ -426,6 +426,7 @@
       "checkbox": "Gribu šo nosūtīt kā dāvanu",
       "email_label": "Saņēmēja e-pasts",
       "name_label": "Saņēmēja vārds (neobligāti)",
+      "send_on_label": "Sūtīt (pēc izvēles)",
       "message_label": "Ziņojums (pēc izvēles)"
     }
   },

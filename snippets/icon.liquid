@@ -137,6 +137,12 @@ Supported variables
     <svg aria-hidden="true" focusable="false" width="{{ width | default: 12 }}" class="{{ class | strip }}" viewBox="0 0 12 11">
       <path d="M6 0v8.635L2.292 11 3.48 6.87 0 4.202l4.443-.187L6 0Zm0 0v8.635L9.708 11 8.52 6.87 12 4.202l-4.443-.187L6 0Z" fill-opacity="0.4" fill="{{ settings.product_rating_color }}"/>
     </svg>
+
+  {%- when 'zoom' -%}
+    <svg aria-hidden="true" focusable="false" width="{{ width | default: 14 }}" class="{{ class | strip }}" viewBox="0 0 14 14">
+      <path d="M9.432 9.432a4.94 4.94 0 1 1-6.985-6.985 4.94 4.94 0 0 1 6.985 6.985Zm0 0L13 13" fill="none" stroke="currentColor" stroke-linecap="square"/>
+      <path d="M6 3.5V6m0 2.5V6m0 0H3.5h5" fill="none" stroke="currentColor" />
+    </svg>
   
   {%- when 'hamburger' -%}
     <svg aria-hidden="true" fill="none" focusable="false" width="{{ width | default: 24 }}" class="{{ class | strip }}" viewBox="0 0 24 24">
@@ -671,16 +677,16 @@ Supported variables
 
   {%- when 'media-model-badge' -%}
     <svg focusable="false" width="{{ width | default: 26 }}" viewBox="0 0 26 26" role="presentation">
-      <path d="M1 25h24V1H1z" fill="{{ settings.background }}"></path>
-      <path d="M.5 25v.5h25V.5H.5z" fill="none" stroke="{{ settings.text_color }}" stroke-opacity=".15"></path>
-      <path d="M19.13 8.28L14 5.32a2 2 0 00-2 0l-5.12 3a2 2 0 00-1 1.76V16a2 2 0 001 1.76l5.12 3a2 2 0 002 0l5.12-3a2 2 0 001-1.76v-6a2 2 0 00-.99-1.72zm-6.4 11.1l-5.12-3a.53.53 0 01-.26-.38v-6a.53.53 0 01.27-.46l5.12-3a.53.53 0 01.53 0l5.12 3-4.72 2.68a1.33 1.33 0 00-.67 1.2v6a.53.53 0 01-.26 0z" fill="{{ settings.text_color }}" opacity=".6"></path>
+      <path d="M1 25h24V1H1z" fill="{{ settings.default_color_scheme.settings.background }}"></path>
+      <path d="M.5 25v.5h25V.5H.5z" fill="none" stroke="{{ settings.default_color_scheme.settings.text_color }}" stroke-opacity=".15"></path>
+      <path d="M19.13 8.28L14 5.32a2 2 0 00-2 0l-5.12 3a2 2 0 00-1 1.76V16a2 2 0 001 1.76l5.12 3a2 2 0 002 0l5.12-3a2 2 0 001-1.76v-6a2 2 0 00-.99-1.72zm-6.4 11.1l-5.12-3a.53.53 0 01-.26-.38v-6a.53.53 0 01.27-.46l5.12-3a.53.53 0 01.53 0l5.12 3-4.72 2.68a1.33 1.33 0 00-.67 1.2v6a.53.53 0 01-.26 0z" fill="{{ settings.default_color_scheme.settings.text_color }}" opacity=".6"></path>
     </svg>
 
   {%- when 'media-video-badge' -%}
     <svg focusable="false" width="{{ width | default: 26 }}" viewBox="0 0 26 26" fill="none" role="presentation">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 25h24V1H1v24z" fill="{{ settings.background }}"></path>
-      <path d="M.5 25v.5h25V.5H.5V25z" stroke="{{ settings.text_color }}" stroke-opacity=".15"></path>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.718 6.72a1 1 0 00-1.518.855v10.736a1 1 0 001.562.827l8.35-5.677a1 1 0 00-.044-1.682l-8.35-5.06z" fill="{{ settings.text_color }}" fill-opacity=".6"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 25h24V1H1v24z" fill="{{ settings.default_color_scheme.settings.background }}"></path>
+      <path d="M.5 25v.5h25V.5H.5V25z" stroke="{{ settings.default_color_scheme.settings.text_color }}" stroke-opacity=".15"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.718 6.72a1 1 0 00-1.518.855v10.736a1 1 0 001.562.827l8.35-5.677a1 1 0 00-.044-1.682l-8.35-5.06z" fill="{{ settings.default_color_scheme.settings.text_color }}" fill-opacity=".6"></path>
     </svg>
 
   {%- when 'media-view-in-space' -%}

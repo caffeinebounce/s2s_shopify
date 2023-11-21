@@ -8,7 +8,9 @@
     }
   </style>
 
-  <div class="section-spacing {% if section.settings.background != blank and section.settings.background != 'rgba(0,0,0,0)' and section.settings.background != settings.background %}section-spacing--padded{% endif %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+  {%- assign color_scheme_hash = section.settings.background | default: settings.default_color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.background != blank and section.settings.background != 'rgba(0,0,0,0)' and section.settings.background != settings.default_color_scheme.settings.background %}section-spacing--padded{% endif %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
     <marquee-text speed="{{ section.settings.scrolling_speed }}" direction="{{ section.settings.scroll_direction }}" class="scrolling-content">
       <div class="scrolling-content__item">
         {%- for block in section.blocks -%}

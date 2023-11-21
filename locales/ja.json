@@ -92,7 +92,7 @@
       "added_to_cart": "カートに追加されました！",
       "sold_out_badge": "売り切れ",
       "on_sale_badge": "セール",
-      "discount_badge_html": "{{ savings }}節約する",
+      "discount_badge_html": "{{ savings }}オフ",
       "sku": "SKU:",
       "variant": "バリエーション",
       "view_in_space": "自分のスペースで見る",
@@ -416,6 +416,7 @@
       "checkbox": "ギフトとしてこれを送る",
       "email_label": "受信者のメール",
       "name_label": "受信者の名前 (任意）",
+      "send_on_label": "送信日 (任意)",
       "message_label": "メッセージ (任意)"
     }
   },

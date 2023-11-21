@@ -57,7 +57,9 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div class="{% unless remove_vertical_spacing %}section-spacing {% if reduce_vertical_spacing %}section-spacing--tight{% endif %}{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="{% unless remove_vertical_spacing %}section-spacing {% if reduce_vertical_spacing %}section-spacing--tight{% endif %}{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="{% if section.settings.space_items %}container{% endif %}">
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
@@ -68,7 +70,7 @@
             {%- assign collection_url = block.settings.button_link | default: collection.url -%}
 
             {%- capture collection_card_info -%}
-              <div class="collection-card__content prose prose--tight {{ block.settings.content_position }}" style="{% render 'surface', text_color: block.settings.text_color %}">
+              <div class="collection-card__content color-scheme color-scheme--{{ block.settings.color_scheme.id }} prose prose--tight {{ block.settings.content_position }}">
                 {%- if block.settings.subheading != blank -%}
                   <p class="h6">{{- block.settings.subheading -}}</p>
                 {%- endif -%}
@@ -78,7 +80,7 @@
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank -%}
-                  {%- render 'button', type: 'button', content: block.settings.button_text, background: block.settings.button_background, text_color: block.settings.button_text_color -%}
+                  {%- render 'button', type: 'button', content: block.settings.button_text -%}
                 {%- endif -%}
               </div>
             {%- endcapture -%}
@@ -89,7 +91,7 @@
                 {%- capture sizes -%}(max-width: 699px) 100vw, {% if block.settings.expand_collection %}100vw{% else %}(max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{% endif %}{%- endcapture -%}
 
                 {%- if image != blank -%}
-                  {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
+                  {{- image | image_url: width: image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
                 {%- else -%}
                   {%- capture collection_placeholder -%}{%- cycle 'collection-1', 'collection-2', 'collection-3' -%}{%- endcapture -%}
                   {{- collection_placeholder | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
@@ -129,19 +131,18 @@
               {{ collection_list }}
             </scroll-carousel>
 
-            {%- capture circle_button_style -%}--circle-button-background: {{ section.settings.circle_button_background.rgb }}; --circle-button-text-color: {{ section.settings.circle_button_text_color.rgb }}{%- endcapture -%}
-
-            <button is="carousel-prev-button" type="button" class="prev-next-button prev-next-button--prev circle-button circle-button--lg hover:animate-icon-inline" aria-controls="{{ carousel_id }}" disabled style="{{ circle_button_style }}">
+            <button is="carousel-prev-button" type="button" class="prev-next-button prev-next-button--prev circle-button circle-button--lg hover:animate-icon-inline" aria-controls="{{ carousel_id }}" disabled>
               <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
               {%- render 'icon' with 'arrow-left', direction_aware: true -%}
             </button>
 
-            <button is="carousel-next-button" type="button" class="prev-next-button prev-next-button--next circle-button circle-button--lg hover:animate-icon-inline" aria-controls="{{ carousel_id }}" style="{{ circle_button_style }}">
+            <button is="carousel-next-button" type="button" class="prev-next-button prev-next-button--next circle-button circle-button--lg hover:animate-icon-inline" aria-controls="{{ carousel_id }}">
               <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
               {%- render 'icon' with 'arrow-right', direction_aware: true -%}
             </button>
           </div>
         {% endif %}
+      </div>
     </div>
   </div>
 {%- endif -%}
@@ -156,6 +157,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",
@@ -235,23 +242,6 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.collection_list.navigation_button_category",
-      "info": "t:sections.collection_list.navigation_button_category_info"
-    },
-    {
-      "type": "color",
-      "id": "circle_button_background",
-      "label": "t:sections.collection_list.navigation_button_background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "circle_button_text_color",
-      "label": "t:sections.collection_list.navigation_button_text_color",
-      "default": "#1c1c1c"
     }
   ],
   "blocks": [
@@ -259,6 +249,12 @@
       "type": "collection",
       "name": "t:sections.collection_list.blocks.collection.name",
       "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:global.colors.scheme",
+          "default": "scheme-4"
+        },
         {
           "type": "collection",
           "id": "collection",
@@ -269,7 +265,7 @@
           "id": "image",
           "label": "t:global.image.image",
           "info": "t:sections.collection_list.blocks.collection.image_size_recommendation"
-        }, 
+        },
         {
           "type": "checkbox",
           "id": "expand_collection",
@@ -349,12 +345,6 @@
         },
         {
           "type": "color",
-          "id": "text_color",
-          "label": "t:global.colors.text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
           "id": "overlay_color",
           "label": "t:global.colors.overlay_color",
           "default": "#000000"
@@ -368,16 +358,6 @@
           "step": 1,
           "unit": "%",
           "default": 30
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:global.colors.button_background"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "t:global.colors.button_text"
         }
       ]
     }

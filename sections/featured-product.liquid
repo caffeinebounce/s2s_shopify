@@ -10,7 +10,9 @@
   }
 </style>
 
-<div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   <div class="container {% unless section.settings.container_size == 'full' %}container--{{ section.settings.container_size }}{% endunless %}">
     <div class="section-stack">
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
@@ -43,6 +45,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "product",
       "id": "product",
@@ -432,7 +440,7 @@
         },
         {
           "type": "product_list",
-          "id": "product_list",
+          "id": "products",
           "label": "t:sections.main_product.blocks.product_variations.product_list",
           "info": "t:sections.main_product.blocks.product_variations.product_list_info"
         },
@@ -1428,6 +1436,12 @@
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Share some content to your customers about your products.</p>"
+        },
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "t:global.code.liquid",
+          "info": "t:sections.main_product.blocks.collapsible_text.liquid_info"
         },
         {
           "type": "page",

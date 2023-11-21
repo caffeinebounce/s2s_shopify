@@ -1,13 +1,5 @@
 {
   "sections": {
-    "shogun-helper": {
-      "type": "shogun-helper",
-      "settings": {}
-    },
-    "shogun-above": {
-      "type": "shogun-above",
-      "settings": {}
-    },
     "c352ce10-24f1-47dd-aa85-aa099a2e3239": {
       "type": "slideshow",
       "blocks": {
@@ -64,8 +56,6 @@
         "show_collection_description": false,
         "show_breadcrumb": true,
         "content_width": "md",
-        "background": "#000000",
-        "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 80
       }
@@ -107,19 +97,12 @@
         "title": "Recently viewed",
         "content": ""
       }
-    },
-    "shogun-below": {
-      "type": "shogun-below",
-      "settings": {}
     }
   },
   "order": [
-    "shogun-helper",
-    "shogun-above",
     "c352ce10-24f1-47dd-aa85-aa099a2e3239",
     "collection-banner",
     "main",
-    "recently-viewed-products",
-    "shogun-below"
+    "recently-viewed-products"
   ]
 }

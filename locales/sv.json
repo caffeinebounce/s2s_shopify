@@ -421,6 +421,7 @@
       "checkbox": "Jag vill skicka detta som en gåva",
       "email_label": "Mottagarens e-postadress",
       "name_label": "Mottagarens namn (valfritt)",
+      "send_on_label": "Skicka den (valfritt)",
       "message_label": "Meddelande (valfritt)"
     }
   },

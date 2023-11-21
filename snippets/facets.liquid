@@ -94,7 +94,7 @@ Supported variables
 
             {%- case filter.type -%}
               {%- when 'list' -%}
-                {%- if section.settings.show_color_swatch and color_label_list contains downcase_label -%}
+                {%- if filter.presentation == 'swatch' or section.settings.show_color_swatch and color_label_list contains downcase_label -%}
                   {%- assign wrapper_class_list = 'h-stack wrap gap-2' -%}
                 {%- else -%}
                   {%- assign wrapper_class_list = 'v-stack gap-2.5' -%}
@@ -109,8 +109,15 @@ Supported variables
 
                       assign value_id_prefix = id_prefix | append: '-' | append: forloop.index
 
-                      if section.settings.show_color_swatch and color_label_list contains downcase_label
-                        render 'swatch' with 'color', allow_multiple: true, selected: filter_value.active, value: filter_value.label, name: filter_value.param_name, show_tooltip: true, id_prefix: value_id_prefix
+                      if filter.presentation == 'swatch'
+                        case filter_value.display.type
+                          when 'colors'
+                            render 'swatch', type: 'colors', allow_multiple: true, colors: filter_value.display.value, selected: filter_value.active, value: filter_value.value, label: filter_value.label, name: filter_value.param_name, show_tooltip: true, id_prefix: value_id_prefix
+                          when 'image'
+                            render 'swatch', type: 'colors', allow_multiple: true, image: filter_value.display.value, selected: filter_value.active, value: filter_value.value, label: filter_value.label, name: filter_value.param_name, show_tooltip: true, id_prefix: value_id_prefix
+                        endcase
+                      elsif section.settings.show_color_swatch and color_label_list contains downcase_label
+                        render 'swatch', type: 'colors', allow_multiple: true, selected: filter_value.active, value: filter_value.value, label: filter_value.label, name: filter_value.param_name, show_tooltip: true, id_prefix: value_id_prefix
                       else
                         if section.settings.show_filter_values_count
                           assign label = filter_value.label | append: ' (' | append: filter_value.count | append: ')'

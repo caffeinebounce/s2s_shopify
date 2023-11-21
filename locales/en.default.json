@@ -65,12 +65,7 @@
       "product_title": "Product",
       "product_description": "Write text about your product.",
       "collection_title": "Collection"
-    },
-    "meta": {},
-    "announcement_bar": {},
-    "popup": {},
-    "password": {},
-    "pagination": {}
+    }
   },
   "header": {
     "general": {
@@ -83,8 +78,7 @@
       "open_search": "Open search",
       "open_account": "Open account page",
       "open_cart": "Open cart"
-    },
-    "navigation": {}
+    }
   },
   "product": {
     "general": {
@@ -109,8 +103,7 @@
       "available_colors_count": {
         "one": "{{ count }} color available",
         "other": "{{ count }} colors available"
-      },
-      "reviews_count": {}
+      }
     },
     "gallery": {
       "close": "Close gallery",
@@ -155,14 +148,7 @@
       "pick_up_currently_unavailable": "Pickup currently unavailable",
       "pick_up_available_at": "Pickup available at {{ location_name }}",
       "pick_up_unavailable_at": "Pickup currently unavailable at {{ location_name }}"
-    },
-    "labels": {},
-    "slideshow": {},
-    "form": {
-      "inventory_quantity_count": {},
-      "low_inventory_quantity_count": {}
-    },
-    "tabs": {}
+    }
   },
   "collection": {
     "general": {
@@ -188,11 +174,7 @@
       "price_filter_to": "To price",
       "price_filter": "{{ min_price }} - {{ max_price }}",
       "in_stock_only": "In stock only"
-    },
-    "filter": {},
-    "sorting": {},
-    "layout": {},
-    "product": {}
+    }
   },
   "blog": {
     "general": {
@@ -220,9 +202,6 @@
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"
       }
-    },
-    "article": {
-      "comments_count": {}
     }
   },
   "blog_post": {
@@ -346,8 +325,7 @@
       "country": "Country",
       "province": "Province",
       "set_default": "Set as default address"
-    },
-    "orders": {}
+    }
   },
   "cart": {
     "general": {
@@ -391,8 +369,7 @@
       "one_result": "There is one shipping rate for your address:",
       "multiple_results": "There are several shipping rates for your address:",
       "error": "One or more error occurred while retrieving shipping rates:"
-    },
-    "items": {}
+    }
   },
   "404": {
     "general": {
@@ -413,9 +390,7 @@
       "pages": "Pages",
       "clear": "Clear",
       "view_all_results": "View all results",
-      "no_results": "No results could be found. Please try again with a different query.",
-      "results_count": {},
-      "results_with_terms_count": {}
+      "no_results": "No results could be found. Please try again with a different query."
     },
     "results_count": {
       "one": "{{ count }} result",
@@ -447,6 +422,7 @@
       "checkbox": "I want to send this as a gift",
       "email_label": "Recipient email",
       "name_label": "Recipient name (optional)",
+      "send_on_label": "Send on (optional)",
       "message_label": "Message (optional)"
     }
   },
@@ -484,29 +460,6 @@
     "shop_the_look": {
       "view_products": "View products",
       "view_product": "View product"
-    }
-  },
-  "footer": {
-    "general": {},
-    "newsletter": {}
-  },
-  "home_page": {
-    "onboarding": {},
-    "featured_product": {},
-    "shop_the_look": {},
-    "featured_video": {},
-    "newsletter": {}
-  },
-  "collection_list": {
-    "general": {}
-  },
-  "store_availability": {
-    "general": {}
-  },
-  "date_formats": {},
-  "shopify": {
-    "links": {
-      "powered_by_shopify": " "
     }
   }
 }

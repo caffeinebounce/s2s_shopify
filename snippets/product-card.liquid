@@ -78,6 +78,8 @@ Supported variables
       {%- if show_quick_buy and product.available -%}
         {%- if product.variants.size == 1 and product.selling_plan_groups.size == 0 -%}
           {%- form 'product', product, is: 'product-form' -%}
+            <input type="hidden" name="on_success" value="force_open_drawer">
+            <input type="hidden" name="quantity" value="1">
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
             <button type="submit" class="product-card__quick-add-button">
               <span class="sr-only">{{ 'product.general.add_to_cart_button' | t }}</span>
@@ -141,7 +143,7 @@ Supported variables
       {%- for color_label in color_label_list -%}
         {%- if product.options_by_name[color_label] != blank -%}
           {%- assign product_option = product.options_by_name[color_label] -%}
-          {%- capture name -%}swatch-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
+          {%- capture name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
 
           {%- case settings.product_color_display -%}
             {%- when 'count' -%}
@@ -156,7 +158,7 @@ Supported variables
                     {% assign selected = false %}
                   {%- endif -%}
 
-                  {%- render 'swatch' with 'color', value: option_value, name: name, selected: selected, size: 'sm' -%}
+                  {%- render 'swatch', type: 'colors', value: option_value, name: name, selected: selected, size: 'sm' -%}
                 {%- endfor -%}
               </fieldset>
           {%- endcase -%}

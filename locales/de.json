@@ -422,6 +422,7 @@
       "checkbox": "Ich möchte dies als Geschenk senden",
       "email_label": "Empfänger E-Mail",
       "name_label": "Name des Empfängers (optional)",
+      "send_on_label": "Senden am (optional)",
       "message_label": "Nachricht (optional)"
     }
   },

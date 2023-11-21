@@ -27,7 +27,7 @@ Supported variables
   </li>
 
   <li class="social-media__item branding-colors--twitter">
-    {%- capture share_url -%}https://twitter.com/share?{% if title != blank %}text={{ title | url_param_escape }}&{% endif %}url={{ url }}{%- endcapture -%}
+    {%- capture share_url -%}https://twitter.com/intent/tweet?{% if title != blank %}text={{ title | url_param_escape }}&{% endif %}url={{ url }}{%- endcapture -%}
 
     <a href="{{ share_url }}" aria-label="{{ 'general.social.share_on' | t: social_media: 'Twitter' }}">
       {%- render 'icon' with 'twitter' -%}

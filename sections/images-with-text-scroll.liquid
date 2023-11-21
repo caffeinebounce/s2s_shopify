@@ -14,7 +14,7 @@
     }
   </style>
 
-  <images-with-text-scroll id="{{ section_carousel_id }}" class="images-with-text-scroll {% if section.settings.image_position == 'end' %}images-with-text-scroll--reverse{% endif %}" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+  <images-with-text-scroll id="{{ section_carousel_id }}" class="images-with-text-scroll {% if section.settings.image_position == 'end' %}images-with-text-scroll--reverse{% endif %} color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
     {%- if section.settings.background_image or section.settings.mobile_background_image -%}
       <picture class="contents {% if section.settings.background_image == blank %}md:hidden{% endif %}">
         {%- if section.settings.mobile_background_image -%}
@@ -28,7 +28,7 @@
 
         {%- assign background_image = section.settings.background_image | default: section.settings.mobile_background_image -%}
 
-        {{- background_image | image_url: width: background_image.width | image_tag: loading: 'lazy', widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'images-with-text-scroll__image-background' -}}
+        {{- background_image | image_url: width: background_image.width | image_tag: widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'images-with-text-scroll__image-background' -}}
       </picture>
     {%- endif -%}
 
@@ -37,11 +37,19 @@
 
       {%- for block in section.blocks -%}
         <div class="images-with-text-scroll__item {% if forloop.first %}is-selected{% endif %}">
-          {%- if images.size == 0 and forloop.first -%}
-            {{ 'image' | placeholder_svg_tag: 'images-with-text-scroll__image placeholder' }}
-          {% elsif block.settings.image -%}
-            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 210px, (max-width: 999px) 440px, 575px', widths: '210,420,440,575,630,880,1150,1320,1725', style: 'object-position: inherit', class: 'images-with-text-scroll__image' -}}
-          {%- endif -%}
+          {%- liquid
+            if images.size == 0 and forloop.first
+              echo 'image' | placeholder_svg_tag: 'images-with-text-scroll__image placeholder'
+            elsif block.settings.image
+              assign loading = nil
+
+              unless forloop.first
+                assign loading = 'lazy'
+              endunless
+
+              echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading, sizes: '(max-width: 699px) 210px, (max-width: 999px) 440px, 575px', widths: '210,420,440,575,630,880,1150,1320,1725', style: 'object-position: inherit', class: 'images-with-text-scroll__image'
+            endif
+          -%}
 
           <div class="images-with-text-scroll__text" {{ block.shopify_attributes }}>
             <div class="prose">
@@ -56,7 +64,7 @@
               {{- block.settings.content -}}
 
               {%- if block.settings.link_text != blank -%}
-                {%- render 'button', href: block.settings.link_url, content: block.settings.link_text, style: block.settings.link_style, background: section.settings.button_background, text_color: section.settings.button_text_color -%}
+                {%- render 'button', href: block.settings.link_url, content: block.settings.link_text, style: block.settings.link_style -%}
               {%- endif -%}
             </div>
           </div>
@@ -86,6 +94,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.images_with_text_scroll.instructions"
@@ -176,31 +190,6 @@
     {
       "type": "header",
       "content": "t:global.colors.category"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "info": "t:sections.images_with_text_scroll.background_info",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "t:global.colors.button_background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "t:global.colors.button_text",
-      "default": "#1c1c1c"
     },
     {
       "type": "color",

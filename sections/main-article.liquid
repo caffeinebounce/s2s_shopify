@@ -4,9 +4,11 @@
   }
 </style>
 
-<div class="article">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="article color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if section.settings.show_sticky_bar -%}
-    <article-toolbar class="article__toolbar sm-max:hidden" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+    <article-toolbar class="article__toolbar color-scheme color-scheme--{{ section.settings.toolbar_color_scheme.id }} sm-max:hidden">
       <div class="container">
         <div class="h-stack justify-between">
           <p class="h-stack gap-1">
@@ -50,7 +52,7 @@
     {%- endif -%}
 
     <div class="article__image">
-      {{- article.image | image_url: width: article.image.width | image_tag: is: is_attribute, loading: 'lazy' , widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}}
+      {{- article.image | image_url: width: article.image.width | image_tag: is: is_attribute, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'w-full' -}}
     </div>
   {%- endif -%}
 
@@ -185,6 +187,12 @@
   "tag": "section",
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
+    {
       "type": "paragraph",
       "content": "t:sections.main_article.comments_category_info"
     },
@@ -292,16 +300,10 @@
       "default": true
     },
     {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
+      "type": "color_scheme",
+      "id": "toolbar_color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
     }
   ]
 }

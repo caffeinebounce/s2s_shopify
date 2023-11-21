@@ -41,7 +41,7 @@ Supported variables
         {%- render 'icon' with 'chevron-down' -%}
       </button>
 
-      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }}">
+      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
         <p class="h4" slot="header">{{ 'general.localization.country' | t }}</p>
 
         {%- form 'localization', id: localization_form_id -%}
@@ -79,7 +79,7 @@ Supported variables
         {%- render 'icon' with 'chevron-down' -%}
       </button>
 
-      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }}">
+      <x-popover id="{{ localization_popover_id }}" initial-focus="[aria-selected='true']" class="popover popover--{{ placement | default: 'bottom-start' }} color-scheme color-scheme--dialog">
         <p class="h4" slot="header">{{ 'general.localization.language' | t }}</p>
 
         {%- form 'localization', id: localization_form_id -%}

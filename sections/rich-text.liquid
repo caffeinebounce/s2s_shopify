@@ -1,5 +1,7 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container container--{{ section.settings.content_width }}">
       <div class="prose text-{{ section.settings.text_position }}">
         {%- assign is_inside_button_group_context = false -%}
@@ -52,7 +54,7 @@
                     {%- assign image_widths = '200,300,400,500,600,800,1000,1200,1400,1600' -%}
                   {%- endif -%}
 
-                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: image_sizes_attribute, widths: image_widths, class: 'constrained-image', style: image_style_attribute -}}
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: image_sizes_attribute, widths: image_widths, class: 'constrained-image', style: image_style_attribute -}}
                 </div>
               {%- endif -%}
 
@@ -62,7 +64,7 @@
                   {%- render 'media', media: block.settings.video, controls: true -%}
                 </div>
               {%- endif -%}
-            
+
             {%- when 'link' -%}
               <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="link" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</a>
 
@@ -93,6 +95,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",

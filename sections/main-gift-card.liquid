@@ -7,16 +7,18 @@
   }
 </style>
 
-<div class="section-spacing section-spacing--tight">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   <div class="container container--xxs">
     <div class="gift-card v-stack gap-12">
       <!-- GIFT CARD IMAGE -->
       {%- assign image = section.settings.image | default: gift_card.product.featured_media -%}
 
       {%- if image != blank -%}
-        {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '270px', widths: '270,540,810', class: 'gift-card__image' -}}
+        {{- image | image_url: width: image.width | image_tag: sizes: '270px', widths: '270,540,810', class: 'gift-card__image' -}}
       {%- else -%}
-        <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" class="gift-card__image" alt="" width="270" height="180" loading="lazy">
+        <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" class="gift-card__image" alt="" width="270" height="180">
       {%- endif -%}
 
       <!-- GIFT CARD INFO -->
@@ -95,6 +97,12 @@
   "class": "shopify-section--main-gift-card",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "image_picker",
       "id": "image",

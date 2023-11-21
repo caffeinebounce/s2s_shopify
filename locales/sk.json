@@ -441,6 +441,7 @@
       "checkbox": "Chcem to poslať ako darček",
       "email_label": "E-mail príjemcu",
       "name_label": "Meno príjemcu (voliteľné)",
+      "send_on_label": "Dátum odoslania (voliteľné)",
       "message_label": "Správa (voliteľné)"
     }
   },

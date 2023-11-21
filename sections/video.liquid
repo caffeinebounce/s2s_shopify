@@ -6,7 +6,7 @@
       {%- if poster_image != blank -%}
         {{- poster_image | image_url: width: poster_image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
       {%- else -%}
-        {{- 'lifestyle-1' | placeholder_svg_tag: 'h-full w-full placeholder placeholder--invert' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
+        {{- 'lifestyle-1' | placeholder_svg_tag: 'h-full w-full placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
       {%- endif -%}
     {%- endunless -%}
   {%- endcapture -%}

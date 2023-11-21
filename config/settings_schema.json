@@ -3,9 +3,9 @@
     "name": "theme_info",
     "theme_name": "Prestige",
     "theme_author": "Maestrooo",
-    "theme_version": "7.3.6",
-    "theme_documentation_url": "https:\/\/support.maestrooo.com\/",
-    "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
+    "theme_version": "8.1.2",
+    "theme_documentation_url": "https:\/\/prestige-theme.helpscoutdocs.com",
+    "theme_support_url": "https:\/\/prestige-theme.helpscoutdocs.com\/article\/500-contact-us"
   },
   {
     "name": "t:theme_settings.appearance.name",
@@ -86,109 +86,95 @@
     "name": "t:theme_settings.colors.name",
     "settings": [
       {
-        "type": "header",
-        "content": "t:theme_settings.colors.general_category"
+        "type": "color_scheme_group",
+        "id": "color_schemes",
+        "definition": [
+          {
+            "type": "header",
+            "content": "t:theme_settings.colors.general_category"
+          },
+          {
+            "type": "color",
+            "id": "background",
+            "label": "t:global.colors.background",
+            "default": "#efefef"
+          },
+          {
+            "type": "color_background",
+            "id": "background_gradient",
+            "label": "t:global.colors.background_gradient"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "t:theme_settings.colors.body_text_color",
+            "default": "#1c1c1c"
+          },
+          {
+            "type": "header",
+            "content": "t:theme_settings.colors.button_category"
+          },
+          {
+            "type": "color",
+            "id": "primary_button_background",
+            "label": "t:global.colors.background",
+            "default": "#1c1c1c"
+          },
+          {
+            "type": "color",
+            "id": "primary_button_text_color",
+            "label": "t:global.colors.text",
+            "default": "#ffffff"
+          },
+          {
+            "type": "header",
+            "content": "t:theme_settings.colors.button_icon_category",
+            "info": "t:theme_settings.colors.button_icon_category_info"
+          },
+          {
+            "type": "color",
+            "id": "circle_button_background",
+            "label": "t:global.colors.background",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "circle_button_icon",
+            "label": "t:global.colors.icon",
+            "default": "#1c1c1c"
+          }
+        ],
+        "role": {
+          "background": {
+            "solid": "background",
+            "gradient": "background_gradient"
+          },
+          "text": "text_color",
+          "links": "text_color",
+          "icons": "text_color",
+          "primary_button": "primary_button_background",
+          "primary_button_border": "primary_button_background",
+          "on_primary_button": "primary_button_text_color",
+          "secondary_button": "primary_button_background",
+          "secondary_button_border": "primary_button_background",
+          "on_secondary_button": "primary_button_text_color"
+        }
       },
       {
-        "type": "color",
-        "id": "text_color",
-        "label": "t:theme_settings.colors.body_text_color",
-        "default": "#1c1c1c"
-      },
-      {
-        "type": "color",
-        "id": "background",
-        "label": "t:global.colors.background",
-        "default": "#efefef"
-      },
-      {
-        "type": "color",
-        "id": "secondary_background",
-        "label": "t:theme_settings.colors.secondary_background",
-        "info": "t:theme_settings.colors.secondary_background_info",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "success_color",
-        "label": "t:theme_settings.colors.success_color",
-        "default": "#307a07"
-      },
-      {
-        "type": "color",
-        "id": "warning_color",
-        "label": "t:theme_settings.colors.warning_color",
-        "default": "#ed8a00"
-      },
-      {
-        "type": "color",
-        "id": "error_color",
-        "label": "t:theme_settings.colors.error_color",
-        "default": "#cb2b2b"
-      },
-      {
-        "type": "header",
-        "content": "t:theme_settings.colors.header_category"
-      },
-      {
-        "type": "color",
-        "id": "header_background",
-        "label": "t:global.colors.background",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "header_text_color",
-        "label": "t:global.colors.text",
-        "default": "#1c1c1c"
-      },
-      {
-        "type": "header",
-        "content": "t:theme_settings.colors.footer_category"
-      },
-      {
-        "type": "color",
-        "id": "footer_background",
-        "label": "t:global.colors.background",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "footer_text_color",
-        "label": "t:global.colors.text",
-        "default": "#1c1c1c"
-      },
-      {
-        "type": "header",
-        "content": "t:theme_settings.colors.button_category"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_background",
-        "label": "t:global.colors.background",
-        "default": "#1c1c1c"
-      },
-      {
-        "type": "color",
-        "id": "primary_button_text_color",
-        "label": "t:global.colors.text",
-        "default": "#ffffff"
+        "type": "color_scheme",
+        "id": "default_color_scheme",
+        "label": "t:theme_settings.colors.default_color_scheme",
+        "info": "t:theme_settings.colors.default_color_scheme_info",
+        "default": "scheme-1"
       },
       {
         "type": "header",
         "content": "t:theme_settings.colors.modal_category"
       },
       {
-        "type": "color",
-        "id": "modal_background",
-        "label": "t:global.colors.background",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "modal_text_color",
-        "label": "t:global.colors.text",
-        "default": "#1c1c1c"
+        "type": "color_scheme",
+        "id": "modal_color_scheme",
+        "default": "scheme-2"
       },
       {
         "type": "header",
@@ -218,6 +204,28 @@
         "label": "t:theme_settings.colors.custom_badge",
         "info": "t:theme_settings.colors.custom_badge_info",
         "default": "#1c1c1c"
+      },
+      {
+        "type": "header",
+        "content": "t:theme_settings.colors.notification_category"
+      },
+      {
+        "type": "color",
+        "id": "success_color",
+        "label": "t:theme_settings.colors.success_color",
+        "default": "#307a07"
+      },
+      {
+        "type": "color",
+        "id": "warning_color",
+        "label": "t:theme_settings.colors.warning_color",
+        "default": "#ed8a00"
+      },
+      {
+        "type": "color",
+        "id": "error_color",
+        "label": "t:theme_settings.colors.error_color",
+        "default": "#cb2b2b"
       }
     ]
   },

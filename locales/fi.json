@@ -426,6 +426,7 @@
       "checkbox": "Haluan lähettää tämän lahjaksi",
       "email_label": "Vastaanottajan sähköpostiosoite",
       "name_label": "Vastaanottajan sähköpostiosoite (valinnainen)",
+      "send_on_label": "Lähetä (valinnainen)",
       "message_label": "Viesti (valinnainen)"
     }
   },

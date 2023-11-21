@@ -2,17 +2,19 @@
   assign has_content_below_gallery = false
 
   for block in section.blocks
+    if block.type == 'complementary_products'
+      assign has_content_below_gallery = true
+      break
+    endif
+
     unless block.settings.show_below_gallery
       continue
     endunless
 
-    if block.type == 'accordion' and block.settings.title != blank and block.settings.content != blank or block.settings.page.content != blank
+    if block.type == 'accordion' and block.settings.title != blank and block.settings.content != blank or block.settings.liquid != blank or block.settings.page.content != blank
       assign has_content_below_gallery = true
       break
     elsif block.type == 'description' and product.description != blank
-      assign has_content_below_gallery = true
-      break
-    elsif block.type == 'complementary_products' or block.type == 'reviews'
       assign has_content_below_gallery = true
       break
     endif
@@ -35,7 +37,9 @@
   }
 </style>
 
-<div class="section-spacing section-spacing--tight">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   <div class="container {% unless section.settings.container_size == 'full' %}container--{{ section.settings.container_size }}{% endunless %}">
     <div class="product">
       {%- if product.media.size > 0 -%}
@@ -55,7 +59,7 @@
       {%- if has_content_below_gallery -%}
         <div id="product-extra-information" class="product-content-below-gallery empty:hidden scroll-margin-offset">
           {%- for block in section.blocks -%}
-            {%- unless block.settings.show_below_gallery or block.type == 'reviews' -%}
+            {%- unless block.settings.show_below_gallery -%}
               {%- continue -%}
             {%- endunless -%}
 
@@ -75,7 +79,7 @@
               {%- when 'accordion' -%}
                 {%- liquid
                   assign accordion_title = block.settings.title | default: block.settings.page.title
-                  assign accordion_content = block.settings.page.content | default: block.settings.content
+                  assign accordion_content = block.settings.page.content | default: block.settings.liquid | default: block.settings.content
 
                   if accordion_title != blank and accordion_content != blank
                     render 'accordion', title: accordion_title, content: accordion_content, size: 'lg', prose_content: true, icon: block.settings.icon, custom_icon: block.settings.custom_icon, block: block
@@ -84,23 +88,6 @@
 
               {%- when 'complementary_products' -%}
                 {%- render 'complementary-products', product: product, block: block -%}
-
-              {%- when 'reviews' -%}
-                {%- capture title -%}{{ 'general.reviews.title' | t }} ({{ product.metafields.reviews.rating_count.value | default: 0 }}){%- endcapture -%}
-
-                {%- capture content -%}
-                  {%- if block.settings.liquid -%}
-                    {{- block.settings.liquid -}}
-                  {%- else -%}
-                    <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
-                  {%- endif -%}
-                {%- endcapture -%}
-
-                {%- if block.settings.show_star_icon -%}
-                  {%- render 'accordion', title: title, content: content, is: 'reviews-disclosure', size: 'lg', icon: 'picto-star' -%}
-                {%- else -%}
-                  {%- render 'accordion', title: title, content: content, is: 'reviews-disclosure', size: 'lg' -%}
-                {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
         </div>
@@ -161,12 +148,12 @@ quick buy information in a template, that will be extracted in JS, which ensures
 <script>
   // We save the product ID in local storage to be eventually used for recently viewed section
   try {
-    const recentlyViewedProducts = new Set(JSON.parse(localStorage.getItem('theme:recently-viewed-products') || '[]'));
+    let recentlyViewedProducts = JSON.parse(localStorage.getItem('theme:recently-viewed-products') || '[]');
 
-    recentlyViewedProducts.delete({{ product.id }}); // Delete first to re-move the product to the start
-    recentlyViewedProducts.add({{ product.id }});
+    recentlyViewedProducts = recentlyViewedProducts.filter(item => item !== {{ product.id }}); // Delete product to remove to the start
+    recentlyViewedProducts.unshift({{ product.id }}); // Add at the start
 
-    localStorage.setItem('theme:recently-viewed-products', JSON.stringify(Array.from(recentlyViewedProducts.values()).reverse()));
+    localStorage.setItem('theme:recently-viewed-products', JSON.stringify(recentlyViewedProducts));
   } catch (e) {
     // Safari in private mode does not allow setting item, we silently fail
   }
@@ -178,6 +165,12 @@ quick buy information in a template, that will be extracted in JS, which ensures
   "class": "shopify-section--main-product",
   "tag": "section",
   "settings": [
+   {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "select",
       "id": "container_size",
@@ -805,29 +798,6 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "id": "show_quick_buy",
           "label": "t:sections.main_product.blocks.complementary_products.show_quick_buy",
           "default": true
-        }
-      ]
-    },
-    {
-      "type": "reviews",
-      "name": "t:sections.main_product.blocks.reviews.name",
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:sections.main_product.blocks.reviews.instructions"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_star_icon",
-          "label": "t:sections.main_product.blocks.reviews.show_star_icon",
-          "default": false
-        },
-        {
-          "type": "liquid",
-          "id": "liquid",
-          "label": "t:sections.main_product.blocks.reviews.liquid",
-          "info": "t:sections.main_product.blocks.reviews.liquid_info",
-          "default": "<div id=\"shopify-product-reviews\" data-id=\"{{ product.id }}\">{{ product.metafields.spr.reviews }}</div>"
         }
       ]
     },
@@ -1579,6 +1549,12 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Share some content to your customers about your products.</p>"
+        },
+        {
+          "type": "liquid",
+          "id": "liquid",
+          "label": "t:global.code.liquid",
+          "info": "t:sections.main_product.blocks.collapsible_text.liquid_info"
         },
         {
           "type": "page",

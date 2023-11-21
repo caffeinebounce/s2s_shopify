@@ -26,7 +26,9 @@
     }
   </style>
 
-  <div class="section-spacing {% if section.settings.background != blank and section.settings.background != 'rgba(0,0,0,0)' and section.settings.background != settings.background %}section-spacing--padded{% endif %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container {% unless section.settings.section_width == 'full' %}container--{{ section.settings.section_width }}{% endunless %}">
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
@@ -34,21 +36,21 @@
         <media-grid class="media-grid">
           {%- for block in section.blocks -%}
             {%- capture block_content -%}
-              <div class="content-over-media group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }}; {% render 'surface', text_color: block.settings.text_color %}">
+              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
                   {%- if block.settings.image -%}
                     {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 100.0 | divided_by: 12.0 | times: block.settings.column_count | round }}vw{%- endcapture -%}
-                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom' -}}
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: sizes_attribute, widths: '200,300,400,500,600,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom' -}}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder placeholder--invert zoom-image group-hover:zoom' -}}
+                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
                   {%- endif -%}
                 {%- else -%}
                   {%- if block.settings.video -%}
                     {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder placeholder--invert zoom-image group-hover:zoom' -}}
+                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
                   {%- endif -%}
                 {%- endif -%}
 
@@ -59,7 +61,7 @@
                     {{- block.settings.content -}}
 
                     {%- if block.settings.link_text != blank -%}
-                      {%- render 'button', content: block.settings.link_text, style: block.settings.link_style, background: block.settings.button_background, text_color: block.settings.text_color -%}
+                      {%- render 'button', content: block.settings.link_text, style: block.settings.link_style -%}
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -91,6 +93,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "checkbox",
       "id": "separate_section_with_border",
@@ -192,20 +200,6 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
-    },
-    {
-      "type": "header",
-      "content": "t:global.colors.category"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.text.text"
     }
   ],
   "blocks": [
@@ -213,6 +207,12 @@
       "type": "image",
       "name": "t:sections.media_grid.blocks.image.name",
       "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:global.colors.scheme",
+          "default": "scheme-4"
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -383,22 +383,6 @@
         },
         {
           "type": "color",
-          "id": "text_color",
-          "label": "t:global.colors.text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:global.colors.button_background"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "t:global.colors.button_text"
-        },
-        {
-          "type": "color",
           "id": "overlay_color",
           "label": "t:global.colors.overlay_color",
           "default": "#000000"
@@ -419,6 +403,12 @@
       "type": "video",
       "name": "t:sections.media_grid.blocks.video.name",
       "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:global.colors.scheme",
+          "default": "scheme-4"
+        },
         {
           "type": "video",
           "id": "video",
@@ -598,22 +588,6 @@
         {
           "type": "header",
           "content": "t:global.colors.category"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:global.colors.text",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_background",
-          "label": "t:global.colors.button_background"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "label": "t:global.colors.button_text"
         },
         {
           "type": "color",

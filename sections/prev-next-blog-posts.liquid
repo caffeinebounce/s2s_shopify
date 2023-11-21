@@ -1,4 +1,6 @@
-<div class="section-spacing {% if section.settings.background != blank and section.settings.background != 'rgba(0,0,0,0)' and section.settings.background != settings.background %}section-spacing--padded{% endif %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
   <div class="container container--lg">
     <div class="section-stack">
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title -%}
@@ -24,6 +26,12 @@
     "class": "shopify-section--prev-next-blog-posts",
     "tag": "section",
     "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:global.colors.scheme",
+        "default": "scheme-3"
+      },
       {
         "type": "checkbox",
         "id": "separate_section_with_border",
@@ -59,22 +67,6 @@
         "id": "show_read_more",
         "label": "t:global.blog.show_read_more",
         "default": true
-      },
-      {
-        "type": "header",
-        "content": "t:global.colors.category"
-      },
-      {
-        "type": "color",
-        "id": "background",
-        "label": "t:global.colors.background",
-        "default": "#1c1c1c"
-      },
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "t:global.colors.text",
-        "default": "#ffffff"
       }
     ]
   }

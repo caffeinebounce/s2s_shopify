@@ -11,7 +11,7 @@
     }
   </style>
 
-  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %}">
+  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
     <image-banner class="image-with-text-block {% if section.settings.enable_parallax %}image-with-text-block--parallax {% endif %}content-over-media content-over-media--{{ section.settings.image_size }}">
       {%- if section.settings.image != blank -%}
         <picture>
@@ -24,14 +24,14 @@
             >
           {%- endif -%}
 
-          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
         </picture>
       {%- else -%}
         {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
       {%- endif -%}
 
       {%- if section.blocks.size > 0 -%}
-        <div class="content text-center" style="{% render 'surface', background: section.settings.block_background, text_color: section.settings.block_text_color %}">
+        <div class="content text-center">
           <div class="prose text-sm sm:text-base">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
@@ -76,6 +76,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-2"
+    },
     {
       "type": "select",
       "id": "image_size",
@@ -153,20 +159,6 @@
       "id": "remove_vertical_spacing",
       "label": "t:global.spacing.remove_vertical_spacing",
       "default": true
-    },
-    {
-      "type": "header",
-      "content": "t:global.colors.category"
-    },
-    {
-      "type": "color",
-      "id": "block_text_color",
-      "label": "t:sections.image_with_text_block.block_text_color"
-    },
-    {
-      "type": "color",
-      "id": "block_background",
-      "label": "t:sections.image_with_text_block.block_background"
     }
   ],
   "blocks": [

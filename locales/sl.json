@@ -440,6 +440,7 @@
       "checkbox": "Želim poslati kot darilo",
       "email_label": "E-poštni naslov prejemnika",
       "name_label": "Ime prejemnika (izbirno)",
+      "send_on_label": "Pošlji na datum (izbirno)",
       "message_label": "Sporočilo (izbirno)"
     }
   },

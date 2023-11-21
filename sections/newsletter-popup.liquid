@@ -9,7 +9,7 @@
       {%- endform -%}
     {%- endcapture -%}
 
-    <newsletter-popup class="pop-in newsletter-popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+    <newsletter-popup class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
       <button class="pop-in__close-button tap-area" is="dialog-close-button">
         <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
         {%- render 'icon' with 'close' -%}
@@ -51,7 +51,7 @@
               {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
             </div>
 
-            {%- render 'button', content: section.settings.button_text, type: 'submit', background: section.settings.button_background, text_color: section.settings.button_text_color -%}
+            {%- render 'button', content: section.settings.button_text, type: 'submit' -%}
           {%- endif -%}
         {%- endform -%}
       </div>
@@ -67,6 +67,12 @@
     {
       "type": "paragraph",
       "content": "t:sections.newsletter_popup.instructions"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
     },
     {
       "type": "range",
@@ -113,30 +119,6 @@
       "id": "button_text",
       "label": "t:global.text.button_text",
       "default": "Subscribe"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "t:global.colors.button_background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "t:global.colors.button_text",
-      "default": "#1c1c1c"
     }
   ]
 }

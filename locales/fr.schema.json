@@ -2,11 +2,14 @@
   "global": {
     "colors": {
       "category": "Couleurs",
+      "scheme": "Nuancier de couleurs",
       "background": "Couleur de fond",
+      "background_gradient": "Dégradé de couleur de fond",
       "background_opacity": "Opacité de la couleur de fond",
       "text": "Couleur du texte",
       "text_shadow": "Ombre du texte",
       "border": "Bordure",
+      "icon": "Icone",
       "button_background": "Fond du bouton",
       "button_text": "Texte du bouton",
       "overlay_color": "Overlay",
@@ -282,21 +285,22 @@
       "general_category": "Général",
       "heading_color": "Titres",
       "body_text_color": "Texte",
-      "secondary_background": "Couleur de fond secondaire",
-      "secondary_background_info": "Choisissez une couleur proche de la couleur de fond principale.",
+      "default_color_scheme": "Nuancier par défaut",
+      "default_color_scheme_info": "Utilisé sur les pages secondaires telles que les pages de condition d'utilisation.",
+      "notification_category": "Notification",
       "success_color": "Succès",
       "warning_color": "Warning",
       "error_color": "Erreur",
-      "header_category": "Header",
-      "footer_category": "Footer",
       "button_category": "Bouton",
+      "button_icon_category": "Bouton avec icone",
+      "button_icon_category_info": "S'applique aux boutons arrondis comme les boutons de navigation ou de fermeture.",
       "modal_category": "Modales\/panneaux déroulants",
       "product_category": "Produit",
       "product_rating_color": "Etoile des avis",
       "on_sale_accent": "Accent en solde",
       "sold_out_badge_background": "Badge en rupture",
       "custom_badge": "Badge personnalisé",
-      "custom_badge_info": "[En savoir plus](https:\/\/support.maestrooo.com\/article\/75-collection-displaying-custom-label)"
+      "custom_badge_info": "[En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/437-custom-badges-with-metafields)"
     },
     "typography": {
       "name": "Typographie",
@@ -352,7 +356,7 @@
       "name": "Pastille de couleur",
       "round_color_swatches": "Arrondir les pastilles de couleur",
       "configuration": "Configuration",
-      "configuration_info": "Chaque règle doit être sur sa propre ligne. [En savoir plus](https:\/\/support.maestrooo.com\/article\/80-product-uploading-custom-color-for-color-swatch)."
+      "configuration_info": "Chaque règle doit être sur sa propre ligne. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/417-configuring-color-swatches)."
     },
     "product_card": {
       "name": "Card produit",
@@ -525,7 +529,12 @@
       "show_shipping_text": "Afficher le texte de livraison\/taxes",
       "show_view_cart_button": "Afficher le bouton pour accéder au panier",
       "show_checkout_button": "Afficher le bouton pour passer à la caisse",
-      "show_price_in_checkout_button": "Afficher le prix dans le bouton de caisse"
+      "show_price_in_checkout_button": "Afficher le prix dans le bouton de caisse",
+      "cross_sell_category": "Cross-sell",
+      "cross_sell_products": "Produits",
+      "cross_sell_products_info": "Les produits déjà dans le panier ou en rupture sont cachés.",
+      "cross_sell_heading": "Titre",
+      "cross_sell_stack_products": "Empiler les produits"
     },
     "collection_banner": {
       "name": "Bannière de la collection",
@@ -534,11 +543,11 @@
       "reveal": "Réveler l'image avec une animation",
       "enable_parallax": "Activer l'effet parallax",
       "enable_parallax_info": "Cet effet coupe l'image.",
+      "show_image": "Afficher l'image",
       "show_collection_title": "Afficher le titre de la collection",
       "show_collection_description": "Afficher la description de la collection",
       "show_breadcrumb": "Afficher le fil d'ariane",
-      "colors_category_info": "Ignorés lorsqu'il n'y a pas d'image.",
-      "background_info": "Visible lorsque l'image charge."
+      "colors_category_info": "Ignorés lorsqu'il n'y a pas d'image."
     },
     "collection_list": {
       "name": "Liste de collections",
@@ -546,10 +555,6 @@
       "space_items": "Espacer les blocs",
       "stack_collections": "Empiler les collections",
       "collections_per_row_desktop": "Collections par ligne (desktop)",
-      "navigation_button_category": "Boutons de navigation",
-      "navigation_button_category_info": "Uniquement lorsque les collections ne sont pas empilées.",
-      "navigation_button_background": "Couleur de fond",
-      "navigation_button_text_color": "Couleur de la flèche",
       "blocks": {
         "collection": {
           "name": "Collection",
@@ -690,7 +695,9 @@
           "name": "Liens",
           "menu": "Menu",
           "menu_info": "Les menus déroulants ne sont pas affichés.",
-          "show_menu_title": "Afficher le titre du menu"
+          "show_menu_title": "Afficher le titre du menu",
+          "menu_title": "Titre",
+          "menu_title_info": "Remplace le titre par défaut du menu"
         },
         "newsletter": {
           "name": "Newsletter",
@@ -733,14 +740,14 @@
       },
       "show_icons": "Afficher les icones",
       "transparent_header_category": "Header transparent",
-      "transparent_header_info": "Pour afficher un header transparent, ajoutez une section compatible (comme un diaporama d'images) en première position. [En savoir plus](https:\/\/support.maestrooo.com\/article\/312-header-how-to-enable-transparent-header)",
+      "transparent_header_info": "Pour afficher un header transparent, ajoutez une section compatible (comme un diaporama d'images) en première position. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/501-transparent-header)",
       "transparent_header_logo_image": "Image logo",
       "transparent_header_logo_size_recommendation": "Utilisez des dimensions identiques au logo principal.",
       "blocks": {
         "mega_menu": {
           "name": "Mega menu",
           "menu_item": "Nom du lien",
-          "menu_item_info": "Entrez un nom de lien pour activer un mega-menu. [En savoir plus](https:\/\/support.maestrooo.com\/article\/180-navigation-enabling-and-configuring-mega-navigation).",
+          "menu_item_info": "Entrez un nom de lien pour activer un mega-menu. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/412-mega-menu).",
           "images_position": "Position des images",
           "image_1": "Image 1",
           "image_2": "Image 2",
@@ -845,7 +852,6 @@
       "instructions": "Configurez le contenu en ajoutant des blocs. La section s'adapte automatiquement pour remplir exactement la hauteur de l'écran.",
       "background_image_info": "3000 x 1800px .jpg recommandé. Les bords de l'image peuvent être coupés pour s'adapter à la taille de l'écran.",
       "mobile_background_image_info": "1600 x 2000px .jpg recommandé. Les bords de l'image peuvent être coupés pour s'adapter à la taille de l'écran.",
-      "background_info": "Ignoré si une image de fond est utilisée.",
       "image_position": "Position de l'image",
       "blocks": {
         "image_with_text": {
@@ -1009,7 +1015,6 @@
       "logo_info": "280 x 80px .png recommandé",
       "background_category": "Arrière-plan",
       "background_image_size_recommendation": "2000 x 1500px .jpg recommandé",
-      "background_color_info": "Uniquement utilisée si aucune image n'est sélectionnée.",
       "blocks": {
         "content": {
           "name": "Contenu",
@@ -1067,7 +1072,7 @@
         },
         "badges": {
           "name": "Badges",
-          "instructions": "Utilisez les metafields pour créer des badges personnalisés. [En savoir plus](https:\/\/support.maestrooo.com\/article\/75-collection-displaying-custom-label)"
+          "instructions": "Utilisez les metafields pour créer des badges personnalisés. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/437-custom-badges-with-metafields)"
         },
         "price": {
           "name": "Prix",
@@ -1104,7 +1109,7 @@
             "dropdown": "Menu déroulant"
           },
           "color_selector_type": "Type de sélecteur de couleur",
-          "color_selector_type_info": "Si vos pastilles ne sont pas visible, vous devez uploader vos propres images. [En savoir plus](https:\/\/support.maestrooo.com\/article\/80-product-uploading-custom-color-for-color-swatch)",
+          "color_selector_type_info": "Si vos pastilles ne sont pas visible, vous devez uploader vos propres images. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/417-configuring-color-swatches)",
           "color_selector_type_options": {
             "block": "Bloc",
             "block_swatch": "Bloc avec pastille de couleur",
@@ -1117,7 +1122,7 @@
         },
         "product_variations": {
           "name": "Variations produit",
-          "instructions": "Utilisez des metafields pour relier des produits entre eux. [En savoir plus](https:\/\/support.maestrooo.com\/article\/307-product-creating-product-variations-that-link-to-different-pages)",
+          "instructions": "Utilisez des metafields pour relier des produits entre eux. [En savoir plus](https:\/\/prestige-theme.helpscoutdocs.com\/article\/426-product-variations-linked-products)",
           "option_name": "Nom de l'option",
           "option_name_placeholder": "Couleur",
           "option_value_metafield": "Metafield de la valeur de l'option",
@@ -1212,6 +1217,7 @@
         "collapsible_text": {
           "name": "Texte déroulant",
           "show_below_gallery": "Afficher sous les images",
+          "liquid_info": "Remplace le contenu en ligne.",
           "page": "Page",
           "page_info": "Remplace le contenu en ligne."
         },
@@ -1565,6 +1571,7 @@
     },
     "timeline": {
       "name": "Frise chronologique",
+      "item_color_scheme": "Nuancier des éléments",
       "blocks": {
         "item": {
           "name": "Item",

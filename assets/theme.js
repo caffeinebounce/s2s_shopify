@@ -1,41 +1,3 @@
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJS = (cb, mod) =>
-  function __require() {
-    return (
-      mod ||
-        (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod),
-      mod.exports
-    );
-  };
-var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (
-  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod || !mod.__esModule
-      ? __defProp(target, "default", { value: mod, enumerable: true })
-      : target,
-    mod
-  )
-);
 var __accessCheck = (obj, member, msg) => {
   if (!member.has(obj)) throw TypeError("Cannot " + msg);
 };
@@ -57,98 +19,6 @@ var __privateMethod = (obj, member, method) => {
   __accessCheck(obj, member, "access private method");
   return method;
 };
-
-// js/sections/spr-reviews.js
-var require_spr_reviews = __commonJS({
-  "js/sections/spr-reviews.js"() {
-    var transformBlock = (appBlock) => {
-      const parentNode = appBlock.parentElement;
-      appBlock.remove();
-      appBlock
-        .querySelectorAll(".spr-summary-actions-newreview")
-        .forEach((button) => {
-          button.classList.add("button");
-          button.addEventListener(
-            "click",
-            () => (button.style.display = "none"),
-            { once: true }
-          );
-        });
-      appBlock.querySelectorAll(".new-review-form").forEach((reviewForm) => {
-        reviewForm.className = "fieldset";
-        if (reviewForm.parentElement.style.display === "") {
-          appBlock
-            .querySelectorAll(".spr-summary-actions-newreview")
-            .forEach((button) => {
-              button.style.display = "none";
-            });
-        }
-      });
-      appBlock
-        .querySelectorAll(".spr-form-contact, .spr-form-review")
-        .forEach((fieldset) => (fieldset.className = "contents"));
-      appBlock
-        .querySelectorAll(".spr-form-label")
-        .forEach((label) => (label.className = ""));
-      appBlock
-        .querySelectorAll(".spr-form-review-rating")
-        .forEach((formRating) => (formRating.className = "form-control"));
-      appBlock
-        .querySelectorAll(".spr-form-input-textarea")
-        .forEach((textarea) => {
-          textarea.className = "textarea";
-          textarea.closest(".spr-form-review-body").className = "form-control";
-        });
-      appBlock
-        .querySelectorAll(".spr-form-input-text, .spr-form-input-email")
-        .forEach((input) => {
-          input.className = "input";
-          input.parentElement.className = "form-control";
-        });
-      appBlock
-        .querySelectorAll(".spr-form-message-success")
-        .forEach((banner) => (banner.className = "banner banner--success"));
-      appBlock
-        .querySelectorAll(".spr-form-message-error")
-        .forEach((banner) => (banner.className = "banner banner--error"));
-      appBlock
-        .querySelectorAll(".spr-review-header-title")
-        .forEach((reviewTitle) => (reviewTitle.className = "h6"));
-      parentNode.appendChild(appBlock);
-    };
-    window.SPRCallbacks = {
-      onProductLoad: (event, params) => {},
-      onReviewsLoad: (event, params) => {
-        transformBlock(
-          document.querySelector(
-            `#shopify-product-reviews[data-id="${params.id}"]`
-          )
-        );
-      },
-      onFormLoad: (event, params) => {
-        transformBlock(
-          document.querySelector(
-            `#shopify-product-reviews[data-id="${params.id}"]`
-          )
-        );
-      },
-      onFormSuccess: (event, params) => {
-        transformBlock(
-          document.querySelector(
-            `#shopify-product-reviews[data-id="${params.id}"]`
-          )
-        );
-      },
-      onFormFailure: (event, params) => {
-        transformBlock(
-          document.querySelector(
-            `#shopify-product-reviews[data-id="${params.id}"]`
-          )
-        );
-      },
-    };
-  },
-});
 
 // js/common/actions/confirm-button.js
 var ConfirmButton = class extends HTMLButtonElement {
@@ -480,7 +350,7 @@ var CountrySelector = class extends HTMLElement {
       "change",
       __privateGet(this, _onCountryChangedListener)
     );
-    if (this.getAttribute("country") !== "") {
+    if (this.hasAttribute("country") && this.getAttribute("country") !== "") {
       this.countryElement.selectedIndex = Math.max(
         0,
         Array.from(this.countryElement.options).findIndex(
@@ -571,6 +441,9 @@ function formatMoney(cents, format = "") {
       break;
     case "amount_no_decimals_with_apostrophe_separator":
       value = formatWithDelimiters(cents, 0, "'");
+      break;
+    default:
+      value = formatWithDelimiters(cents, 2);
       break;
   }
   if (formatString.indexOf("with_comma_separator") !== -1) {
@@ -669,7 +542,8 @@ function videoLoaded(videoOrArray) {
         if (
           (video.tagName === "VIDEO" &&
             video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) ||
-          !video.offsetParent
+          !video.offsetParent ||
+          video.parentNode.hasAttribute("suspended")
         ) {
           resolve();
         } else {
@@ -1301,9 +1175,11 @@ var EffectCarousel = class extends HTMLElement {
     __privateAdd(this, _preventInitialTransition, false);
     __privateMethod(this, _setupListeners, setupListeners_fn).call(this);
     inView3(this, () => this.onBecameVisible());
-    this.addEventListener("carousel:settle", (event) =>
-      event.detail.cell.classList.add("is-selected")
-    );
+    this.addEventListener("carousel:settle", (event) => {
+      this.allCells.forEach((cell) =>
+        cell.classList.toggle("is-selected", cell === event.detail.cell)
+      );
+    });
   }
   connectedCallback() {
     __privateSet(
@@ -1314,7 +1190,9 @@ var EffectCarousel = class extends HTMLElement {
         this.cells.findIndex((item) => item.classList.contains("is-selected"))
       )
     );
-    __privateMethod(this, _preloadImages, preloadImages_fn).call(this);
+    inView3(this, () =>
+      __privateMethod(this, _preloadImages, preloadImages_fn).call(this)
+    );
   }
   /**
    * -------------------------------------------------------------------------------------------------------------------
@@ -1615,6 +1493,7 @@ if (!window.customElements.get("effect-carousel")) {
 }
 
 // js/common/carousel/scroll-carousel.js
+import { inView as inView4 } from "vendor";
 var _hasPendingProgrammaticScroll,
   _onMouseDownListener,
   _onMouseMoveListener,
@@ -1757,7 +1636,9 @@ var ScrollCarousel = class extends HTMLElement {
     if (this.adaptiveHeight) {
       __privateMethod(this, _adaptHeight, adaptHeight_fn).call(this);
     }
-    __privateMethod(this, _preloadImages2, preloadImages_fn2).call(this);
+    inView4(this, () =>
+      __privateMethod(this, _preloadImages2, preloadImages_fn2).call(this)
+    );
   }
   disconnectedCallback() {
     this.removeEventListener(
@@ -2205,6 +2086,9 @@ onMutate_fn = function () {
 };
 _adaptHeight = new WeakSet();
 adaptHeight_fn = function () {
+  if (this.clientHeight === this.selectedCell.clientHeight) {
+    return;
+  }
   this.style.maxHeight = null;
   if (this.isScrollable) {
     this.style.maxHeight = `${this.selectedCell.clientHeight}px`;
@@ -3636,7 +3520,7 @@ document.addEventListener("facet:update", async (event) => {
 });
 
 // js/common/feedback/progress-bar.js
-import { inView as inView4 } from "vendor";
+import { inView as inView5 } from "vendor";
 var _allowUpdatingProgress, _calculateProgressBar, calculateProgressBar_fn;
 var ProgressBar = class extends HTMLElement {
   constructor() {
@@ -3653,7 +3537,7 @@ var ProgressBar = class extends HTMLElement {
   }
   connectedCallback() {
     if (this.hasAttribute("animate-on-scroll")) {
-      inView4(
+      inView5(
         this,
         () => {
           __privateSet(this, _allowUpdatingProgress, true);
@@ -4175,15 +4059,22 @@ if (!window.customElements.get("image-parallax")) {
 // js/common/product/gift-card-recipient.js
 var _recipientCheckbox,
   _recipientOtherProperties,
+  _recipientSendOnProperty,
+  _offsetProperty,
   _recipientFieldsContainer,
   _synchronizeProperties,
-  synchronizeProperties_fn;
+  synchronizeProperties_fn,
+  _formatDate,
+  formatDate_fn;
 var GiftCardRecipient = class extends HTMLElement {
   constructor() {
     super(...arguments);
     __privateAdd(this, _synchronizeProperties);
+    __privateAdd(this, _formatDate);
     __privateAdd(this, _recipientCheckbox, void 0);
     __privateAdd(this, _recipientOtherProperties, []);
+    __privateAdd(this, _recipientSendOnProperty, void 0);
+    __privateAdd(this, _offsetProperty, void 0);
     __privateAdd(this, _recipientFieldsContainer, void 0);
   }
   connectedCallback() {
@@ -4207,6 +4098,32 @@ var GiftCardRecipient = class extends HTMLElement {
       _recipientFieldsContainer,
       this.querySelector(".gift-card-recipient__fields")
     );
+    __privateSet(
+      this,
+      _offsetProperty,
+      this.querySelector('[name="properties[__shopify_offset]"]')
+    );
+    if (__privateGet(this, _offsetProperty)) {
+      __privateGet(this, _offsetProperty).value = /* @__PURE__ */ new Date()
+        .getTimezoneOffset()
+        .toString();
+    }
+    __privateSet(
+      this,
+      _recipientSendOnProperty,
+      this.querySelector('[name="properties[Send on]"]')
+    );
+    const minDate = /* @__PURE__ */ new Date();
+    const maxDate = /* @__PURE__ */ new Date();
+    maxDate.setDate(minDate.getDate() + 90);
+    __privateGet(this, _recipientSendOnProperty)?.setAttribute(
+      "min",
+      __privateMethod(this, _formatDate, formatDate_fn).call(this, minDate)
+    );
+    __privateGet(this, _recipientSendOnProperty)?.setAttribute(
+      "max",
+      __privateMethod(this, _formatDate, formatDate_fn).call(this, maxDate)
+    );
     __privateGet(this, _recipientCheckbox)?.addEventListener(
       "change",
       __privateMethod(
@@ -4224,6 +4141,8 @@ var GiftCardRecipient = class extends HTMLElement {
 };
 _recipientCheckbox = new WeakMap();
 _recipientOtherProperties = new WeakMap();
+_recipientSendOnProperty = new WeakMap();
+_offsetProperty = new WeakMap();
 _recipientFieldsContainer = new WeakMap();
 _synchronizeProperties = new WeakSet();
 synchronizeProperties_fn = function () {
@@ -4235,6 +4154,12 @@ synchronizeProperties_fn = function () {
     "js:hidden",
     !__privateGet(this, _recipientCheckbox).checked
   );
+};
+_formatDate = new WeakSet();
+formatDate_fn = function (date) {
+  const offset = date.getTimezoneOffset();
+  const offsetDate = new Date(date.getTime() - offset * 60 * 1e3);
+  return offsetDate.toISOString().split("T")[0];
 };
 if (!window.customElements.get("gift-card-recipient")) {
   window.customElements.define("gift-card-recipient", GiftCardRecipient);
@@ -4270,12 +4195,12 @@ var ProductCard = class extends HTMLElement {
   connectedCallback() {
     __privateGet(this, _delegate3).on(
       "change",
-      '[type="radio"]',
+      '.product-card__info [type="radio"]',
       __privateMethod(this, _onSwatchChanged, onSwatchChanged_fn).bind(this)
     );
     __privateGet(this, _delegate3).on(
       "pointerover",
-      '[type="radio"] + label',
+      '.product-card__info [type="radio"] + label',
       __privateMethod(this, _onSwatchHovered, onSwatchHovered_fn).bind(this),
       true
     );
@@ -4466,6 +4391,7 @@ onSubmit_fn = async function (event) {
             ? responseJson["items"]
             : [responseJson],
           cart: cartContent,
+          onSuccessDo: formData.get("on_success"),
         },
       })
     );
@@ -4474,6 +4400,7 @@ onSubmit_fn = async function (event) {
         bubbles: true,
         detail: {
           baseEvent: "variant:add",
+          onSuccessDo: formData.get("on_success"),
           cart: cartContent,
         },
       })
@@ -5041,10 +4968,12 @@ onVariantChanged_fn10 = function (event) {
         event.detail.variant["id"] !==
           parseInt(item.getAttribute("data-variant-id"))
       );
-      if (!isItemHidden && __privateGet(this, _progressBarElement)) {
-        __privateGet(this, _progressBarElement).valueNow =
-          item.getAttribute("data-quantity");
+      if (!isItemHidden) {
         this.className = `inventory text-${item.getAttribute("data-status")}`;
+        if (__privateGet(this, _progressBarElement)) {
+          __privateGet(this, _progressBarElement).valueNow =
+            item.getAttribute("data-quantity");
+        }
       }
     });
   }
@@ -5261,7 +5190,13 @@ var ProductGallery = class extends HTMLElement {
         thumbCropped: true,
       };
     });
-    this.lightBox.loadAndOpen(index ?? this.carousel.selectedIndex, dataSource);
+    const imageCells = this.carousel.cells.filter(
+      (cell) => cell.getAttribute("data-media-type") === "image"
+    );
+    this.lightBox.loadAndOpen(
+      index ?? imageCells.indexOf(this.carousel.selectedCell),
+      dataSource
+    );
   }
 };
 _abortController6 = new WeakMap();
@@ -5406,10 +5341,13 @@ onCarouselClick_fn = function (event) {
     return;
   }
   const media = event.target.closest(".product-gallery__media");
+  const imageCells = this.carousel.cells.filter(
+    (cell) => cell.getAttribute("data-media-type") === "image"
+  );
   this.dispatchEvent(
     new CustomEvent("lightbox:open", {
       bubbles: true,
-      detail: { index: this.carousel.cells.indexOf(media) },
+      detail: { index: imageCells.indexOf(media) },
     })
   );
 };
@@ -5594,14 +5532,14 @@ if (!window.customElements.get("open-lightbox-button")) {
 }
 
 // js/common/product/product-list.js
-import { inView as inView5, animate as animate9, stagger } from "vendor";
+import { inView as inView6, animate as animate9, stagger } from "vendor";
 var ProductList = class extends HTMLElement {
   connectedCallback() {
     if (
       matchesMediaQuery("motion-safe") &&
       this.querySelectorAll('product-card[reveal-on-scroll="true"]').length > 0
     ) {
-      inView5(this, this.reveal.bind(this));
+      inView6(this, this.reveal.bind(this));
     }
   }
   reveal() {
@@ -5653,42 +5591,47 @@ var ProductLoader = class {
 };
 
 // js/common/product/quick-buy-modal.js
+var _onAfterHide, onAfterHide_fn;
 var QuickBuyModal = class extends Modal {
-  #isLoaded = false;
   constructor() {
     super();
+    __privateAdd(this, _onAfterHide);
     if (window.themeVariables.settings.cartType === "drawer") {
       document.addEventListener("variant:add", this.hide.bind(this));
     }
+    this.addEventListener(
+      "dialog:after-hide",
+      __privateMethod(this, _onAfterHide, onAfterHide_fn).bind(this)
+    );
   }
   async show() {
-    if (!this.#isLoaded) {
-      document.documentElement.dispatchEvent(
-        new CustomEvent("theme:loading:start", { bubbles: true })
-      );
-      const responseContent = await (
-        await fetch(
-          `${window.Shopify.routes.root}products/${this.getAttribute("handle")}`
-        )
-      ).text();
-      document.documentElement.dispatchEvent(
-        new CustomEvent("theme:loading:end", { bubbles: true })
-      );
-      const tempDoc = new DOMParser().parseFromString(
-        responseContent,
-        "text/html"
-      );
-      const quickBuyContent =
-        tempDoc.getElementById("quick-buy-content").content;
-      Array.from(quickBuyContent.querySelectorAll("noscript")).forEach(
-        (noScript) => noScript.remove()
-      );
-      this.replaceChildren(document.importNode(quickBuyContent, true));
-      Shopify?.PaymentButton?.init();
-      this.#isLoaded = true;
-    }
-    super.show();
+    document.documentElement.dispatchEvent(
+      new CustomEvent("theme:loading:start", { bubbles: true })
+    );
+    const responseContent = await (
+      await cachedFetch(
+        `${window.Shopify.routes.root}products/${this.getAttribute("handle")}`
+      )
+    ).text();
+    document.documentElement.dispatchEvent(
+      new CustomEvent("theme:loading:end", { bubbles: true })
+    );
+    const tempDoc = new DOMParser().parseFromString(
+      responseContent,
+      "text/html"
+    );
+    const quickBuyContent = tempDoc.getElementById("quick-buy-content").content;
+    Array.from(quickBuyContent.querySelectorAll("noscript")).forEach(
+      (noScript) => noScript.remove()
+    );
+    this.replaceChildren(document.importNode(quickBuyContent, true));
+    Shopify?.PaymentButton?.init();
+    return super.show();
   }
+};
+_onAfterHide = new WeakSet();
+onAfterHide_fn = function () {
+  this.innerHTML = "";
 };
 if (!window.customElements.get("quick-buy-modal")) {
   window.customElements.define("quick-buy-modal", QuickBuyModal);
@@ -6085,7 +6028,7 @@ if (!window.customElements.get("variant-option-value")) {
 }
 
 // js/common/media/base-media.js
-import { inView as inView6 } from "vendor";
+import { inView as inView7 } from "vendor";
 var BaseMedia = class extends HTMLElement {
   static get observedAttributes() {
     return ["playing"];
@@ -6093,7 +6036,7 @@ var BaseMedia = class extends HTMLElement {
   connectedCallback() {
     this._abortController = new AbortController();
     if (this.hasAttribute("autoplay")) {
-      inView6(this, this.play.bind(this), { margin: "0px 0px 0px 0px" });
+      inView7(this, this.play.bind(this), { margin: "0px 0px 0px 0px" });
     }
   }
   disconnectedCallback() {
@@ -6205,7 +6148,7 @@ if (!window.customElements.get("model-media")) {
 }
 
 // js/common/media/video.js
-import { inView as inView7 } from "vendor";
+import { inView as inView8 } from "vendor";
 var onYouTubePromise = new Promise((resolve) => {
   window.onYouTubeIframeAPIReady = () => resolve();
 });
@@ -6227,7 +6170,7 @@ var VideoMedia = class extends BaseMedia {
       );
     }
     if (this.getAttribute("type") === "video") {
-      inView7(
+      inView8(
         this,
         () => {
           this.querySelector("video")?.setAttribute("preload", "metadata");
@@ -6707,34 +6650,6 @@ detectFocusOut_fn = function (event) {
 };
 var MenuDisclosure = _MenuDisclosure;
 
-// js/common/navigation/reviews-disclosure.js
-var _onHashChange, onHashChange_fn;
-var ReviewsDisclosure = class extends AccordionDisclosure {
-  constructor() {
-    super(...arguments);
-    __privateAdd(this, _onHashChange);
-  }
-  connectedCallback() {
-    super.connectedCallback();
-    document.addEventListener(
-      "hashchange:simulate",
-      __privateMethod(this, _onHashChange, onHashChange_fn).bind(this)
-    );
-  }
-};
-_onHashChange = new WeakSet();
-onHashChange_fn = function (event) {
-  if (event.detail.hash === "#shopify-product-reviews" && !this.open) {
-    this.toggle(true, false);
-    this.scrollIntoView({ block: "start", behavior: "smooth" });
-  }
-};
-if (!window.customElements.get("reviews-disclosure")) {
-  window.customElements.define("reviews-disclosure", ReviewsDisclosure, {
-    extends: "details",
-  });
-}
-
 // js/common/navigation/tabs.js
 import {
   Delegate as Delegate5,
@@ -7154,7 +7069,7 @@ if (!window.customElements.get("announcement-bar-carousel")) {
 }
 
 // js/sections/before-after-image.js
-import { animate as animate12, inView as inView8 } from "vendor";
+import { animate as animate12, inView as inView9 } from "vendor";
 var _onPointerMoveListener,
   _onTouchMoveListener,
   _touchStartTimestamp,
@@ -7196,7 +7111,7 @@ var BeforeAfter = class extends HTMLElement {
     );
   }
   connectedCallback() {
-    inView8(
+    inView9(
       this,
       __privateMethod(
         this,
@@ -7310,7 +7225,7 @@ if (!window.customElements.get("before-after")) {
 import {
   animate as animate13,
   stagger as stagger2,
-  inView as inView9,
+  inView as inView10,
 } from "vendor";
 var _reveal, reveal_fn;
 var BlogPosts = class extends HTMLElement {
@@ -7321,7 +7236,7 @@ var BlogPosts = class extends HTMLElement {
       this.hasAttribute("reveal-on-scroll") &&
       matchesMediaQuery("motion-safe")
     ) {
-      inView9(this, __privateMethod(this, _reveal, reveal_fn).bind(this), {
+      inView10(this, __privateMethod(this, _reveal, reveal_fn).bind(this), {
         margin: "-50px 0px",
       });
     }
@@ -7432,7 +7347,8 @@ onCartChange_fn = async function (event) {
     event.detail.cart["sections"][__privateGet(this, _sectionId)]
   );
   if (
-    window.themeVariables.settings.cartType === "drawer" &&
+    (window.themeVariables.settings.cartType === "drawer" ||
+      event.detail["onSuccessDo"] === "force_open_drawer") &&
     event.detail.baseEvent === "variant:add"
   ) {
     this.show();
@@ -7532,7 +7448,7 @@ if (!window.customElements.get("cart-note-dialog")) {
 // js/sections/collection.js
 import {
   timeline as timeline8,
-  inView as inView10,
+  inView as inView11,
   Delegate as Delegate6,
 } from "vendor";
 var _reveal2, reveal_fn2;
@@ -7546,7 +7462,7 @@ var CollectionBanner = class extends HTMLElement {
       this.hasAttribute("reveal-on-scroll") &&
       matchesMediaQuery("motion-safe")
     ) {
-      inView10(this, __privateMethod(this, _reveal2, reveal_fn2).bind(this));
+      inView11(this, __privateMethod(this, _reveal2, reveal_fn2).bind(this));
     }
   }
 };
@@ -7641,7 +7557,7 @@ if (!window.customElements.get("collection-layout-switch")) {
 }
 
 // js/sections/countdown-timer.js
-import { animate as animate15, inView as inView11 } from "vendor";
+import { animate as animate15, inView as inView12 } from "vendor";
 var _flips,
   _expirationDate,
   _interval,
@@ -7678,7 +7594,7 @@ var CountdownTimer = class extends HTMLElement {
       );
       __privateMethod(this, _recalculateFlips, recalculateFlips_fn).call(this);
     }
-    inView11(
+    inView12(
       this,
       () => {
         __privateSet(this, _isVisible, true);
@@ -8431,7 +8347,7 @@ if (!window.customElements.get("header-sidebar-collapsible-panel")) {
 }
 
 // js/sections/image-with-text.js
-import { animate as animate19, inView as inView12 } from "vendor";
+import { animate as animate19, inView as inView13 } from "vendor";
 var _onBecameVisible, onBecameVisible_fn;
 var ImageWithText = class extends HTMLElement {
   constructor() {
@@ -8440,7 +8356,7 @@ var ImageWithText = class extends HTMLElement {
   }
   connectedCallback() {
     if (matchesMediaQuery("motion-safe")) {
-      inView12(
+      inView13(
         this.querySelector('[reveal-on-scroll="true"]'),
         ({ target }) =>
           __privateMethod(this, _onBecameVisible, onBecameVisible_fn).call(
@@ -8471,7 +8387,7 @@ if (!window.customElements.get("image-with-text")) {
 }
 
 // js/sections/image-with-text-overlay.js
-import { timeline as timeline10, inView as inView13 } from "vendor";
+import { timeline as timeline10, inView as inView14 } from "vendor";
 var _preventInitialTransition2, _onBecameVisible2, onBecameVisible_fn2;
 var ImageWithTextOverlay = class extends HTMLElement {
   constructor() {
@@ -8491,7 +8407,7 @@ var ImageWithTextOverlay = class extends HTMLElement {
       matchesMediaQuery("motion-safe") &&
       this.getAttribute("reveal-on-scroll") === "true"
     ) {
-      inView13(
+      inView14(
         this,
         ({ target }) =>
           __privateMethod(this, _onBecameVisible2, onBecameVisible_fn2).call(
@@ -8536,7 +8452,7 @@ if (!window.customElements.get("image-with-text-overlay")) {
 import {
   timeline as timeline11,
   animate as animate20,
-  inView as inView14,
+  inView as inView15,
   scroll as scroll2,
   ScrollOffset,
 } from "vendor";
@@ -8587,7 +8503,7 @@ var ImagesWithTextScroll = class extends EffectCarousel {
       _visibleImageElement,
       __privateGet(this, _imageElements)[0]
     );
-    inView14(this, () => {
+    inView15(this, () => {
       __privateGet(this, _imageElements).forEach((imageElement) =>
         imageElement.setAttribute("loading", "eager")
       );
@@ -8738,7 +8654,7 @@ if (!window.customElements.get("article-toolbar")) {
 }
 
 // js/sections/media-grid.js
-import { animate as animate21, inView as inView15 } from "vendor";
+import { animate as animate21, inView as inView16 } from "vendor";
 var _onReveal, onReveal_fn;
 var MediaGrid = class extends HTMLElement {
   constructor() {
@@ -8747,7 +8663,7 @@ var MediaGrid = class extends HTMLElement {
   }
   connectedCallback() {
     if (matchesMediaQuery("motion-safe")) {
-      inView15(
+      inView16(
         this.querySelectorAll('[reveal-on-scroll="true"]'),
         __privateMethod(this, _onReveal, onReveal_fn).bind(this),
         { margin: "-200px 0px 0px 0px" }
@@ -8788,7 +8704,7 @@ if (!window.customElements.get("multi-column")) {
 }
 
 // js/sections/multiple-media-with-text.js
-import { timeline as timeline12, inView as inView16 } from "vendor";
+import { timeline as timeline12, inView as inView17 } from "vendor";
 var _preventInitialTransition3, _onBecameVisible3, onBecameVisible_fn3;
 var MultipleMediaWithText = class extends HTMLElement {
   constructor() {
@@ -8808,7 +8724,7 @@ var MultipleMediaWithText = class extends HTMLElement {
       matchesMediaQuery("motion-safe") &&
       this.hasAttribute("reveal-on-scroll")
     ) {
-      inView16(
+      inView17(
         this,
         __privateMethod(this, _onBecameVisible3, onBecameVisible_fn3).bind(
           this
@@ -9906,7 +9822,6 @@ if (!window.customElements.get("timeline-carousel")) {
 }
 
 // js/theme.js
-var SprReviews = __toESM(require_spr_reviews());
 import { animate as animate26, Delegate as Delegate10 } from "vendor";
 (() => {
   const delegateDocument = new Delegate10(document.documentElement);
@@ -9914,21 +9829,25 @@ import { animate as animate26, Delegate as Delegate10 } from "vendor";
     window.themeVariables.settings.showPageTransition &&
     window.matchMedia("(prefers-reduced-motion: no-preference)").matches
   ) {
-    delegateDocument.on("click", "a", async (event, target) => {
-      if (event.defaultPrevented || event.ctrlKey || event.metaKey) {
-        return;
+    delegateDocument.on(
+      "click",
+      'a:not([target="_blank"])',
+      async (event, target) => {
+        if (event.defaultPrevented || event.ctrlKey || event.metaKey) {
+          return;
+        }
+        if (
+          target.hostname !== window.location.hostname ||
+          target.pathname === window.location.pathname
+        ) {
+          return;
+        }
+        event.preventDefault();
+        await animate26(document.body, { opacity: 0 }, { duration: 0.2 })
+          .finished;
+        window.location = target.href;
       }
-      if (
-        target.hostname !== window.location.hostname ||
-        target.pathname === window.location.pathname
-      ) {
-        return;
-      }
-      event.preventDefault();
-      await animate26(document.body, { opacity: 0 }, { duration: 0.2 })
-        .finished;
-      window.location = target.href;
-    });
+    );
   }
   delegateDocument.on("click", 'a[href*="#"]', (event, target) => {
     if (
@@ -9969,17 +9888,6 @@ import { animate as animate26, Delegate as Delegate10 } from "vendor";
     table.outerHTML =
       '<div class="table-scroller">' + table.outerHTML + "</div>";
   });
-  try {
-    document.querySelector(":has(p)");
-  } catch (error) {
-    Array.from(document.querySelectorAll(".shopify-section")).forEach(
-      (section) => {
-        if (section.querySelector(".bordered-section")) {
-          section.classList.add("shopify-section--has-fallback-bordered");
-        }
-      }
-    );
-  }
 })();
 export {
   AccordionDisclosure,
@@ -10062,7 +9970,6 @@ export {
   QuickBuyModal,
   RecentlyViewedProducts,
   ResizableTextarea,
-  ReviewsDisclosure,
   SafeSticky,
   SalePrice,
   ScrollCarousel,
@@ -10074,7 +9981,6 @@ export {
   ShopTheLookProductListCarousel,
   SlideshowCarousel,
   SoldOutBadge,
-  SprReviews,
   Tabs,
   TestimonialCarousel,
   TextWithIconsCarousel,

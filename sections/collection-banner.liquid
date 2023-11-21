@@ -1,4 +1,4 @@
-{%- if collection.image == blank and section.settings.image == blank -%}
+{%- if section.settings.show_image == false or collection.image == blank and section.settings.image == blank -%}
   {%- assign show_image = false -%}
 {%- else -%}
   {%- assign show_image = true -%}
@@ -44,7 +44,7 @@
     }
   </style>
 
-  <collection-banner {% if section.settings.reveal %}reveal-on-scroll="true"{% endif %} class="collection-banner" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+  <collection-banner {% if section.settings.reveal %}reveal-on-scroll="true"{% endif %} class="collection-banner color-scheme color-scheme--{{ section.settings.color_scheme.id }}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
     {%- unless section.settings.allow_transparent_header -%}
       {{- collection_breadcrumb -}}
     {%- endunless -%}
@@ -65,7 +65,7 @@
         {%- endif -%}
 
         {%- assign image = section.settings.image | default: collection.image -%}
-        {{- image | image_url: width: image.width | image_tag: loading: 'lazy', is: is_attribute, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+        {{- image | image_url: width: image.width | image_tag: is: is_attribute, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
       </picture>
 
       <div class="prose text-center">
@@ -91,6 +91,12 @@
   "class": "shopify-section--collection-banner",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-4"
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -154,6 +160,12 @@
     },
     {
       "type": "checkbox",
+      "id": "show_image",
+      "label": "t:sections.collection_banner.show_image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
       "id": "show_collection_title",
       "label": "t:sections.collection_banner.show_collection_title",
       "default": true
@@ -202,19 +214,6 @@
       "type": "header",
       "content": "t:global.colors.category",
       "info": "t:sections.collection_banner.colors_category_info"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "info": "t:sections.collection_banner.background_info",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
     },
     {
       "type": "color",

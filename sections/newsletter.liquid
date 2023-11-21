@@ -22,7 +22,9 @@ LIQUID
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
-<div class="{% unless section.settings.image != blank %}section-spacing{% endunless %} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.image != blank %}color-scheme--with-image-overlay{% else %}section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %}{% endif %}">
   <div class="newsletter content-over-media content-over-media--{{ section.settings.image_size }}">
     {%- if section.settings.image != blank -%}
       <picture>
@@ -34,12 +36,12 @@ LIQUID
               height="{{ section.settings.mobile_image.height }}"
           >
         {%- endif -%}
-      
-        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+
+        {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
       </picture>
     {%- endif -%}
 
-    <div class="content section-stack gap-8 text-center" style="{% render 'surface', text_color: section.settings.text_color %}">
+    <div class="content section-stack gap-8 text-center">
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
 
       {%- assign newsletter_form_id = 'newsletter-form-' | append: section.id -%}
@@ -60,7 +62,7 @@ LIQUID
             {%- assign input_label = 'general.newsletter.email' | t -%}
 
             {%- render 'input', name: 'contact[email]', label: input_label, label_hidden: true, type: 'email', required: true, autocomplete: 'email', enterkeyhint: 'send' -%}
-            {%- render 'button', type: 'submit', content: section.settings.button_text, background: section.settings.button_background, text_color: section.settings.button_text_color -%}
+            {%- render 'button', type: 'submit', content: section.settings.button_text -%}
           </div>
         {%- endif -%}
       {%- endform -%}
@@ -80,6 +82,12 @@ LIQUID
     {
       "type": "paragraph",
       "content": "t:sections.newsletter.instructions"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
     },
     {
       "type": "checkbox",
@@ -155,22 +163,6 @@ LIQUID
     {
       "type": "header",
       "content": "t:global.colors.category"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.text.text",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "t:global.colors.button_background"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "t:global.colors.button_text"
     },
     {
       "type": "color",

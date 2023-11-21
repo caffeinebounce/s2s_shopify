@@ -160,9 +160,6 @@
             "link_url": "shopify:\/\/products\/moisture-balance-kit",
             "link_style": "solid",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -180,9 +177,6 @@
             "link_url": "shopify:\/\/products\/root-refresh-micellar-rinse",
             "link_style": "solid",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -200,9 +194,6 @@
             "link_url": "shopify:\/\/products\/revive-me-daily-moisturizing-spray",
             "link_style": "solid",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -220,9 +211,6 @@
             "link_url": "shopify:\/\/products\/quick-curl-reset-co-wash-with-frizz-resist-complex",
             "link_style": "solid",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -242,9 +230,6 @@
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "button_background": "",
-            "button_text_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -265,9 +250,7 @@
         "spacing": "md",
         "subheading": "",
         "title": "What The Reviews Say",
-        "content": "",
-        "background": "",
-        "text_color": ""
+        "content": ""
       }
     },
     "d146a183-3805-4056-bbb0-4bd1c71c4276": {

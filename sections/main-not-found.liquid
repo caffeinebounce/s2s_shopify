@@ -1,4 +1,6 @@
-<div class="section-spacing">
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   <div class="container container--xs">
     <div class="empty-state">
       <div class="prose">
@@ -19,6 +21,12 @@
   "class": "shopify-section--404",
   "tag": "section",
   "settings" : [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "url",
       "id": "link",

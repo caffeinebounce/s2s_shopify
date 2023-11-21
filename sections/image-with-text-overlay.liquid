@@ -21,7 +21,7 @@
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
-  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
+  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--with-image-overlay" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
     <image-with-text-overlay class="content-over-media content-over-media--{{ section.settings.image_size }}" reveal-on-scroll="{{ section.settings.reveal_on_scroll }}">
       {%- if section.settings.image != blank -%}
         <picture>
@@ -34,14 +34,14 @@
             >
           {%- endif -%}
 
-          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
         </picture>
       {%- else -%}
         {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
       {%- endif -%}
 
       {%- if section.blocks.size > 0 -%}
-        <div class="content {{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}" style="{% render 'surface', text_color: section.settings.text_color %}">
+        <div class="content {{ section.settings.mobile_text_position }} {{ section.settings.desktop_text_position }}">
           <div class="prose">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
@@ -99,6 +99,12 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-4"
+    },
     {
       "type": "select",
       "id": "image_size",
@@ -285,12 +291,6 @@
     },
     {
       "type": "color",
-      "id": "text_color",
-      "label": "t:global.text.text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
       "id": "overlay_color",
       "label": "t:global.colors.overlay_color",
       "default": "#000000"
@@ -391,44 +391,44 @@
       "type": "button",
       "name": "t:sections.image_with_text_overlay.blocks.button.name",
       "settings": [
-        {	
-          "type": "select",	
-          "id": "style",	
+        {
+          "type": "select",
+          "id": "style",
           "label": "t:global.text.style",
-          "options": [	
-            {	
-              "value": "outline",	
+          "options": [
+            {
+              "value": "outline",
               "label": "t:global.text.button_style_options.outline"
-            },	
-            {	
+            },
+            {
               "value": "solid",
               "label": "t:global.text.button_style_options.solid"
-            }	
-          ],	
+            }
+          ],
           "default": "solid"
         },
-        {	
-          "type": "text",	
-          "id": "text",	
+        {
+          "type": "text",
+          "id": "text",
           "label": "t:global.text.text",
-          "default": "Button text"	
-        },	
-        {	
-          "type": "url",	
-          "id": "url",	
+          "default": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "url",
           "label": "t:global.text.link"
-        },	
-        {	
-          "type": "color",	
-          "id": "background",	
+        },
+        {
+          "type": "color",
+          "id": "background",
           "label": "t:global.colors.background"
-        },	
-        {	
-          "type": "color",	
-          "id": "text_color",	
+        },
+        {
+          "type": "color",
+          "id": "text_color",
           "label": "t:global.colors.text"
-        }	
-      ]	
+        }
+      ]
     },
     {
       "type": "link",

@@ -11,6 +11,7 @@ Supported variables
 ********************************************
 
 * menu: the menu to render
+* color_scheme: the color scheme to use for the sidebar
 * show_dividers: whether dividers are shown for the collapsible
 {%- endcomment -%}
 
@@ -40,7 +41,7 @@ therefore using a different structure for the Shadow DOM template
   </div>
 </template>
 
-<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm" template="header-sidebar-template" open-from="left">
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="left">
   {%- comment -%}We are using a Shadow DOM where each panel has a slot, so we can directly render each level individually{%- endcomment -%}
 
   {%- comment -%}Panel 1 is the first level{%- endcomment -%}

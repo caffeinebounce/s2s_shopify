@@ -11,7 +11,7 @@ usable in the main template, please look at the "countdown.liquid" section inste
   }
 </style>
 
-<div class="countdown-condensed" style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}">
+<div class="countdown-condensed color-scheme color-scheme--{{ section.settings.color_scheme.id }}">
   <div class="countdown-condensed__text">
     {%- if section.settings.content != blank -%}
       <div class="prose">
@@ -66,6 +66,12 @@ usable in the main template, please look at the "countdown.liquid" section inste
     "groups": ["header"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-3"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.countdown_timer.timezone_information"
@@ -129,22 +135,6 @@ usable in the main template, please look at the "countdown.liquid" section inste
         }
       ],
       "default": "space-between"
-    },
-    {
-      "type": "header",
-      "content": "t:global.colors.category"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "t:global.colors.background",
-      "default": "#1c1c1c"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:global.colors.text",
-      "default": "#ffffff"
     }
   ],
   "presets": [

@@ -219,6 +219,7 @@
         ".bordered-section {margin-top: 30px; margin-bottom: 30px;}"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "content_width": "sm",
         "text_position": "center",
@@ -235,6 +236,7 @@
         ".icon-bar p {margin: 0; padding: 0px; font-size: 10px;}"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
@@ -260,8 +262,11 @@
         "template--16132781473980__52310b58-09f8-40d5-aa80-798c708b2589-collection-1"
       ],
       "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -293,6 +298,7 @@
         ".bordered-section {margin-top: 50px; margin-bottom: 50px;}"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -309,6 +315,7 @@
         "template--16132781473980__0c8df06b-8ffa-4480-9b46-a5bebebaf217-before-1": {
           "type": "before",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/Before_-_Desktop_370995d9-8523-4515-aca4-265a61d704a6.png",
             "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile.png",
             "text": "Before",
@@ -320,6 +327,7 @@
         "template--16132781473980__0c8df06b-8ffa-4480-9b46-a5bebebaf217-after-1": {
           "type": "after",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/After_-_Desktop.png",
             "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile.png",
             "text": "After",
@@ -334,6 +342,7 @@
         "template--16132781473980__0c8df06b-8ffa-4480-9b46-a5bebebaf217-after-1"
       ],
       "settings": {
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "subheading": "",
         "title": "Before and After",
@@ -350,6 +359,7 @@
         "9f4ce7a3-fe03-49c8-ace2-3437da33990e": {
           "type": "before",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/Before_-_Desktop_eefdc7b3-1e8b-43e7-9c68-6b40990d34fb.png",
             "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile_dfe50397-e7eb-41e3-9767-e639e79e30b0.png",
             "text": "Before",
@@ -361,6 +371,7 @@
         "9832a2a6-fd54-4b71-ae19-f4549f832cf1": {
           "type": "after",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/After_-_Desktop_1a3ce4bf-2534-4151-8551-fbca9753aba7.png",
             "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile_f3a1cc39-f9c9-42e9-a9e2-3883b1ffbb8b.png",
             "text": "After",
@@ -375,6 +386,7 @@
         "9832a2a6-fd54-4b71-ae19-f4549f832cf1"
       ],
       "settings": {
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "",
@@ -391,6 +403,7 @@
         "82ad8a76-a0a9-4585-856c-4f572768e5ed": {
           "type": "before",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/Before_-_Desktop_76f3d7ee-9b58-4082-9cb4-fc3a1b26f24c.png",
             "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile_c393a2ae-ba7c-4772-81b4-05248e0a2f9e.png",
             "text": "Before",
@@ -402,6 +415,7 @@
         "344ecfb2-f59e-4c25-a637-5f5a9d8333e9": {
           "type": "after",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/After_-_Desktop_d5dd727f-3b9f-422c-bd83-d4af37197f0e.png",
             "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile_2ce57689-b571-48e8-bf84-797b35be000f.png",
             "text": "After",
@@ -416,6 +430,7 @@
         "344ecfb2-f59e-4c25-a637-5f5a9d8333e9"
       ],
       "settings": {
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "",
@@ -441,6 +456,7 @@
         "template--16132781473980__363c4539-06eb-4344-b939-53ecc1370774-heading-1"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
@@ -487,6 +503,7 @@
         "f4dc98a6-ec36-44e7-a326-d0ff9cfc11ed"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify:\/\/shop_images\/Edge_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/Edge_-_Mobile.png",
@@ -547,6 +564,7 @@
         "8e0732cb-cd47-408b-9cbd-788f92069d1d"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image": "shopify:\/\/shop_images\/RootRevive_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/RootRevive_-_Mobile.png",
@@ -596,6 +614,7 @@
         "c65666cb-f886-4bea-a978-811ac3e8c791"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify:\/\/shop_images\/Soothe_-_Desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/Soothe_-_Mobile.png",
@@ -642,6 +661,7 @@
         "template--16132781473980__a34c186f-9ccc-48aa-bb9a-3358358dcc28-testimonial-2"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "auto_rotate_between_testimonials": false,
         "cycle_speed": 5,
@@ -657,6 +677,7 @@
         "template--16043082907836__e2bb1e0c-3c91-4478-9222-e9adf81d3b33-1685698792a6c2d2d5-0": {
           "type": "image",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/S2S_Root_Refresh_Joc.jpg",
             "column_count": "4",
             "row_count": 2,
@@ -674,6 +695,7 @@
         "template--16043082907836__e2bb1e0c-3c91-4478-9222-e9adf81d3b33-1685698792a6c2d2d5-1": {
           "type": "image",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/signature-wash-day-system-936581.jpg",
             "column_count": "4",
             "row_count": 2,
@@ -691,6 +713,7 @@
         "11d083d7-91a2-4ec7-b94c-97cf9d83944f": {
           "type": "image",
           "settings": {
+            "color_scheme": "",
             "image": "shopify:\/\/shop_images\/on-the-go-signature-travel-post-gym-hair-kit-563653.jpg",
             "column_count": "4",
             "row_count": 2,
@@ -711,8 +734,11 @@
         "template--16043082907836__e2bb1e0c-3c91-4478-9222-e9adf81d3b33-1685698792a6c2d2d5-1",
         "11d083d7-91a2-4ec7-b94c-97cf9d83944f"
       ],
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "desktop_row_height": 290,
         "mobile_row_height": 180,
@@ -737,6 +763,7 @@
         "87801203-22ba-4967-8e71-58c7ba937819"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false

@@ -9,21 +9,24 @@
           "type": "links",
           "settings": {
             "menu": "footer",
-            "show_menu_title": true
+            "show_menu_title": true,
+            "menu_title": ""
           }
         },
         "footer-1": {
           "type": "links",
           "settings": {
             "menu": "work-with-us",
-            "show_menu_title": true
+            "show_menu_title": true,
+            "menu_title": ""
           }
         },
         "11bcdb32-2ca7-4e64-b3b6-05958825fc12": {
           "type": "links",
           "settings": {
             "menu": "support",
-            "show_menu_title": true
+            "show_menu_title": true,
+            "menu_title": ""
           }
         },
         "footer-2": {
@@ -52,6 +55,7 @@
         "footer-0"
       ],
       "settings": {
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": false,

@@ -1,57 +1,15 @@
 {
   "sections": {
-    "c352ce10-24f1-47dd-aa85-aa099a2e3239": {
-      "type": "slideshow",
-      "blocks": {
-        "template--16132781441212__c352ce10-24f1-47dd-aa85-aa099a2e3239-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BFCM_Shop_Banner_daadbcdb-cbff-415f-a3cb-472fa232372c.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16132781441212__c352ce10-24f1-47dd-aa85-aa099a2e3239-image-1"
-      ],
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": false,
-        "media_size": "auto",
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff"
-      }
-    },
     "collection-banner": {
       "type": "collection-banner",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "image_size": "xs",
         "allow_transparent_header": true,
         "reveal": true,
         "enable_parallax": true,
+        "show_image": true,
         "show_collection_title": true,
         "show_collection_description": false,
         "show_breadcrumb": true,
@@ -63,6 +21,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
+        "color_scheme": "",
         "hide_product_information": false,
         "products_per_page": 48,
         "products_per_row_mobile": "2",
@@ -86,6 +45,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
+        "color_scheme": "",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 9,
@@ -100,7 +60,6 @@
     }
   },
   "order": [
-    "c352ce10-24f1-47dd-aa85-aa099a2e3239",
     "collection-banner",
     "main",
     "recently-viewed-products"

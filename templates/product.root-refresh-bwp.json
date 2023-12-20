@@ -136,6 +136,9 @@
         "buy_buttons",
         "8d5578d9-c87e-410f-8246-af1fa591279f"
       ],
+      "custom_css": [
+        ";-.product-sticky-bar {background-color: #ffff; border-bottom-color: rgb(221, 221, 221);}"
+      ],
       "settings": {
         "color_scheme": "",
         "container_size": "xl",
@@ -159,18 +162,10 @@
           "settings": {
             "icon_color": "#ffffff"
           }
-        },
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-heading-1": {
-          "type": "heading",
-          "settings": {
-            "text": "What is Root Refresh?",
-            "heading_tag": "h2"
-          }
         }
       },
       "block_order": [
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-play-1",
-        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-heading-1"
+        "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-play-1"
       ],
       "custom_css": [
 

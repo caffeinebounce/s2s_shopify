@@ -5,7 +5,8 @@
       "blocks": {
         "share_buttons": {
           "type": "share_buttons",
-          "settings": {}
+          "settings": {
+          }
         },
         "db357489-faed-409c-af58-3c76a6edb3ec": {
           "type": "title",
@@ -47,12 +48,14 @@
             "icon": "picto-happy-face",
             "title": "Ingredients",
             "content": "{{ product.metafields.custom.ingredient_list | metafield_tag }}",
+            "liquid": "",
             "page": ""
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "17becc6b-ad72-4931-9fd0-aab7538d029f": {
           "type": "liquid",
@@ -63,7 +66,8 @@
         "f4a5d2f1-6cd5-4f77-83f9-2b10e8d3dbef": {
           "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "disabled": true,
-          "settings": {}
+          "settings": {
+          }
         },
         "36830a27-2772-4a00-a1bd-98f69ac6cd76": {
           "type": "accordion",
@@ -72,6 +76,7 @@
             "icon": "picto-love",
             "title": "Best For",
             "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -82,6 +87,7 @@
             "icon": "picto-success",
             "title": "Key Benefit",
             "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -92,6 +98,7 @@
             "icon": "picto-user",
             "title": "How To Use",
             "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -108,7 +115,8 @@
         },
         "8d5578d9-c87e-410f-8246-af1fa591279f": {
           "type": "payment_terms",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -129,6 +137,7 @@
         "8d5578d9-c87e-410f-8246-af1fa591279f"
       ],
       "settings": {
+        "color_scheme": "",
         "container_size": "xl",
         "product_info_size": 50,
         "show_sticky_add_to_cart": true,
@@ -163,12 +172,14 @@
         "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-play-1",
         "template--16047964717244__881df6d9-a3d4-4379-85c4-6590fb45a772-heading-1"
       ],
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
         "autoplay": false,
         "show_controls": true,
-        "video_size": "sm",
-        "video": "shopify:\/\/files\/videos\/root-refresh-pdp.mp4",
+        "video_size": "auto",
+        "video": "shopify:\/\/files\/videos\/display-ad-1-rr.mp4",
         "external_video_url": "",
         "poster": "shopify:\/\/shop_images\/root-refresh-ingredients-banner-product-pdp_c3dec27f-6082-401d-b1ba-da165f5a9de1.png",
         "text_color": "#303030"
@@ -286,6 +297,7 @@
         "3faa0794-e0bb-44ee-96f8-8278067c0410"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
@@ -295,6 +307,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false,
@@ -306,6 +319,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
+        "color_scheme": "",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 9,

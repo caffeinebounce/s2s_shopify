@@ -6588,7 +6588,7 @@ tfoot td {
   position: fixed;
   inset-block-end: 0;
   inset-inline-start: 0;
-  background-color: #ffff;
+  background-color: rgb(var(--background)) !important;
   border-bottom-color: rgb(221, 221, 221);
 }
 

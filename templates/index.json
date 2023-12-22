@@ -439,6 +439,43 @@
         "cursor_arrows_color": "#000000"
       }
     },
+    "332d7823-538a-4351-8127-452fb06f00df": {
+      "type": "video",
+      "blocks": {
+        "template--16263877853372__332d7823-538a-4351-8127-452fb06f00df-play-1": {
+          "type": "play",
+          "settings": {
+            "icon_color": "#ffffff"
+          }
+        },
+        "afeb4344-75ed-494e-b58c-6dc21101f072": {
+          "type": "heading",
+          "settings": {
+            "text": "ROOT REFRESH",
+            "heading_tag": "h2"
+          }
+        },
+        "26ffa3dc-3ff3-4f6d-a219-0c89dd3dc470": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em>Cleanse your scalp between washes<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16263877853372__332d7823-538a-4351-8127-452fb06f00df-play-1",
+        "afeb4344-75ed-494e-b58c-6dc21101f072",
+        "26ffa3dc-3ff3-4f6d-a219-0c89dd3dc470"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_controls": true,
+        "video_size": "md",
+        "video": "shopify:\/\/files\/videos\/display-ad-1-rr.mp4",
+        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff"
+      }
+    },
     "363c4539-06eb-4344-b939-53ecc1370774": {
       "type": "rich-text",
       "blocks": {
@@ -753,6 +790,9 @@
         "87801203-22ba-4967-8e71-58c7ba937819": {
           "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
             "html_area": ""
           }
         }
@@ -777,6 +817,7 @@
     "0c8df06b-8ffa-4480-9b46-a5bebebaf217",
     "a1e20b61-d9a8-43a7-93ad-3b7a9a094358",
     "53161e06-eec8-42d2-a20f-5d12156da954",
+    "332d7823-538a-4351-8127-452fb06f00df",
     "363c4539-06eb-4344-b939-53ecc1370774",
     "f8bd5952-415c-45fd-b4fd-38da20a7e70f",
     "4b860c8b-ca05-46b8-9856-0fc088b28963",

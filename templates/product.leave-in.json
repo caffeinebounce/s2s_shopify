@@ -5,7 +5,8 @@
       "blocks": {
         "share_buttons": {
           "type": "share_buttons",
-          "settings": {}
+          "settings": {
+          }
         },
         "db357489-faed-409c-af58-3c76a6edb3ec": {
           "type": "title",
@@ -40,22 +41,26 @@
             "icon": "picto-happy-face",
             "title": "Ingredients",
             "content": "{{ product.metafields.custom.ingredient_list | metafield_tag }}",
+            "liquid": "",
             "page": ""
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "4147cc8c-19f2-4ab0-922e-fbfad48f5c50": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
           }
         },
         "6feb80be-6585-4f4d-bc39-75787c0d3269": {
           "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -75,6 +80,7 @@
             "icon": "picto-love",
             "title": "Best For",
             "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -85,6 +91,7 @@
             "icon": "picto-success",
             "title": "Key Benefit",
             "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -95,6 +102,7 @@
             "icon": "picto-user",
             "title": "How To Use",
             "content": "<p><\/p>{{ product.metafields.custom.how_to_use_steps | metafield_tag }}",
+            "liquid": "",
             "page": ""
           }
         }
@@ -115,6 +123,7 @@
         "ab375b75-f6d4-46de-a935-1fc021d1a997"
       ],
       "settings": {
+        "color_scheme": "",
         "container_size": "xl",
         "product_info_size": 50,
         "show_sticky_add_to_cart": true,
@@ -198,6 +207,7 @@
         "22af48d4-8d65-4bdc-940a-e12176bb7106"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false
@@ -207,6 +217,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
+        "color_scheme": "",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 9,

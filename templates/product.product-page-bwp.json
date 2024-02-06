@@ -35,6 +35,7 @@
             "icon": "picto-love",
             "title": "Best For",
             "content": "<p>{{ product.metafields.custom.best_for | metafield_tag }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -45,6 +46,7 @@
             "icon": "picto-success",
             "title": "Key Benefit",
             "content": "<p>{{ product.metafields.custom.key_benefit.value }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
@@ -55,6 +57,7 @@
             "icon": "picto-happy-face",
             "title": "Ingredients",
             "content": "{{ product.metafields.custom.ingredient_list | metafield_tag }}",
+            "liquid": "",
             "page": ""
           }
         },
@@ -65,15 +68,18 @@
             "icon": "picto-user",
             "title": "How To Use",
             "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}<\/p>",
+            "liquid": "",
             "page": ""
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "25a671b7-1239-49f7-aecc-164ba5182199": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 30% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
           }
@@ -91,7 +97,8 @@
         },
         "share_buttons": {
           "type": "share_buttons",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -109,6 +116,7 @@
         "share_buttons"
       ],
       "settings": {
+        "color_scheme": "",
         "container_size": "lg",
         "product_info_size": 35,
         "show_sticky_add_to_cart": true,
@@ -136,6 +144,7 @@
         "7fa833f5-2555-4528-9b0e-90e15825987d"
       ],
       "settings": {
+        "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
@@ -145,6 +154,7 @@
       "type": "recently-viewed-products",
       "settings": {
         "separate_section_with_border": true,
+        "color_scheme": "",
         "hide_product_information": false,
         "stack_products": false,
         "products_count": 9,

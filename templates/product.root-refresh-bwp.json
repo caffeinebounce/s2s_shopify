@@ -59,6 +59,7 @@
         },
         "17becc6b-ad72-4931-9fd0-aab7538d029f": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"limited-time-deal-container\">\n    <h5 class=\"limited-time-deal\">Limited Time Deal<\/h5>\n    <div class=\"deal-info\">\n        Get up to 40% off using \n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/buywithprime_primary_logo.png?v=1699846941\" alt=\"Buy With Prime\" class=\"buy-with-prime-logo\"> &nbsp; or in cart\n    <\/div>\n<\/div>"
           }
@@ -137,7 +138,7 @@
         "8d5578d9-c87e-410f-8246-af1fa591279f"
       ],
       "custom_css": [
-        ";-.product-sticky-bar {background-color: #ffff; border-bottom-color: rgb(221, 221, 221);}"
+        "-.product-sticky-bar {background-color: #ffff; border-bottom-color: rgb(221, 221, 221);}"
       ],
       "settings": {
         "color_scheme": "",

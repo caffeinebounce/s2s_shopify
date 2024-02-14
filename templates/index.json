@@ -32,6 +32,7 @@
         },
         "d8c9e733-e7c8-4947-a3b5-e30bd17e8f21": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Free_Shipping_Root_Refresh_Banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/root-refresh-banner-mobile.jpg",
@@ -59,6 +60,7 @@
         },
         "172ad6ec-e3a4-43ca-87d4-967126e18169": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/S2S_Revive_Me_Desktop_Banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/revive-me-banner-mobile.jpg",

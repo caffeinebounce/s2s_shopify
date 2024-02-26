@@ -465,5 +465,16 @@
       "view_products": "Ver productos",
       "view_product": "Ver producto"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "errors": {
+          "merchandise": {
+            "title_empty": "El título de la mercancía está vacío."
+          }
+        }
+      }
+    }
   }
 }

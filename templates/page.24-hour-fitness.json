@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -587,9 +596,20 @@
         "title": "",
         "content": ""
       }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {
+      }
     }
   },
   "order": [
+    "shogun-helper",
     "main",
     "8b61905f-ec91-4778-90c3-42e7b88c8185",
     "88f8d502-027d-4c28-bfa5-0ccbd3dc0f18",
@@ -597,6 +617,7 @@
     "3e893cfb-5f76-4c96-b5a6-92db37910fe4",
     "d9de5232-40e7-4d9a-ab75-59b4d8433b63",
     "6d27e342-edc5-4de0-8733-a49e0d4231e5",
-    "fb79876b-0241-422d-a4ad-9a99e97be9a2"
+    "fb79876b-0241-422d-a4ad-9a99e97be9a2",
+    "shogun-optimizer"
   ]
 }

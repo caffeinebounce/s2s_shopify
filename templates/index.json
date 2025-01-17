@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -6,15 +15,15 @@
         "slide-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/group-beauty-shot-1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/group-beauty-shot-mobile.jpg",
+            "image": "shopify://shop_images/group-beauty-shot-1.jpg",
+            "mobile_image": "shopify://shop_images/group-beauty-shot-mobile.jpg",
             "subheading": "From SUNDAY to SUNDAY",
             "title": "Healthy Hair & Scalp",
             "mobile_text_position": "place-self-end text-end",
             "desktop_text_position": "sm:place-self-end sm:text-end",
             "content_max_width": 780,
             "button_1_text": "SHOP NOW",
-            "button_1_link": "shopify:\/\/collections\/all-products",
+            "button_1_link": "shopify://collections/all-products",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -34,15 +43,15 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free_Shipping_Root_Refresh_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/root-refresh-banner-mobile.jpg",
+            "image": "shopify://shop_images/Free_Shipping_Root_Refresh_Banner.jpg",
+            "mobile_image": "shopify://shop_images/root-refresh-banner-mobile.jpg",
             "subheading": "Big Savings On Your Routine",
             "title": "With Subscribe & Save",
             "mobile_text_position": "place-self-end-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "content_max_width": 780,
             "button_1_text": "SUBSCRIBE & SAVE",
-            "button_1_link": "https:\/\/mysunday2sunday.com\/apps\/subscriptions\/bb\/sA5sxa7d#\/",
+            "button_1_link": "https://mysunday2sunday.com/apps/subscriptions/bb/sA5sxa7d#/",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -62,15 +71,15 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/S2S_Revive_Me_Desktop_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/revive-me-banner-mobile.jpg",
+            "image": "shopify://shop_images/S2S_Revive_Me_Desktop_Banner.jpg",
+            "mobile_image": "shopify://shop_images/revive-me-banner-mobile.jpg",
             "subheading": "Save More",
             "title": "Exclusive Bundles",
             "mobile_text_position": "place-self-end text-end",
             "desktop_text_position": "sm:place-self-end sm:text-end",
             "content_max_width": 780,
             "button_1_text": "SHOP BUNDLES",
-            "button_1_link": "shopify:\/\/collections\/our-bundles",
+            "button_1_link": "shopify://collections/our-bundles",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -90,15 +99,15 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/S2S_Deluxe_Wash_Day_Kit_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/S2S_Deluxe_Wash_Day_Kit_Mobile_Banner.jpg",
+            "image": "shopify://shop_images/S2S_Deluxe_Wash_Day_Kit_Banner.jpg",
+            "mobile_image": "shopify://shop_images/S2S_Deluxe_Wash_Day_Kit_Mobile_Banner.jpg",
             "subheading": "Revitalize Your Wash Day",
             "title": "Deluxe Wash Day Kit",
             "mobile_text_position": "place-self-end text-end",
             "desktop_text_position": "sm:place-self-end sm:text-end",
             "content_max_width": 780,
             "button_1_text": "SHOP NOW",
-            "button_1_link": "shopify:\/\/products\/deluxe-signature-wash-day-kit",
+            "button_1_link": "shopify://products/deluxe-signature-wash-day-kit",
             "button_1_style": "outline",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -118,15 +127,15 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/BFCM_Desktop.png",
-            "mobile_image": "shopify:\/\/shop_images\/BFCM_Mobile.png",
+            "image": "shopify://shop_images/BFCM_Desktop.png",
+            "mobile_image": "shopify://shop_images/BFCM_Mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 780,
             "button_1_text": "",
-            "button_1_link": "shopify:\/\/collections\/all",
+            "button_1_link": "shopify://collections/all",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -146,15 +155,15 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/pre-bfcm-kits.png",
-            "mobile_image": "shopify:\/\/shop_images\/pre-bfcm-kits-mobile.png",
+            "image": "shopify://shop_images/pre-bfcm-kits.png",
+            "mobile_image": "shopify://shop_images/pre-bfcm-kits-mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-end text-end",
             "desktop_text_position": "sm:place-self-end sm:text-end",
             "content_max_width": 780,
             "button_1_text": "",
-            "button_1_link": "shopify:\/\/collections\/black-friday-kit-sale",
+            "button_1_link": "shopify://collections/black-friday-kit-sale",
             "button_1_style": "solid",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -207,7 +216,7 @@
         "template--16043082907836__50eead62-8afe-4657-a537-a5939e9ac07e-1685669377a06d4e1b-2": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Science-backed formulas designed to help you maintain your hair between washes.<\/p>"
+            "content": "<p>Science-backed formulas designed to help you maintain your hair between washes.</p>"
           }
         }
       },
@@ -215,9 +224,7 @@
         "template--16043082907836__50eead62-8afe-4657-a537-a5939e9ac07e-1685669377a06d4e1b-1",
         "template--16043082907836__50eead62-8afe-4657-a537-a5939e9ac07e-1685669377a06d4e1b-2"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
@@ -240,7 +247,7 @@
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "<div class=\"icon-bar\">\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/cruelty-free.webp?v=1685786516\" alt=\"icon1\">\n    <p>Cruelty Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/gluten-free.webp?v=1685786698\" alt=\"icon2\">\n    <p>Gluten Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/paraben-free.webp?v=1685786698\" alt=\"icon3\">\n    <p>Paraben Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/phthalate-free.webp?v=1685786698\" alt=\"icon4\">\n    <p>Phthalate Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/silicone-free.webp?v=1685786698\" alt=\"icon5\">\n    <p>Silicone Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/paraffin-free.webp?v=1685786698\" alt=\"icon6\">\n    <p>Paraffin Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/sulfate-free.webp?v=1685786698\" alt=\"icon7\">\n    <p>Sulfate Free<\/p>\n  <\/a>\n  <a href=\"#\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0318\/7238\/5161\/files\/vegan.webp?v=1685786698\" alt=\"icon8\">\n    <p>Vegan<\/p>\n  <\/a>\n<\/div>",
+        "liquid": "<div class=\"icon-bar\">\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/cruelty-free.webp?v=1685786516\" alt=\"icon1\">\n    <p>Cruelty Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/gluten-free.webp?v=1685786698\" alt=\"icon2\">\n    <p>Gluten Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/paraben-free.webp?v=1685786698\" alt=\"icon3\">\n    <p>Paraben Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/phthalate-free.webp?v=1685786698\" alt=\"icon4\">\n    <p>Phthalate Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/silicone-free.webp?v=1685786698\" alt=\"icon5\">\n    <p>Silicone Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/paraffin-free.webp?v=1685786698\" alt=\"icon6\">\n    <p>Paraffin Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/sulfate-free.webp?v=1685786698\" alt=\"icon7\">\n    <p>Sulfate Free</p>\n  </a>\n  <a href=\"#\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0318/7238/5161/files/vegan.webp?v=1685786698\" alt=\"icon8\">\n    <p>Vegan</p>\n  </a>\n</div>",
         "text_alignment": "center"
       }
     },
@@ -262,9 +269,7 @@
         "template--16132781473980__52310b58-09f8-40d5-aa80-798c708b2589-collection-1"
       ],
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -286,7 +291,7 @@
             "collection": "best-sellers",
             "products_count": 30,
             "title": "Our Best Sellers",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_text": "View all"
           }
         }
@@ -294,6 +299,7 @@
       "block_order": [
         "dcabf889-329c-4ed1-8ab2-374eb871abdd"
       ],
+      "disabled": true,
       "custom_css": [
         ".bordered-section {margin-top: 50px; margin-bottom: 50px;}"
       ],
@@ -316,11 +322,11 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/Before_-_Desktop_370995d9-8523-4515-aca4-265a61d704a6.png",
-            "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile.png",
+            "image": "shopify://shop_images/Before_-_Desktop_370995d9-8523-4515-aca4-265a61d704a6.png",
+            "mobile_image": "shopify://shop_images/Before_-_Mobile.png",
             "text": "Before",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "outline"
           }
         },
@@ -328,11 +334,11 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/After_-_Desktop.png",
-            "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile.png",
+            "image": "shopify://shop_images/After_-_Desktop.png",
+            "mobile_image": "shopify://shop_images/After_-_Mobile.png",
             "text": "After",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "link"
           }
         }
@@ -360,11 +366,11 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/Before_-_Desktop_eefdc7b3-1e8b-43e7-9c68-6b40990d34fb.png",
-            "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile_dfe50397-e7eb-41e3-9767-e639e79e30b0.png",
+            "image": "shopify://shop_images/Before_-_Desktop_eefdc7b3-1e8b-43e7-9c68-6b40990d34fb.png",
+            "mobile_image": "shopify://shop_images/Before_-_Mobile_dfe50397-e7eb-41e3-9767-e639e79e30b0.png",
             "text": "Before",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "outline"
           }
         },
@@ -372,11 +378,11 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/After_-_Desktop_1a3ce4bf-2534-4151-8551-fbca9753aba7.png",
-            "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile_f3a1cc39-f9c9-42e9-a9e2-3883b1ffbb8b.png",
+            "image": "shopify://shop_images/After_-_Desktop_1a3ce4bf-2534-4151-8551-fbca9753aba7.png",
+            "mobile_image": "shopify://shop_images/After_-_Mobile_f3a1cc39-f9c9-42e9-a9e2-3883b1ffbb8b.png",
             "text": "After",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "link"
           }
         }
@@ -404,11 +410,11 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/Before_-_Desktop_76f3d7ee-9b58-4082-9cb4-fc3a1b26f24c.png",
-            "mobile_image": "shopify:\/\/shop_images\/Before_-_Mobile_c393a2ae-ba7c-4772-81b4-05248e0a2f9e.png",
+            "image": "shopify://shop_images/Before_-_Desktop_76f3d7ee-9b58-4082-9cb4-fc3a1b26f24c.png",
+            "mobile_image": "shopify://shop_images/Before_-_Mobile_c393a2ae-ba7c-4772-81b4-05248e0a2f9e.png",
             "text": "Before",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "outline"
           }
         },
@@ -416,11 +422,11 @@
           "type": "after",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/After_-_Desktop_d5dd727f-3b9f-422c-bd83-d4af37197f0e.png",
-            "mobile_image": "shopify:\/\/shop_images\/After_-_Mobile_2ce57689-b571-48e8-bf84-797b35be000f.png",
+            "image": "shopify://shop_images/After_-_Desktop_d5dd727f-3b9f-422c-bd83-d4af37197f0e.png",
+            "mobile_image": "shopify://shop_images/After_-_Mobile_2ce57689-b571-48e8-bf84-797b35be000f.png",
             "text": "After",
             "link_text": "",
-            "link_url": "shopify:\/\/collections\/all",
+            "link_url": "shopify://collections/all",
             "link_style": "link"
           }
         }
@@ -460,7 +466,7 @@
         "26ffa3dc-3ff3-4f6d-a219-0c89dd3dc470": {
           "type": "richtext",
           "settings": {
-            "content": "<p><em>Cleanse your scalp between washes<\/em><\/p>"
+            "content": "<p><em>Cleanse your scalp between washes</em></p>"
           }
         }
       },
@@ -473,8 +479,8 @@
         "autoplay": false,
         "show_controls": true,
         "video_size": "md",
-        "video": "shopify:\/\/files\/videos\/display-ad-1-rr.mp4",
-        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify://files/videos/display-ad-1-rr.mp4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "text_color": "#ffffff"
       }
     },
@@ -519,7 +525,7 @@
         "template--16132781473980__f8bd5952-415c-45fd-b4fd-38da20a7e70f-richtext-1": {
           "type": "richtext",
           "settings": {
-            "content": "<p><strong>Edge Flourish<\/strong> lays the foundation for hair that keeps pace with your busy life. <\/p><p>Infused with biotin and banana extract, it protects, repairs, and nourishes your hair’s edges against the daily grind.<\/p>"
+            "content": "<p><strong>Edge Flourish</strong> lays the foundation for hair that keeps pace with your busy life. </p><p>Infused with biotin and banana extract, it protects, repairs, and nourishes your hair’s edges against the daily grind.</p>"
           }
         },
         "f4dc98a6-ec36-44e7-a326-d0ff9cfc11ed": {
@@ -527,7 +533,7 @@
           "settings": {
             "style": "solid",
             "text": "EDGE FLOURISH",
-            "url": "shopify:\/\/products\/edge-flourish-daily-nourishing-serum",
+            "url": "shopify://products/edge-flourish-daily-nourishing-serum",
             "background": "",
             "text_color": ""
           }
@@ -542,8 +548,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "image": "shopify:\/\/shop_images\/Edge_-_Desktop.png",
-        "mobile_image": "shopify:\/\/shop_images\/Edge_-_Mobile.png",
+        "image": "shopify://shop_images/Edge_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/Edge_-_Mobile.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -569,7 +575,7 @@
         "template--16132781473980__4b860c8b-ca05-46b8-9856-0fc088b28963-richtext-1": {
           "type": "richtext",
           "settings": {
-            "content": "<p>After any activity, <strong>Root Refresh<\/strong> is a refreshing cleanser that's as gentle as it is effective. The Micellar Water works to remove buildup while maintaining your scalp's delicate moisture balance.<\/p><p>Complementing this, <strong>Revive Me<\/strong> provides an instant boost of hydration, taming frizz and invigorating lifeless strands. Its specialized formula with Antarctic Marine Extracts tackles scalp dryness and flakiness.<\/p><p>When used together, <strong>Root Refresh<\/strong> and <strong>Revive Me<\/strong> form a powerful tandem that revitalizes your hair quickly, post-activity.<\/p>"
+            "content": "<p>After any activity, <strong>Root Refresh</strong> is a refreshing cleanser that's as gentle as it is effective. The Micellar Water works to remove buildup while maintaining your scalp's delicate moisture balance.</p><p>Complementing this, <strong>Revive Me</strong> provides an instant boost of hydration, taming frizz and invigorating lifeless strands. Its specialized formula with Antarctic Marine Extracts tackles scalp dryness and flakiness.</p><p>When used together, <strong>Root Refresh</strong> and <strong>Revive Me</strong> form a powerful tandem that revitalizes your hair quickly, post-activity.</p>"
           }
         },
         "aa3bd981-6449-4cbc-9047-4c6463841924": {
@@ -577,7 +583,7 @@
           "settings": {
             "style": "solid",
             "text": "ROOT REFRESH",
-            "url": "shopify:\/\/products\/root-refresh-micellar-rinse",
+            "url": "shopify://products/root-refresh-micellar-rinse",
             "background": "",
             "text_color": ""
           }
@@ -587,7 +593,7 @@
           "settings": {
             "style": "solid",
             "text": "REVIVE ME",
-            "url": "shopify:\/\/products\/revive-me-daily-moisturizing-spray",
+            "url": "shopify://products/revive-me-daily-moisturizing-spray",
             "background": "",
             "text_color": ""
           }
@@ -603,8 +609,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
-        "image": "shopify:\/\/shop_images\/RootRevive_-_Desktop.png",
-        "mobile_image": "shopify:\/\/shop_images\/RootRevive_-_Mobile.png",
+        "image": "shopify://shop_images/RootRevive_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/RootRevive_-_Mobile.png",
         "reveal_on_scroll": true,
         "image_position": "end",
         "content_width": "sm",
@@ -630,7 +636,7 @@
         "template--16132781473980__04e0f4da-f6e3-4da2-8d6e-ef8cb1c2a428-richtext-1": {
           "type": "richtext",
           "settings": {
-            "content": "<p>To wind down, <strong>Soothe Me<\/strong> steps in as your soothing finish. This serum is your scalp's calming end to any day, providing a gentle cooling sensation while easing any irritation. It's the nurturing touch your hair craves after exposure to the elements and daily stressors.<\/p>"
+            "content": "<p>To wind down, <strong>Soothe Me</strong> steps in as your soothing finish. This serum is your scalp's calming end to any day, providing a gentle cooling sensation while easing any irritation. It's the nurturing touch your hair craves after exposure to the elements and daily stressors.</p>"
           }
         },
         "c65666cb-f886-4bea-a978-811ac3e8c791": {
@@ -638,7 +644,7 @@
           "settings": {
             "style": "solid",
             "text": "SOOTHE ME",
-            "url": "shopify:\/\/products\/soothe-me-daily-scalp-serum",
+            "url": "shopify://products/soothe-me-daily-scalp-serum",
             "background": "",
             "text_color": ""
           }
@@ -653,8 +659,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "image": "shopify:\/\/shop_images\/Soothe_-_Desktop.png",
-        "mobile_image": "shopify:\/\/shop_images\/Soothe_-_Mobile.png",
+        "image": "shopify://shop_images/Soothe_-_Desktop.png",
+        "mobile_image": "shopify://shop_images/Soothe_-_Mobile.png",
         "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
@@ -667,7 +673,7 @@
         "template--16132781473980__a34c186f-9ccc-48aa-bb9a-3358358dcc28-testimonial-3": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>I've been using dry shampoo for a while, but after 30 minutes, it's like I never put any product in my hair to absorb oils and grease post-workout. I've used Sunday II Sunday three times now after the gym, and it's a miracle product! I don't even have to do anything else besides spray it on. Will be a returning customer. In particular, I'm referring to the <a href=\"\/products\/root-refresh-micellar-rinse\" title=\"Root Refresh Micellar Rinse Dry Shampoo Alternative with Apple Cider Vinegar\">Sunday II Sunday Root Refresh spray<\/a>.<\/p>",
+            "content": "<p>I've been using dry shampoo for a while, but after 30 minutes, it's like I never put any product in my hair to absorb oils and grease post-workout. I've used Sunday II Sunday three times now after the gym, and it's a miracle product! I don't even have to do anything else besides spray it on. Will be a returning customer. In particular, I'm referring to the <a href=\"/products/root-refresh-micellar-rinse\" title=\"Root Refresh Micellar Rinse Dry Shampoo Alternative with Apple Cider Vinegar\">Sunday II Sunday Root Refresh spray</a>.</p>",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100,
             "author": "Cheryl E."
@@ -676,7 +682,7 @@
         "template--16132781473980__a34c186f-9ccc-48aa-bb9a-3358358dcc28-testimonial-1": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>Love this <a href=\"\/products\/edge-flourish-daily-nourishing-serum\" title=\"Edge Flourish Daily Nourishing Serum\">serum<\/a>! It has helped my edges grow back since they came out due to rubber from a wig band. It keeps them moisturized without being too heavy. I use it day and night and leave uncovered from the satin cap.<\/p>",
+            "content": "<p>Love this <a href=\"/products/edge-flourish-daily-nourishing-serum\" title=\"Edge Flourish Daily Nourishing Serum\">serum</a>! It has helped my edges grow back since they came out due to rubber from a wig band. It keeps them moisturized without being too heavy. I use it day and night and leave uncovered from the satin cap.</p>",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100,
             "author": "Salena A."
@@ -685,7 +691,7 @@
         "template--16132781473980__a34c186f-9ccc-48aa-bb9a-3358358dcc28-testimonial-2": {
           "type": "testimonial",
           "settings": {
-            "content": "<p>This is my second bottle! I absolutely LOVE <a href=\"\/products\/revive-me-daily-moisturizing-spray\" title=\"Revive Me Daily Leave-In Conditioner Spray with Argan Oil and Green Tea\">Revive Me Daily<\/a>! I wear my hair curly, especially during the summer months! All I have to do in the mornings is spray run my hands over my curls, and by the time I arrive at work, my curls are beautiful! My scalp doesn't itch between washes! Forever grateful!<\/p>",
+            "content": "<p>This is my second bottle! I absolutely LOVE <a href=\"/products/revive-me-daily-moisturizing-spray\" title=\"Revive Me Daily Leave-In Conditioner Spray with Argan Oil and Green Tea\">Revive Me Daily</a>! I wear my hair curly, especially during the summer months! All I have to do in the mornings is spray run my hands over my curls, and by the time I arrive at work, my curls are beautiful! My scalp doesn't itch between washes! Forever grateful!</p>",
             "logo_max_width": 140,
             "logo_mobile_max_width": 100,
             "author": "April M."
@@ -715,14 +721,14 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/S2S_Root_Refresh_Joc.jpg",
+            "image": "shopify://shop_images/S2S_Root_Refresh_Joc.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "Healthy Scalp Between Washes",
             "heading_tag": "h3",
             "content": "",
             "link_text": "Shop Between Wash",
-            "link_url": "shopify:\/\/collections\/hair-kit-collection",
+            "link_url": "shopify://collections/hair-kit-collection",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
             "overlay_color": "#000000",
@@ -733,14 +739,14 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/signature-wash-day-system-936581.jpg",
+            "image": "shopify://shop_images/signature-wash-day-system-936581.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "Cleanse & Condition",
             "heading_tag": "h3",
             "content": "",
             "link_text": "Shop Wash Day",
-            "link_url": "shopify:\/\/collections\/wash-day-kit",
+            "link_url": "shopify://collections/wash-day-kit",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
             "overlay_color": "#000000",
@@ -751,14 +757,14 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/on-the-go-signature-travel-post-gym-hair-kit-563653.jpg",
+            "image": "shopify://shop_images/on-the-go-signature-travel-post-gym-hair-kit-563653.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "Live Life To the Fullest",
             "heading_tag": "h3",
             "content": "",
             "link_text": "SHOP ON-THE-GO",
-            "link_url": "shopify:\/\/collections\/signature-travel-post-gym-hair-collection",
+            "link_url": "shopify://collections/signature-travel-post-gym-hair-collection",
             "link_style": "outline",
             "text_position": "place-self-end text-end",
             "overlay_color": "#000000",
@@ -771,9 +777,7 @@
         "template--16043082907836__e2bb1e0c-3c91-4478-9222-e9adf81d3b33-1685698792a6c2d2d5-1",
         "11d083d7-91a2-4ec7-b94c-97cf9d83944f"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
@@ -790,11 +794,13 @@
       "type": "apps",
       "blocks": {
         "87801203-22ba-4967-8e71-58c7ba937819": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
             "title": "",
             "title_color": "",
             "alignment": "center",
+            "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
